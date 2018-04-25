@@ -4,7 +4,7 @@ It’s a to-do app for people who prefer plain text editors over complex product
 
 There’s two main components, the text editor on one larger side and the assistant pane on the other. 
 
-You use the text editor the same as you would use a notepad - each task is its own line, and and you delete the line when you’re done. The app never modifies the notepad view, to the user it's static. Feedback from the assistant is only shown in the side pane.
+You use the text editor the same as you would use a notepad - each task is its own line, and and you delete the line when you’re done. The app never modifies the notepad view, from the user's perspective it's static. The app would be synced, allowing you to view your list anywhere you can sign in.
 
 Some users of plain text todo lists use formatting to indicate contextual information for themselves. For example, making a line italic could mean it's personal, or indenting the line with a tab could mean it's partially complete. The meaning of a formatting choice is only relevant to the specific user and not dictated by the app, the app would just allow you to filter your view by the formatting style. (ie view all italic lines)
 
