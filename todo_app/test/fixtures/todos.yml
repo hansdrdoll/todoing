@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  key: MyString
+  archived: false
+  priority_area: 1
+  priority_order: 1
+
+two:
+  key: MyString
+  archived: false
+  priority_area: 1
+  priority_order: 1

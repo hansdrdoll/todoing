@@ -42,6 +42,11 @@ Another advanced feature could be a system of placing items into a meta-list of 
 -
 
 
+#### User stories:
+- As a user, I want a simple interface with the same controls as my notepad app, so that I can use this app in the fashion which I am already accustomed.
+- As a user, I want the app to leave my list alone, so that it does not conflict with my mental map of the todo list.
+- As a user, 
+
 #### Wireframes:
 
 ![Todo entry](https://git.generalassemb.ly/raw/hans/project_4/master/wireframes/Todo%20Entry.png)
