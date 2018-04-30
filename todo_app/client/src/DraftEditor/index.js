@@ -41,8 +41,8 @@ onEditorStateChange: Function = (editorState) => {
 
 logStateChange = debounce((editorState) => {
   const rawState = convertToRaw(editorState)
-  // console.log(rawState)
-  console.table(rawState.blocks)
+  console.log(JSON.stringify(rawState))
+  // console.table(rawState.blocks)
 }, 2000)
 
 render() {

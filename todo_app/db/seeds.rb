@@ -1,7 +1,7 @@
 # This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+
+User.destroy_all
+
+User.create!(username: 'hans', email: 'hans@hans.com', password: 'hanshans', todos: {"blocks":[{"key":"as6h4","text":"This is a string of urgency","type":"unstyled","depth":0,"inlineStyleRanges":[],"entityRanges":[],"data":{"urgent":true,"quick":true}},{"key":"5irev","text":"and this is not","type":"unstyled","depth":0,"inlineStyleRanges":[{"offset":0,"length":15,"style":"BOLD"}],"entityRanges":[],"data":{"urgent":false,"quick":false}}],"entityMap":{}})
+
+puts "Added user to db"
