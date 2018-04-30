@@ -26,8 +26,3 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
-
-.editor {
-  width: 80vw;
-  border: 1px solid red;
-}
