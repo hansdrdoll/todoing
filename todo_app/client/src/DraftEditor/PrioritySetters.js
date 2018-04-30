@@ -21,7 +21,7 @@ class UrgentQuick extends Component {
 
   render() {
     return (
-      <div onClick={this.setUrgentQuick}>⭐1</div>
+      <div onClick={this.setUrgentQuick}>1</div>
     );
   }
 }
@@ -44,7 +44,7 @@ class UrgentSlow extends Component {
 
   render() {
     return (
-      <div onClick={this.setUrgentSlow}>⭐2</div>
+      <div onClick={this.setUrgentSlow}>2</div>
     );
   }
 }
@@ -67,7 +67,7 @@ class NotUrgentSlow extends Component {
 
   render() {
     return (
-      <div onClick={this.setNotUrgentSlow}>⭐3</div>
+      <div onClick={this.setNotUrgentSlow}>3</div>
     );
   }
 }
@@ -90,7 +90,7 @@ class NotUrgentQuick extends Component {
 
   render() {
     return (
-      <div onClick={this.setNotUrgentQuick}>⭐4</div>
+      <div onClick={this.setNotUrgentQuick}>4</div>
     );
   }
 }

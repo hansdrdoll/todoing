@@ -1,8 +1,8 @@
-
 import React, { Component } from 'react';
-import { EditorState, Modifier, convertToRaw } from 'draft-js';
+import { EditorState, Modifier, convertToRaw, convertFromRaw } from 'draft-js';
 import { Editor } from 'react-draft-wysiwyg';
 import PropTypes from 'prop-types';
+import Api from '../api';
 import { UrgentSlow, UrgentQuick, NotUrgentSlow, NotUrgentQuick } from './PrioritySetters'
 
 // import { Map } from 'immutable';
@@ -29,8 +29,28 @@ class DraftEditor extends Component {
   super(props);
   this.state = {
     editorState: EditorState.createEmpty(),
+    dataLoaded: false,
   };
 }
+
+  componentDidMount() {
+    Api.getTodo(1)
+    .then(rawData => {
+      if (rawData) {
+        console.log("i got data", rawData)
+        this.setState({
+          editorState: EditorState.createWithContent(convertFromRaw(rawData)),
+          dataLoaded: true
+        })
+      } else {
+        console.log("i got nothin");
+        this.setState({
+          editorState: EditorState.createEmpty(),
+          dataLoaded: false
+        });
+      }
+    })
+  };
 
 onEditorStateChange: Function = (editorState) => {
   this.logStateChange(editorState.getCurrentContent())
@@ -41,12 +61,13 @@ onEditorStateChange: Function = (editorState) => {
 
 logStateChange = debounce((editorState) => {
   const rawState = convertToRaw(editorState)
-  console.log(JSON.stringify(rawState))
-  // console.table(rawState.blocks)
+  // console.log(JSON.stringify(rawState))
+  console.table(rawState.blocks)
 }, 2000)
 
 render() {
   const { editorState } = this.state;
+  if (this.state.dataLoaded) {
   return (
     <Editor
       editorState={editorState}
@@ -87,6 +108,9 @@ render() {
 }}
     />
   )
+  } else {
+  return <div>Loading</div>
+  }
 }
 
 }
