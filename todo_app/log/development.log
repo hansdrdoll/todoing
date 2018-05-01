@@ -7727,3 +7727,363 @@ Unpermitted parameter: :todo
 Completed 204 No Content in 9ms (ActiveRecord: 1.5ms)
 
 
+Started GET "/api/todos/1" for 127.0.0.1 at 2018-05-01 17:06:56 -0400
+Processing by TodosController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mTodo Load (6.0ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:5
+Completed 200 OK in 8ms (Views: 0.2ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/api/todos/1" for 127.0.0.1 at 2018-05-01 17:07:16 -0400
+Processing by TodosController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mTodo Load (0.6ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:5
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/todos/1" for 127.0.0.1 at 2018-05-01 17:07:39 -0400
+Processing by TodosController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mTodo Load (0.6ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:5
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/todos/1" for 127.0.0.1 at 2018-05-01 17:07:50 -0400
+Processing by TodosController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mTodo Load (5.3ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:5
+Completed 200 OK in 8ms (Views: 0.2ms | ActiveRecord: 5.3ms)
+
+
+Started GET "/api/todos/1" for 127.0.0.1 at 2018-05-01 17:08:22 -0400
+Processing by TodosController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mTodo Load (5.3ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:5
+Completed 200 OK in 7ms (Views: 0.2ms | ActiveRecord: 5.3ms)
+
+
+Started PATCH "/api/todos/1" for 127.0.0.1 at 2018-05-01 17:08:31 -0400
+Processing by TodosController#update as HTML
+  Parameters: {"editor_data"=>"{\"blocks\":[{\"key\":\"as6h4\",\"text\":\"gThis is a strin\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":0,\"length\":16,\"style\":\"UNDERLINE\"},{\"offset\":0,\"length\":16,\"style\":\"STRIKETHROUGH\"}],\"entityRanges\":[],\"data\":{\"urgent\":true,\"quick\":true}},{\"key\":\"928qo\",\"text\":\"g of urgency \",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":0,\"length\":8,\"style\":\"UNDERLINE\"},{\"offset\":0,\"length\":13,\"style\":\"STRIKETHROUGH\"}],\"entityRanges\":[],\"data\":{\"urgent\":true,\"quick\":true}},{\"key\":\"e4cbd\",\"text\":\"hi youna\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{\"urgent\":true,\"quick\":false}},{\"key\":\"cup06\",\"text\":\"g\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{}},{\"key\":\"6latn\",\"text\":\"and this\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":0,\"length\":8,\"style\":\"color-rgb(0,0,0)\"},{\"offset\":0,\"length\":8,\"style\":\"fontsize-medium\"},{\"offset\":0,\"length\":8,\"style\":\"fontfamily-sans-serif\"}],\"entityRanges\":[],\"data\":{}},{\"key\":\"5irev\",\"text\":\"asdfasdfasdfasdfaand this is not\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":0,\"length\":32,\"style\":\"BOLD\"}],\"entityRanges\":[],\"data\":{\"urgent\":false,\"quick\":false}},{\"key\":\"7ferf\",\"text\":\"pokkkl\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":0,\"length\":6,\"style\":\"BOLD\"}],\"entityRanges\":[],\"data\":{}}],\"entityMap\":{}}", "id"=>"1", "todo"=>{"editor_data"=>"{\"blocks\":[{\"key\":\"as6h4\",\"text\":\"gThis is a strin\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":0,\"length\":16,\"style\":\"UNDERLINE\"},{\"offset\":0,\"length\":16,\"style\":\"STRIKETHROUGH\"}],\"entityRanges\":[],\"data\":{\"urgent\":true,\"quick\":true}},{\"key\":\"928qo\",\"text\":\"g of urgency \",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":0,\"length\":8,\"style\":\"UNDERLINE\"},{\"offset\":0,\"length\":13,\"style\":\"STRIKETHROUGH\"}],\"entityRanges\":[],\"data\":{\"urgent\":true,\"quick\":true}},{\"key\":\"e4cbd\",\"text\":\"hi youna\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{\"urgent\":true,\"quick\":false}},{\"key\":\"cup06\",\"text\":\"g\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{}},{\"key\":\"6latn\",\"text\":\"and this\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":0,\"length\":8,\"style\":\"color-rgb(0,0,0)\"},{\"offset\":0,\"length\":8,\"style\":\"fontsize-medium\"},{\"offset\":0,\"length\":8,\"style\":\"fontfamily-sans-serif\"}],\"entityRanges\":[],\"data\":{}},{\"key\":\"5irev\",\"text\":\"asdfasdfasdfasdfaand this is not\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":0,\"length\":32,\"style\":\"BOLD\"}],\"entityRanges\":[],\"data\":{\"urgent\":false,\"quick\":false}},{\"key\":\"7ferf\",\"text\":\"pokkkl\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":0,\"length\":6,\"style\":\"BOLD\"}],\"entityRanges\":[],\"data\":{}}],\"entityMap\":{}}"}}
+Unpermitted parameter: :todo
+  [1m[36mTodo Load (0.5ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:10
+Unpermitted parameter: :todo
+Unpermitted parameter: :todo
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/todos_controller.rb:13
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:13
+  [1m[36mTodo Update (4.8ms)[0m  [1m[33mUPDATE "todos" SET "editor_data" = $1 WHERE "todos"."id" = $2[0m  [["editor_data", "\"{\\\"blocks\\\":[{\\\"key\\\":\\\"as6h4\\\",\\\"text\\\":\\\"gThis is a strin\\\",\\\"type\\\":\\\"unstyled\\\",\\\"depth\\\":0,\\\"inlineStyleRanges\\\":[{\\\"offset\\\":0,\\\"length\\\":16,\\\"style\\\":\\\"UNDERLINE\\\"},{\\\"offset\\\":0,\\\"length\\\":16,\\\"style\\\":\\\"STRIKETHROUGH\\\"}],\\\"entityRanges\\\":[],\\\"data\\\":{\\\"urgent\\\":true,\\\"quick\\\":true}},{\\\"key\\\":\\\"928qo\\\",\\\"text\\\":\\\"g of urgency \\\",\\\"type\\\":\\\"unstyled\\\",\\\"depth\\\":0,\\\"inlineStyleRanges\\\":[{\\\"offset\\\":0,\\\"length\\\":8,\\\"style\\\":\\\"UNDERLINE\\\"},{\\\"offset\\\":0,\\\"length\\\":13,\\\"style\\\":\\\"STRIKETHROUGH\\\"}],\\\"entityRanges\\\":[],\\\"data\\\":{\\\"urgent\\\":true,\\\"quick\\\":true}},{\\\"key\\\":\\\"e4cbd\\\",\\\"text\\\":\\\"hi youna\\\",\\\"type\\\":\\\"unstyled\\\",\\\"depth\\\":0,\\\"inlineStyleRanges\\\":[],\\\"entityRanges\\\":[],\\\"data\\\":{\\\"urgent\\\":true,\\\"quick\\\":false}},{\\\"key\\\":\\\"cup06\\\",\\\"text\\\":\\\"g\\\",\\\"type\\\":\\\"unstyled\\\",\\\"depth\\\":0,\\\"inlineStyleRanges\\\":[],\\\"entityRanges\\\":[],\\\"data\\\":{}},{\\\"key\\\":\\\"6latn\\\",\\\"text\\\":\\\"and this\\\",\\\"type\\\":\\\"unstyled\\\",\\\"depth\\\":0,\\\"inlineStyleRanges\\\":[{\\\"offset\\\":0,\\\"length\\\":8,\\\"style\\\":\\\"color-rgb(0,0,0)\\\"},{\\\"offset\\\":0,\\\"length\\\":8,\\\"style\\\":\\\"fontsize-medium\\\"},{\\\"offset\\\":0,\\\"length\\\":8,\\\"style\\\":\\\"fontfamily-sans-serif\\\"}],\\\"entityRanges\\\":[],\\\"data\\\":{}},{\\\"key\\\":\\\"5irev\\\",\\\"text\\\":\\\"asdfasdfasdfasdfaand this is not\\\",\\\"type\\\":\\\"unstyled\\\",\\\"depth\\\":0,\\\"inlineStyleRanges\\\":[{\\\"offset\\\":0,\\\"length\\\":32,\\\"style\\\":\\\"BOLD\\\"}],\\\"entityRanges\\\":[],\\\"data\\\":{\\\"urgent\\\":false,\\\"quick\\\":false}},{\\\"key\\\":\\\"7ferf\\\",\\\"text\\\":\\\"pokkkl\\\",\\\"type\\\":\\\"unstyled\\\",\\\"depth\\\":0,\\\"inlineStyleRanges\\\":[{\\\"offset\\\":0,\\\"length\\\":6,\\\"style\\\":\\\"BOLD\\\"}],\\\"entityRanges\\\":[],\\\"data\\\":{}}],\\\"entityMap\\\":{}}\""], ["id", 1]]
+  ↳ app/controllers/todos_controller.rb:13
+  [1m[35m (3.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/todos_controller.rb:13
+Completed 204 No Content in 147ms (ActiveRecord: 11.1ms)
+
+
+Started GET "/api/todos/1" for 127.0.0.1 at 2018-05-01 17:08:45 -0400
+Processing by TodosController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mTodo Load (3.9ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:5
+Completed 200 OK in 18ms (Views: 0.2ms | ActiveRecord: 14.4ms)
+
+
+Started PATCH "/api/todos/1" for 127.0.0.1 at 2018-05-01 17:08:51 -0400
+Processing by TodosController#update as HTML
+  Parameters: {"editor_data"=>"{\"blocks\":[{\"key\":\"as6h4\",\"text\":\"fgThis is a strin\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":0,\"length\":17,\"style\":\"UNDERLINE\"},{\"offset\":0,\"length\":17,\"style\":\"STRIKETHROUGH\"}],\"entityRanges\":[],\"data\":{\"urgent\":true,\"quick\":true}},{\"key\":\"928qo\",\"text\":\"g of urgency \",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":0,\"length\":8,\"style\":\"UNDERLINE\"},{\"offset\":0,\"length\":13,\"style\":\"STRIKETHROUGH\"}],\"entityRanges\":[],\"data\":{\"urgent\":true,\"quick\":true}},{\"key\":\"e4cbd\",\"text\":\"hi youna\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{\"urgent\":true,\"quick\":false}},{\"key\":\"cup06\",\"text\":\"g\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{}},{\"key\":\"6latn\",\"text\":\"and this\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":0,\"length\":8,\"style\":\"color-rgb(0,0,0)\"},{\"offset\":0,\"length\":8,\"style\":\"fontsize-medium\"},{\"offset\":0,\"length\":8,\"style\":\"fontfamily-sans-serif\"}],\"entityRanges\":[],\"data\":{}},{\"key\":\"5irev\",\"text\":\"asdfasdfasdfasdfaand this is not\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":0,\"length\":32,\"style\":\"BOLD\"}],\"entityRanges\":[],\"data\":{\"urgent\":false,\"quick\":false}},{\"key\":\"7ferf\",\"text\":\"pokkkl\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":0,\"length\":6,\"style\":\"BOLD\"}],\"entityRanges\":[],\"data\":{}}],\"entityMap\":{}}", "id"=>"1", "todo"=>{"editor_data"=>"{\"blocks\":[{\"key\":\"as6h4\",\"text\":\"fgThis is a strin\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":0,\"length\":17,\"style\":\"UNDERLINE\"},{\"offset\":0,\"length\":17,\"style\":\"STRIKETHROUGH\"}],\"entityRanges\":[],\"data\":{\"urgent\":true,\"quick\":true}},{\"key\":\"928qo\",\"text\":\"g of urgency \",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":0,\"length\":8,\"style\":\"UNDERLINE\"},{\"offset\":0,\"length\":13,\"style\":\"STRIKETHROUGH\"}],\"entityRanges\":[],\"data\":{\"urgent\":true,\"quick\":true}},{\"key\":\"e4cbd\",\"text\":\"hi youna\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{\"urgent\":true,\"quick\":false}},{\"key\":\"cup06\",\"text\":\"g\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{}},{\"key\":\"6latn\",\"text\":\"and this\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":0,\"length\":8,\"style\":\"color-rgb(0,0,0)\"},{\"offset\":0,\"length\":8,\"style\":\"fontsize-medium\"},{\"offset\":0,\"length\":8,\"style\":\"fontfamily-sans-serif\"}],\"entityRanges\":[],\"data\":{}},{\"key\":\"5irev\",\"text\":\"asdfasdfasdfasdfaand this is not\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":0,\"length\":32,\"style\":\"BOLD\"}],\"entityRanges\":[],\"data\":{\"urgent\":false,\"quick\":false}},{\"key\":\"7ferf\",\"text\":\"pokkkl\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":0,\"length\":6,\"style\":\"BOLD\"}],\"entityRanges\":[],\"data\":{}}],\"entityMap\":{}}"}}
+Unpermitted parameter: :todo
+  [1m[36mTodo Load (0.4ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:10
+Unpermitted parameter: :todo
+Unpermitted parameter: :todo
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/todos_controller.rb:13
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:13
+  [1m[36mTodo Update (5.6ms)[0m  [1m[33mUPDATE "todos" SET "editor_data" = $1 WHERE "todos"."id" = $2[0m  [["editor_data", "\"{\\\"blocks\\\":[{\\\"key\\\":\\\"as6h4\\\",\\\"text\\\":\\\"fgThis is a strin\\\",\\\"type\\\":\\\"unstyled\\\",\\\"depth\\\":0,\\\"inlineStyleRanges\\\":[{\\\"offset\\\":0,\\\"length\\\":17,\\\"style\\\":\\\"UNDERLINE\\\"},{\\\"offset\\\":0,\\\"length\\\":17,\\\"style\\\":\\\"STRIKETHROUGH\\\"}],\\\"entityRanges\\\":[],\\\"data\\\":{\\\"urgent\\\":true,\\\"quick\\\":true}},{\\\"key\\\":\\\"928qo\\\",\\\"text\\\":\\\"g of urgency \\\",\\\"type\\\":\\\"unstyled\\\",\\\"depth\\\":0,\\\"inlineStyleRanges\\\":[{\\\"offset\\\":0,\\\"length\\\":8,\\\"style\\\":\\\"UNDERLINE\\\"},{\\\"offset\\\":0,\\\"length\\\":13,\\\"style\\\":\\\"STRIKETHROUGH\\\"}],\\\"entityRanges\\\":[],\\\"data\\\":{\\\"urgent\\\":true,\\\"quick\\\":true}},{\\\"key\\\":\\\"e4cbd\\\",\\\"text\\\":\\\"hi youna\\\",\\\"type\\\":\\\"unstyled\\\",\\\"depth\\\":0,\\\"inlineStyleRanges\\\":[],\\\"entityRanges\\\":[],\\\"data\\\":{\\\"urgent\\\":true,\\\"quick\\\":false}},{\\\"key\\\":\\\"cup06\\\",\\\"text\\\":\\\"g\\\",\\\"type\\\":\\\"unstyled\\\",\\\"depth\\\":0,\\\"inlineStyleRanges\\\":[],\\\"entityRanges\\\":[],\\\"data\\\":{}},{\\\"key\\\":\\\"6latn\\\",\\\"text\\\":\\\"and this\\\",\\\"type\\\":\\\"unstyled\\\",\\\"depth\\\":0,\\\"inlineStyleRanges\\\":[{\\\"offset\\\":0,\\\"length\\\":8,\\\"style\\\":\\\"color-rgb(0,0,0)\\\"},{\\\"offset\\\":0,\\\"length\\\":8,\\\"style\\\":\\\"fontsize-medium\\\"},{\\\"offset\\\":0,\\\"length\\\":8,\\\"style\\\":\\\"fontfamily-sans-serif\\\"}],\\\"entityRanges\\\":[],\\\"data\\\":{}},{\\\"key\\\":\\\"5irev\\\",\\\"text\\\":\\\"asdfasdfasdfasdfaand this is not\\\",\\\"type\\\":\\\"unstyled\\\",\\\"depth\\\":0,\\\"inlineStyleRanges\\\":[{\\\"offset\\\":0,\\\"length\\\":32,\\\"style\\\":\\\"BOLD\\\"}],\\\"entityRanges\\\":[],\\\"data\\\":{\\\"urgent\\\":false,\\\"quick\\\":false}},{\\\"key\\\":\\\"7ferf\\\",\\\"text\\\":\\\"pokkkl\\\",\\\"type\\\":\\\"unstyled\\\",\\\"depth\\\":0,\\\"inlineStyleRanges\\\":[{\\\"offset\\\":0,\\\"length\\\":6,\\\"style\\\":\\\"BOLD\\\"}],\\\"entityRanges\\\":[],\\\"data\\\":{}}],\\\"entityMap\\\":{}}\""], ["id", 1]]
+  ↳ app/controllers/todos_controller.rb:13
+  [1m[35m (30.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/todos_controller.rb:13
+Completed 204 No Content in 58ms (ActiveRecord: 36.6ms)
+
+
+Started GET "/api/todos/1" for 127.0.0.1 at 2018-05-01 17:11:19 -0400
+Processing by TodosController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mTodo Load (1.6ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:5
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 1.6ms)
+
+
+Started PATCH "/api/todos/1" for 127.0.0.1 at 2018-05-01 17:11:27 -0400
+Processing by TodosController#update as HTML
+  Parameters: {"editor_data"=>"{\"blocks\":[{\"key\":\"as6h4\",\"text\":\"fgThis is a strin\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":0,\"length\":17,\"style\":\"UNDERLINE\"},{\"offset\":0,\"length\":17,\"style\":\"STRIKETHROUGH\"}],\"entityRanges\":[],\"data\":{\"urgent\":true,\"quick\":true}},{\"key\":\"928qo\",\"text\":\"g of urgency \",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":0,\"length\":8,\"style\":\"UNDERLINE\"},{\"offset\":0,\"length\":13,\"style\":\"STRIKETHROUGH\"}],\"entityRanges\":[],\"data\":{\"urgent\":true,\"quick\":true}},{\"key\":\"e4cbd\",\"text\":\"hi younasdfa\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{\"urgent\":true,\"quick\":false}},{\"key\":\"cup06\",\"text\":\"g\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{}},{\"key\":\"6latn\",\"text\":\"and this\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":0,\"length\":8,\"style\":\"color-rgb(0,0,0)\"},{\"offset\":0,\"length\":8,\"style\":\"fontsize-medium\"},{\"offset\":0,\"length\":8,\"style\":\"fontfamily-sans-serif\"}],\"entityRanges\":[],\"data\":{}},{\"key\":\"5irev\",\"text\":\"asdfasdfasdfasdfasdfaand this is not\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":0,\"length\":36,\"style\":\"BOLD\"}],\"entityRanges\":[],\"data\":{\"urgent\":false,\"quick\":false}},{\"key\":\"7ferf\",\"text\":\"pokkklasdf\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":0,\"length\":10,\"style\":\"BOLD\"}],\"entityRanges\":[],\"data\":{}}],\"entityMap\":{}}", "id"=>"1", "todo"=>{"editor_data"=>"{\"blocks\":[{\"key\":\"as6h4\",\"text\":\"fgThis is a strin\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":0,\"length\":17,\"style\":\"UNDERLINE\"},{\"offset\":0,\"length\":17,\"style\":\"STRIKETHROUGH\"}],\"entityRanges\":[],\"data\":{\"urgent\":true,\"quick\":true}},{\"key\":\"928qo\",\"text\":\"g of urgency \",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":0,\"length\":8,\"style\":\"UNDERLINE\"},{\"offset\":0,\"length\":13,\"style\":\"STRIKETHROUGH\"}],\"entityRanges\":[],\"data\":{\"urgent\":true,\"quick\":true}},{\"key\":\"e4cbd\",\"text\":\"hi younasdfa\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{\"urgent\":true,\"quick\":false}},{\"key\":\"cup06\",\"text\":\"g\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{}},{\"key\":\"6latn\",\"text\":\"and this\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":0,\"length\":8,\"style\":\"color-rgb(0,0,0)\"},{\"offset\":0,\"length\":8,\"style\":\"fontsize-medium\"},{\"offset\":0,\"length\":8,\"style\":\"fontfamily-sans-serif\"}],\"entityRanges\":[],\"data\":{}},{\"key\":\"5irev\",\"text\":\"asdfasdfasdfasdfasdfaand this is not\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":0,\"length\":36,\"style\":\"BOLD\"}],\"entityRanges\":[],\"data\":{\"urgent\":false,\"quick\":false}},{\"key\":\"7ferf\",\"text\":\"pokkklasdf\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":0,\"length\":10,\"style\":\"BOLD\"}],\"entityRanges\":[],\"data\":{}}],\"entityMap\":{}}"}}
+Unpermitted parameter: :todo
+  [1m[36mTodo Load (0.4ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:10
+Unpermitted parameter: :todo
+Unpermitted parameter: :todo
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/todos_controller.rb:13
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:13
+  [1m[36mTodo Update (1.3ms)[0m  [1m[33mUPDATE "todos" SET "editor_data" = $1 WHERE "todos"."id" = $2[0m  [["editor_data", "\"{\\\"blocks\\\":[{\\\"key\\\":\\\"as6h4\\\",\\\"text\\\":\\\"fgThis is a strin\\\",\\\"type\\\":\\\"unstyled\\\",\\\"depth\\\":0,\\\"inlineStyleRanges\\\":[{\\\"offset\\\":0,\\\"length\\\":17,\\\"style\\\":\\\"UNDERLINE\\\"},{\\\"offset\\\":0,\\\"length\\\":17,\\\"style\\\":\\\"STRIKETHROUGH\\\"}],\\\"entityRanges\\\":[],\\\"data\\\":{\\\"urgent\\\":true,\\\"quick\\\":true}},{\\\"key\\\":\\\"928qo\\\",\\\"text\\\":\\\"g of urgency \\\",\\\"type\\\":\\\"unstyled\\\",\\\"depth\\\":0,\\\"inlineStyleRanges\\\":[{\\\"offset\\\":0,\\\"length\\\":8,\\\"style\\\":\\\"UNDERLINE\\\"},{\\\"offset\\\":0,\\\"length\\\":13,\\\"style\\\":\\\"STRIKETHROUGH\\\"}],\\\"entityRanges\\\":[],\\\"data\\\":{\\\"urgent\\\":true,\\\"quick\\\":true}},{\\\"key\\\":\\\"e4cbd\\\",\\\"text\\\":\\\"hi younasdfa\\\",\\\"type\\\":\\\"unstyled\\\",\\\"depth\\\":0,\\\"inlineStyleRanges\\\":[],\\\"entityRanges\\\":[],\\\"data\\\":{\\\"urgent\\\":true,\\\"quick\\\":false}},{\\\"key\\\":\\\"cup06\\\",\\\"text\\\":\\\"g\\\",\\\"type\\\":\\\"unstyled\\\",\\\"depth\\\":0,\\\"inlineStyleRanges\\\":[],\\\"entityRanges\\\":[],\\\"data\\\":{}},{\\\"key\\\":\\\"6latn\\\",\\\"text\\\":\\\"and this\\\",\\\"type\\\":\\\"unstyled\\\",\\\"depth\\\":0,\\\"inlineStyleRanges\\\":[{\\\"offset\\\":0,\\\"length\\\":8,\\\"style\\\":\\\"color-rgb(0,0,0)\\\"},{\\\"offset\\\":0,\\\"length\\\":8,\\\"style\\\":\\\"fontsize-medium\\\"},{\\\"offset\\\":0,\\\"length\\\":8,\\\"style\\\":\\\"fontfamily-sans-serif\\\"}],\\\"entityRanges\\\":[],\\\"data\\\":{}},{\\\"key\\\":\\\"5irev\\\",\\\"text\\\":\\\"asdfasdfasdfasdfasdfaand this is not\\\",\\\"type\\\":\\\"unstyled\\\",\\\"depth\\\":0,\\\"inlineStyleRanges\\\":[{\\\"offset\\\":0,\\\"length\\\":36,\\\"style\\\":\\\"BOLD\\\"}],\\\"entityRanges\\\":[],\\\"data\\\":{\\\"urgent\\\":false,\\\"quick\\\":false}},{\\\"key\\\":\\\"7ferf\\\",\\\"text\\\":\\\"pokkklasdf\\\",\\\"type\\\":\\\"unstyled\\\",\\\"depth\\\":0,\\\"inlineStyleRanges\\\":[{\\\"offset\\\":0,\\\"length\\\":10,\\\"style\\\":\\\"BOLD\\\"}],\\\"entityRanges\\\":[],\\\"data\\\":{}}],\\\"entityMap\\\":{}}\""], ["id", 1]]
+  ↳ app/controllers/todos_controller.rb:13
+  [1m[35m (99.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/todos_controller.rb:13
+Completed 204 No Content in 118ms (ActiveRecord: 102.3ms)
+
+
+Started GET "/api/todos/1" for 127.0.0.1 at 2018-05-01 17:11:35 -0400
+Processing by TodosController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mTodo Load (2.5ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:5
+Completed 200 OK in 4ms (Views: 0.3ms | ActiveRecord: 2.5ms)
+
+
+Started PATCH "/api/todos/1" for 127.0.0.1 at 2018-05-01 17:11:48 -0400
+Processing by TodosController#update as HTML
+  Parameters: {"editor_data"=>"{\"blocks\":[{\"key\":\"as6h4\",\"text\":\"fgThis is a strin\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":0,\"length\":17,\"style\":\"UNDERLINE\"},{\"offset\":0,\"length\":17,\"style\":\"STRIKETHROUGH\"}],\"entityRanges\":[],\"data\":{\"urgent\":true,\"quick\":true}},{\"key\":\"cme5g\",\"text\":\"this is a test \",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":0,\"length\":15,\"style\":\"CODE\"}],\"entityRanges\":[],\"data\":{}},{\"key\":\"dj4sf\",\"text\":\"g of urgency \",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":0,\"length\":8,\"style\":\"UNDERLINE\"},{\"offset\":0,\"length\":13,\"style\":\"STRIKETHROUGH\"}],\"entityRanges\":[],\"data\":{}},{\"key\":\"e4cbd\",\"text\":\"hi younasdfa\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{\"urgent\":true,\"quick\":false}},{\"key\":\"cup06\",\"text\":\"g\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{}},{\"key\":\"6latn\",\"text\":\"and this\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":0,\"length\":8,\"style\":\"color-rgb(0,0,0)\"},{\"offset\":0,\"length\":8,\"style\":\"fontsize-medium\"},{\"offset\":0,\"length\":8,\"style\":\"fontfamily-sans-serif\"}],\"entityRanges\":[],\"data\":{}},{\"key\":\"5irev\",\"text\":\"asdfasdfasdfasdfasdfaand this is not\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":0,\"length\":36,\"style\":\"BOLD\"}],\"entityRanges\":[],\"data\":{\"urgent\":false,\"quick\":false}},{\"key\":\"7ferf\",\"text\":\"pokkklasdf\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":0,\"length\":10,\"style\":\"BOLD\"}],\"entityRanges\":[],\"data\":{}}],\"entityMap\":{}}", "id"=>"1", "todo"=>{"editor_data"=>"{\"blocks\":[{\"key\":\"as6h4\",\"text\":\"fgThis is a strin\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":0,\"length\":17,\"style\":\"UNDERLINE\"},{\"offset\":0,\"length\":17,\"style\":\"STRIKETHROUGH\"}],\"entityRanges\":[],\"data\":{\"urgent\":true,\"quick\":true}},{\"key\":\"cme5g\",\"text\":\"this is a test \",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":0,\"length\":15,\"style\":\"CODE\"}],\"entityRanges\":[],\"data\":{}},{\"key\":\"dj4sf\",\"text\":\"g of urgency \",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":0,\"length\":8,\"style\":\"UNDERLINE\"},{\"offset\":0,\"length\":13,\"style\":\"STRIKETHROUGH\"}],\"entityRanges\":[],\"data\":{}},{\"key\":\"e4cbd\",\"text\":\"hi younasdfa\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{\"urgent\":true,\"quick\":false}},{\"key\":\"cup06\",\"text\":\"g\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{}},{\"key\":\"6latn\",\"text\":\"and this\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":0,\"length\":8,\"style\":\"color-rgb(0,0,0)\"},{\"offset\":0,\"length\":8,\"style\":\"fontsize-medium\"},{\"offset\":0,\"length\":8,\"style\":\"fontfamily-sans-serif\"}],\"entityRanges\":[],\"data\":{}},{\"key\":\"5irev\",\"text\":\"asdfasdfasdfasdfasdfaand this is not\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":0,\"length\":36,\"style\":\"BOLD\"}],\"entityRanges\":[],\"data\":{\"urgent\":false,\"quick\":false}},{\"key\":\"7ferf\",\"text\":\"pokkklasdf\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":0,\"length\":10,\"style\":\"BOLD\"}],\"entityRanges\":[],\"data\":{}}],\"entityMap\":{}}"}}
+Unpermitted parameter: :todo
+  [1m[36mTodo Load (0.8ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:10
+Unpermitted parameter: :todo
+Unpermitted parameter: :todo
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/todos_controller.rb:13
+  [1m[36mUser Load (111.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:13
+  [1m[36mTodo Update (0.6ms)[0m  [1m[33mUPDATE "todos" SET "editor_data" = $1 WHERE "todos"."id" = $2[0m  [["editor_data", "\"{\\\"blocks\\\":[{\\\"key\\\":\\\"as6h4\\\",\\\"text\\\":\\\"fgThis is a strin\\\",\\\"type\\\":\\\"unstyled\\\",\\\"depth\\\":0,\\\"inlineStyleRanges\\\":[{\\\"offset\\\":0,\\\"length\\\":17,\\\"style\\\":\\\"UNDERLINE\\\"},{\\\"offset\\\":0,\\\"length\\\":17,\\\"style\\\":\\\"STRIKETHROUGH\\\"}],\\\"entityRanges\\\":[],\\\"data\\\":{\\\"urgent\\\":true,\\\"quick\\\":true}},{\\\"key\\\":\\\"cme5g\\\",\\\"text\\\":\\\"this is a test \\\",\\\"type\\\":\\\"unstyled\\\",\\\"depth\\\":0,\\\"inlineStyleRanges\\\":[{\\\"offset\\\":0,\\\"length\\\":15,\\\"style\\\":\\\"CODE\\\"}],\\\"entityRanges\\\":[],\\\"data\\\":{}},{\\\"key\\\":\\\"dj4sf\\\",\\\"text\\\":\\\"g of urgency \\\",\\\"type\\\":\\\"unstyled\\\",\\\"depth\\\":0,\\\"inlineStyleRanges\\\":[{\\\"offset\\\":0,\\\"length\\\":8,\\\"style\\\":\\\"UNDERLINE\\\"},{\\\"offset\\\":0,\\\"length\\\":13,\\\"style\\\":\\\"STRIKETHROUGH\\\"}],\\\"entityRanges\\\":[],\\\"data\\\":{}},{\\\"key\\\":\\\"e4cbd\\\",\\\"text\\\":\\\"hi younasdfa\\\",\\\"type\\\":\\\"unstyled\\\",\\\"depth\\\":0,\\\"inlineStyleRanges\\\":[],\\\"entityRanges\\\":[],\\\"data\\\":{\\\"urgent\\\":true,\\\"quick\\\":false}},{\\\"key\\\":\\\"cup06\\\",\\\"text\\\":\\\"g\\\",\\\"type\\\":\\\"unstyled\\\",\\\"depth\\\":0,\\\"inlineStyleRanges\\\":[],\\\"entityRanges\\\":[],\\\"data\\\":{}},{\\\"key\\\":\\\"6latn\\\",\\\"text\\\":\\\"and this\\\",\\\"type\\\":\\\"unstyled\\\",\\\"depth\\\":0,\\\"inlineStyleRanges\\\":[{\\\"offset\\\":0,\\\"length\\\":8,\\\"style\\\":\\\"color-rgb(0,0,0)\\\"},{\\\"offset\\\":0,\\\"length\\\":8,\\\"style\\\":\\\"fontsize-medium\\\"},{\\\"offset\\\":0,\\\"length\\\":8,\\\"style\\\":\\\"fontfamily-sans-serif\\\"}],\\\"entityRanges\\\":[],\\\"data\\\":{}},{\\\"key\\\":\\\"5irev\\\",\\\"text\\\":\\\"asdfasdfasdfasdfasdfaand this is not\\\",\\\"type\\\":\\\"unstyled\\\",\\\"depth\\\":0,\\\"inlineStyleRanges\\\":[{\\\"offset\\\":0,\\\"length\\\":36,\\\"style\\\":\\\"BOLD\\\"}],\\\"entityRanges\\\":[],\\\"data\\\":{\\\"urgent\\\":false,\\\"quick\\\":false}},{\\\"key\\\":\\\"7ferf\\\",\\\"text\\\":\\\"pokkklasdf\\\",\\\"type\\\":\\\"unstyled\\\",\\\"depth\\\":0,\\\"inlineStyleRanges\\\":[{\\\"offset\\\":0,\\\"length\\\":10,\\\"style\\\":\\\"BOLD\\\"}],\\\"entityRanges\\\":[],\\\"data\\\":{}}],\\\"entityMap\\\":{}}\""], ["id", 1]]
+  ↳ app/controllers/todos_controller.rb:13
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/todos_controller.rb:13
+Completed 204 No Content in 131ms (ActiveRecord: 115.0ms)
+
+
+Started GET "/api/todos/1" for 127.0.0.1 at 2018-05-01 17:11:52 -0400
+Processing by TodosController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mTodo Load (22.9ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:5
+Completed 200 OK in 25ms (Views: 0.1ms | ActiveRecord: 22.9ms)
+
+
+Started GET "/api/todos/1" for 127.0.0.1 at 2018-05-01 17:11:55 -0400
+Processing by TodosController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mTodo Load (19.8ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:5
+Completed 200 OK in 22ms (Views: 0.1ms | ActiveRecord: 19.8ms)
+
+
+Started GET "/api/todos/1" for 127.0.0.1 at 2018-05-01 17:12:03 -0400
+Processing by TodosController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mTodo Load (0.9ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:5
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/todos/1" for 127.0.0.1 at 2018-05-01 17:13:55 -0400
+Processing by TodosController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mTodo Load (51.0ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:5
+Completed 200 OK in 53ms (Views: 0.1ms | ActiveRecord: 51.0ms)
+
+
+Started GET "/api/todos/1" for 127.0.0.1 at 2018-05-01 17:14:11 -0400
+Processing by TodosController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mTodo Load (1.6ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:5
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/api/todos/1" for 127.0.0.1 at 2018-05-01 17:14:39 -0400
+Processing by TodosController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mTodo Load (13.5ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:5
+Completed 200 OK in 15ms (Views: 0.2ms | ActiveRecord: 13.5ms)
+
+
+Started PATCH "/api/todos/1" for 127.0.0.1 at 2018-05-01 17:14:48 -0400
+Processing by TodosController#update as HTML
+  Parameters: {"editor_data"=>"{\"blocks\":[{\"key\":\"as6h4\",\"text\":\"fgThis is a strin\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":0,\"length\":17,\"style\":\"UNDERLINE\"},{\"offset\":0,\"length\":17,\"style\":\"STRIKETHROUGH\"}],\"entityRanges\":[],\"data\":{\"urgent\":true,\"quick\":true}},{\"key\":\"cme5g\",\"text\":\"this is still a test \",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":0,\"length\":21,\"style\":\"CODE\"}],\"entityRanges\":[],\"data\":{}},{\"key\":\"dj4sf\",\"text\":\"g of urgency \",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":0,\"length\":8,\"style\":\"UNDERLINE\"},{\"offset\":0,\"length\":13,\"style\":\"STRIKETHROUGH\"}],\"entityRanges\":[],\"data\":{}},{\"key\":\"e4cbd\",\"text\":\"hi younasdfa\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{\"urgent\":true,\"quick\":false}},{\"key\":\"cup06\",\"text\":\"g\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{}},{\"key\":\"6latn\",\"text\":\"and this\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":0,\"length\":8,\"style\":\"color-rgb(0,0,0)\"},{\"offset\":0,\"length\":8,\"style\":\"fontsize-medium\"},{\"offset\":0,\"length\":8,\"style\":\"fontfamily-sans-serif\"}],\"entityRanges\":[],\"data\":{}},{\"key\":\"5irev\",\"text\":\"asdfasdfasdfasdfasdfaand this is not\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":0,\"length\":36,\"style\":\"BOLD\"}],\"entityRanges\":[],\"data\":{\"urgent\":false,\"quick\":false}},{\"key\":\"7ferf\",\"text\":\"pokkklasdf\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":0,\"length\":10,\"style\":\"BOLD\"}],\"entityRanges\":[],\"data\":{}}],\"entityMap\":{}}", "id"=>"1", "todo"=>{"editor_data"=>"{\"blocks\":[{\"key\":\"as6h4\",\"text\":\"fgThis is a strin\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":0,\"length\":17,\"style\":\"UNDERLINE\"},{\"offset\":0,\"length\":17,\"style\":\"STRIKETHROUGH\"}],\"entityRanges\":[],\"data\":{\"urgent\":true,\"quick\":true}},{\"key\":\"cme5g\",\"text\":\"this is still a test \",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":0,\"length\":21,\"style\":\"CODE\"}],\"entityRanges\":[],\"data\":{}},{\"key\":\"dj4sf\",\"text\":\"g of urgency \",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":0,\"length\":8,\"style\":\"UNDERLINE\"},{\"offset\":0,\"length\":13,\"style\":\"STRIKETHROUGH\"}],\"entityRanges\":[],\"data\":{}},{\"key\":\"e4cbd\",\"text\":\"hi younasdfa\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{\"urgent\":true,\"quick\":false}},{\"key\":\"cup06\",\"text\":\"g\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{}},{\"key\":\"6latn\",\"text\":\"and this\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":0,\"length\":8,\"style\":\"color-rgb(0,0,0)\"},{\"offset\":0,\"length\":8,\"style\":\"fontsize-medium\"},{\"offset\":0,\"length\":8,\"style\":\"fontfamily-sans-serif\"}],\"entityRanges\":[],\"data\":{}},{\"key\":\"5irev\",\"text\":\"asdfasdfasdfasdfasdfaand this is not\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":0,\"length\":36,\"style\":\"BOLD\"}],\"entityRanges\":[],\"data\":{\"urgent\":false,\"quick\":false}},{\"key\":\"7ferf\",\"text\":\"pokkklasdf\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":0,\"length\":10,\"style\":\"BOLD\"}],\"entityRanges\":[],\"data\":{}}],\"entityMap\":{}}"}}
+Unpermitted parameter: :todo
+  [1m[36mTodo Load (0.6ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:10
+Unpermitted parameter: :todo
+Unpermitted parameter: :todo
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/todos_controller.rb:13
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:13
+  [1m[36mTodo Update (12.0ms)[0m  [1m[33mUPDATE "todos" SET "editor_data" = $1 WHERE "todos"."id" = $2[0m  [["editor_data", "\"{\\\"blocks\\\":[{\\\"key\\\":\\\"as6h4\\\",\\\"text\\\":\\\"fgThis is a strin\\\",\\\"type\\\":\\\"unstyled\\\",\\\"depth\\\":0,\\\"inlineStyleRanges\\\":[{\\\"offset\\\":0,\\\"length\\\":17,\\\"style\\\":\\\"UNDERLINE\\\"},{\\\"offset\\\":0,\\\"length\\\":17,\\\"style\\\":\\\"STRIKETHROUGH\\\"}],\\\"entityRanges\\\":[],\\\"data\\\":{\\\"urgent\\\":true,\\\"quick\\\":true}},{\\\"key\\\":\\\"cme5g\\\",\\\"text\\\":\\\"this is still a test \\\",\\\"type\\\":\\\"unstyled\\\",\\\"depth\\\":0,\\\"inlineStyleRanges\\\":[{\\\"offset\\\":0,\\\"length\\\":21,\\\"style\\\":\\\"CODE\\\"}],\\\"entityRanges\\\":[],\\\"data\\\":{}},{\\\"key\\\":\\\"dj4sf\\\",\\\"text\\\":\\\"g of urgency \\\",\\\"type\\\":\\\"unstyled\\\",\\\"depth\\\":0,\\\"inlineStyleRanges\\\":[{\\\"offset\\\":0,\\\"length\\\":8,\\\"style\\\":\\\"UNDERLINE\\\"},{\\\"offset\\\":0,\\\"length\\\":13,\\\"style\\\":\\\"STRIKETHROUGH\\\"}],\\\"entityRanges\\\":[],\\\"data\\\":{}},{\\\"key\\\":\\\"e4cbd\\\",\\\"text\\\":\\\"hi younasdfa\\\",\\\"type\\\":\\\"unstyled\\\",\\\"depth\\\":0,\\\"inlineStyleRanges\\\":[],\\\"entityRanges\\\":[],\\\"data\\\":{\\\"urgent\\\":true,\\\"quick\\\":false}},{\\\"key\\\":\\\"cup06\\\",\\\"text\\\":\\\"g\\\",\\\"type\\\":\\\"unstyled\\\",\\\"depth\\\":0,\\\"inlineStyleRanges\\\":[],\\\"entityRanges\\\":[],\\\"data\\\":{}},{\\\"key\\\":\\\"6latn\\\",\\\"text\\\":\\\"and this\\\",\\\"type\\\":\\\"unstyled\\\",\\\"depth\\\":0,\\\"inlineStyleRanges\\\":[{\\\"offset\\\":0,\\\"length\\\":8,\\\"style\\\":\\\"color-rgb(0,0,0)\\\"},{\\\"offset\\\":0,\\\"length\\\":8,\\\"style\\\":\\\"fontsize-medium\\\"},{\\\"offset\\\":0,\\\"length\\\":8,\\\"style\\\":\\\"fontfamily-sans-serif\\\"}],\\\"entityRanges\\\":[],\\\"data\\\":{}},{\\\"key\\\":\\\"5irev\\\",\\\"text\\\":\\\"asdfasdfasdfasdfasdfaand this is not\\\",\\\"type\\\":\\\"unstyled\\\",\\\"depth\\\":0,\\\"inlineStyleRanges\\\":[{\\\"offset\\\":0,\\\"length\\\":36,\\\"style\\\":\\\"BOLD\\\"}],\\\"entityRanges\\\":[],\\\"data\\\":{\\\"urgent\\\":false,\\\"quick\\\":false}},{\\\"key\\\":\\\"7ferf\\\",\\\"text\\\":\\\"pokkklasdf\\\",\\\"type\\\":\\\"unstyled\\\",\\\"depth\\\":0,\\\"inlineStyleRanges\\\":[{\\\"offset\\\":0,\\\"length\\\":10,\\\"style\\\":\\\"BOLD\\\"}],\\\"entityRanges\\\":[],\\\"data\\\":{}}],\\\"entityMap\\\":{}}\""], ["id", 1]]
+  ↳ app/controllers/todos_controller.rb:13
+  [1m[35m (3.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/todos_controller.rb:13
+Completed 204 No Content in 88ms (ActiveRecord: 17.6ms)
+
+
+Started GET "/api/todos/1" for 127.0.0.1 at 2018-05-01 17:15:09 -0400
+Processing by TodosController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mTodo Load (4.1ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:5
+Completed 200 OK in 6ms (Views: 0.1ms | ActiveRecord: 4.1ms)
+
+
+Started PATCH "/api/todos/1" for 127.0.0.1 at 2018-05-01 17:15:19 -0400
+Processing by TodosController#update as HTML
+  Parameters: {"editor_data"=>"{\"blocks\":[{\"key\":\"as6h4\",\"text\":\"fgThis is a strin\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":0,\"length\":17,\"style\":\"UNDERLINE\"},{\"offset\":0,\"length\":17,\"style\":\"STRIKETHROUGH\"}],\"entityRanges\":[],\"data\":{\"urgent\":true,\"quick\":true}},{\"key\":\"cme5g\",\"text\":\"this is still a test \",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":0,\"length\":21,\"style\":\"CODE\"}],\"entityRanges\":[],\"data\":{}},{\"key\":\"dj4sf\",\"text\":\"g of urgency \",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":0,\"length\":8,\"style\":\"UNDERLINE\"},{\"offset\":0,\"length\":13,\"style\":\"STRIKETHROUGH\"}],\"entityRanges\":[],\"data\":{}},{\"key\":\"e4cbd\",\"text\":\"hi younasdfa\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{\"urgent\":true,\"quick\":false}},{\"key\":\"cup06\",\"text\":\"g\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{}},{\"key\":\"6latn\",\"text\":\"and this\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":0,\"length\":8,\"style\":\"color-rgb(0,0,0)\"},{\"offset\":0,\"length\":8,\"style\":\"fontsize-medium\"},{\"offset\":0,\"length\":8,\"style\":\"fontfamily-sans-serif\"}],\"entityRanges\":[],\"data\":{}},{\"key\":\"5irev\",\"text\":\"asdfasdfasdfasdfasdfaand this is not\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":0,\"length\":36,\"style\":\"BOLD\"}],\"entityRanges\":[],\"data\":{\"urgent\":false,\"quick\":false}},{\"key\":\"7ferf\",\"text\":\"pokkklasdf\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":0,\"length\":10,\"style\":\"BOLD\"}],\"entityRanges\":[],\"data\":{}}],\"entityMap\":{}}", "id"=>"1", "todo"=>{"editor_data"=>"{\"blocks\":[{\"key\":\"as6h4\",\"text\":\"fgThis is a strin\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":0,\"length\":17,\"style\":\"UNDERLINE\"},{\"offset\":0,\"length\":17,\"style\":\"STRIKETHROUGH\"}],\"entityRanges\":[],\"data\":{\"urgent\":true,\"quick\":true}},{\"key\":\"cme5g\",\"text\":\"this is still a test \",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":0,\"length\":21,\"style\":\"CODE\"}],\"entityRanges\":[],\"data\":{}},{\"key\":\"dj4sf\",\"text\":\"g of urgency \",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":0,\"length\":8,\"style\":\"UNDERLINE\"},{\"offset\":0,\"length\":13,\"style\":\"STRIKETHROUGH\"}],\"entityRanges\":[],\"data\":{}},{\"key\":\"e4cbd\",\"text\":\"hi younasdfa\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{\"urgent\":true,\"quick\":false}},{\"key\":\"cup06\",\"text\":\"g\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{}},{\"key\":\"6latn\",\"text\":\"and this\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":0,\"length\":8,\"style\":\"color-rgb(0,0,0)\"},{\"offset\":0,\"length\":8,\"style\":\"fontsize-medium\"},{\"offset\":0,\"length\":8,\"style\":\"fontfamily-sans-serif\"}],\"entityRanges\":[],\"data\":{}},{\"key\":\"5irev\",\"text\":\"asdfasdfasdfasdfasdfaand this is not\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":0,\"length\":36,\"style\":\"BOLD\"}],\"entityRanges\":[],\"data\":{\"urgent\":false,\"quick\":false}},{\"key\":\"7ferf\",\"text\":\"pokkklasdf\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":0,\"length\":10,\"style\":\"BOLD\"}],\"entityRanges\":[],\"data\":{}}],\"entityMap\":{}}"}}
+Unpermitted parameter: :todo
+  [1m[36mTodo Load (6.5ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:10
+Unpermitted parameter: :todo
+Unpermitted parameter: :todo
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/todos_controller.rb:13
+  [1m[36mUser Load (2.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:13
+  [1m[35m (4.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/todos_controller.rb:13
+Completed 204 No Content in 57ms (ActiveRecord: 14.1ms)
+
+
+Started GET "/api/todos/1" for 127.0.0.1 at 2018-05-01 17:16:29 -0400
+Processing by TodosController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mTodo Load (16.3ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:5
+Completed 200 OK in 18ms (Views: 0.3ms | ActiveRecord: 16.3ms)
+
+
+Started GET "/api/todos/1" for 127.0.0.1 at 2018-05-01 17:16:40 -0400
+Processing by TodosController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mTodo Load (4.0ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:5
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 4.0ms)
+
+
+Started PATCH "/api/todos/1" for 127.0.0.1 at 2018-05-01 17:16:45 -0400
+Processing by TodosController#update as HTML
+  Parameters: {"editor_data"=>"{\"blocks\":[{\"key\":\"as6h4\",\"text\":\"fgThis is a strin\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":0,\"length\":17,\"style\":\"UNDERLINE\"},{\"offset\":0,\"length\":17,\"style\":\"STRIKETHROUGH\"}],\"entityRanges\":[],\"data\":{\"urgent\":true,\"quick\":true}},{\"key\":\"cme5g\",\"text\":\"this is still a testasdf \",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":0,\"length\":25,\"style\":\"CODE\"}],\"entityRanges\":[],\"data\":{}},{\"key\":\"dj4sf\",\"text\":\"g of urgency \",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":0,\"length\":8,\"style\":\"UNDERLINE\"},{\"offset\":0,\"length\":13,\"style\":\"STRIKETHROUGH\"}],\"entityRanges\":[],\"data\":{}},{\"key\":\"e4cbd\",\"text\":\"hi younasdfa\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{\"urgent\":true,\"quick\":false}},{\"key\":\"cup06\",\"text\":\"g\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{}},{\"key\":\"6latn\",\"text\":\"and this\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":0,\"length\":8,\"style\":\"color-rgb(0,0,0)\"},{\"offset\":0,\"length\":8,\"style\":\"fontsize-medium\"},{\"offset\":0,\"length\":8,\"style\":\"fontfamily-sans-serif\"}],\"entityRanges\":[],\"data\":{}},{\"key\":\"5irev\",\"text\":\"asdfasdfasdfasdfasdfaand this is not\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":0,\"length\":36,\"style\":\"BOLD\"}],\"entityRanges\":[],\"data\":{\"urgent\":false,\"quick\":false}},{\"key\":\"7ferf\",\"text\":\"pokkklasdf\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":0,\"length\":10,\"style\":\"BOLD\"}],\"entityRanges\":[],\"data\":{}}],\"entityMap\":{}}", "id"=>"1", "todo"=>{"editor_data"=>"{\"blocks\":[{\"key\":\"as6h4\",\"text\":\"fgThis is a strin\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":0,\"length\":17,\"style\":\"UNDERLINE\"},{\"offset\":0,\"length\":17,\"style\":\"STRIKETHROUGH\"}],\"entityRanges\":[],\"data\":{\"urgent\":true,\"quick\":true}},{\"key\":\"cme5g\",\"text\":\"this is still a testasdf \",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":0,\"length\":25,\"style\":\"CODE\"}],\"entityRanges\":[],\"data\":{}},{\"key\":\"dj4sf\",\"text\":\"g of urgency \",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":0,\"length\":8,\"style\":\"UNDERLINE\"},{\"offset\":0,\"length\":13,\"style\":\"STRIKETHROUGH\"}],\"entityRanges\":[],\"data\":{}},{\"key\":\"e4cbd\",\"text\":\"hi younasdfa\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{\"urgent\":true,\"quick\":false}},{\"key\":\"cup06\",\"text\":\"g\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{}},{\"key\":\"6latn\",\"text\":\"and this\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":0,\"length\":8,\"style\":\"color-rgb(0,0,0)\"},{\"offset\":0,\"length\":8,\"style\":\"fontsize-medium\"},{\"offset\":0,\"length\":8,\"style\":\"fontfamily-sans-serif\"}],\"entityRanges\":[],\"data\":{}},{\"key\":\"5irev\",\"text\":\"asdfasdfasdfasdfasdfaand this is not\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":0,\"length\":36,\"style\":\"BOLD\"}],\"entityRanges\":[],\"data\":{\"urgent\":false,\"quick\":false}},{\"key\":\"7ferf\",\"text\":\"pokkklasdf\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":0,\"length\":10,\"style\":\"BOLD\"}],\"entityRanges\":[],\"data\":{}}],\"entityMap\":{}}"}}
+Unpermitted parameter: :todo
+  [1m[36mTodo Load (3.0ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:10
+Unpermitted parameter: :todo
+Unpermitted parameter: :todo
+  [1m[35m (44.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/todos_controller.rb:13
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:13
+  [1m[36mTodo Update (2.3ms)[0m  [1m[33mUPDATE "todos" SET "editor_data" = $1 WHERE "todos"."id" = $2[0m  [["editor_data", "\"{\\\"blocks\\\":[{\\\"key\\\":\\\"as6h4\\\",\\\"text\\\":\\\"fgThis is a strin\\\",\\\"type\\\":\\\"unstyled\\\",\\\"depth\\\":0,\\\"inlineStyleRanges\\\":[{\\\"offset\\\":0,\\\"length\\\":17,\\\"style\\\":\\\"UNDERLINE\\\"},{\\\"offset\\\":0,\\\"length\\\":17,\\\"style\\\":\\\"STRIKETHROUGH\\\"}],\\\"entityRanges\\\":[],\\\"data\\\":{\\\"urgent\\\":true,\\\"quick\\\":true}},{\\\"key\\\":\\\"cme5g\\\",\\\"text\\\":\\\"this is still a testasdf \\\",\\\"type\\\":\\\"unstyled\\\",\\\"depth\\\":0,\\\"inlineStyleRanges\\\":[{\\\"offset\\\":0,\\\"length\\\":25,\\\"style\\\":\\\"CODE\\\"}],\\\"entityRanges\\\":[],\\\"data\\\":{}},{\\\"key\\\":\\\"dj4sf\\\",\\\"text\\\":\\\"g of urgency \\\",\\\"type\\\":\\\"unstyled\\\",\\\"depth\\\":0,\\\"inlineStyleRanges\\\":[{\\\"offset\\\":0,\\\"length\\\":8,\\\"style\\\":\\\"UNDERLINE\\\"},{\\\"offset\\\":0,\\\"length\\\":13,\\\"style\\\":\\\"STRIKETHROUGH\\\"}],\\\"entityRanges\\\":[],\\\"data\\\":{}},{\\\"key\\\":\\\"e4cbd\\\",\\\"text\\\":\\\"hi younasdfa\\\",\\\"type\\\":\\\"unstyled\\\",\\\"depth\\\":0,\\\"inlineStyleRanges\\\":[],\\\"entityRanges\\\":[],\\\"data\\\":{\\\"urgent\\\":true,\\\"quick\\\":false}},{\\\"key\\\":\\\"cup06\\\",\\\"text\\\":\\\"g\\\",\\\"type\\\":\\\"unstyled\\\",\\\"depth\\\":0,\\\"inlineStyleRanges\\\":[],\\\"entityRanges\\\":[],\\\"data\\\":{}},{\\\"key\\\":\\\"6latn\\\",\\\"text\\\":\\\"and this\\\",\\\"type\\\":\\\"unstyled\\\",\\\"depth\\\":0,\\\"inlineStyleRanges\\\":[{\\\"offset\\\":0,\\\"length\\\":8,\\\"style\\\":\\\"color-rgb(0,0,0)\\\"},{\\\"offset\\\":0,\\\"length\\\":8,\\\"style\\\":\\\"fontsize-medium\\\"},{\\\"offset\\\":0,\\\"length\\\":8,\\\"style\\\":\\\"fontfamily-sans-serif\\\"}],\\\"entityRanges\\\":[],\\\"data\\\":{}},{\\\"key\\\":\\\"5irev\\\",\\\"text\\\":\\\"asdfasdfasdfasdfasdfaand this is not\\\",\\\"type\\\":\\\"unstyled\\\",\\\"depth\\\":0,\\\"inlineStyleRanges\\\":[{\\\"offset\\\":0,\\\"length\\\":36,\\\"style\\\":\\\"BOLD\\\"}],\\\"entityRanges\\\":[],\\\"data\\\":{\\\"urgent\\\":false,\\\"quick\\\":false}},{\\\"key\\\":\\\"7ferf\\\",\\\"text\\\":\\\"pokkklasdf\\\",\\\"type\\\":\\\"unstyled\\\",\\\"depth\\\":0,\\\"inlineStyleRanges\\\":[{\\\"offset\\\":0,\\\"length\\\":10,\\\"style\\\":\\\"BOLD\\\"}],\\\"entityRanges\\\":[],\\\"data\\\":{}}],\\\"entityMap\\\":{}}\""], ["id", 1]]
+  ↳ app/controllers/todos_controller.rb:13
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/todos_controller.rb:13
+Completed 204 No Content in 102ms (ActiveRecord: 50.9ms)
+
+
+Started PATCH "/api/todos/1" for 127.0.0.1 at 2018-05-01 17:16:50 -0400
+Processing by TodosController#update as HTML
+  Parameters: {"editor_data"=>"{\"blocks\":[{\"key\":\"as6h4\",\"text\":\"fgThis is a strin\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":0,\"length\":17,\"style\":\"UNDERLINE\"},{\"offset\":0,\"length\":17,\"style\":\"STRIKETHROUGH\"}],\"entityRanges\":[],\"data\":{\"urgent\":true,\"quick\":true}},{\"key\":\"cme5g\",\"text\":\"this is still a testasdf \",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":0,\"length\":25,\"style\":\"CODE\"}],\"entityRanges\":[],\"data\":{}},{\"key\":\"dj4sf\",\"text\":\"g of urgency \",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":0,\"length\":8,\"style\":\"UNDERLINE\"},{\"offset\":0,\"length\":13,\"style\":\"STRIKETHROUGH\"}],\"entityRanges\":[],\"data\":{}},{\"key\":\"e4cbd\",\"text\":\"hi younasdfa\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{\"urgent\":true,\"quick\":false}},{\"key\":\"cup06\",\"text\":\"g\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{}},{\"key\":\"6latn\",\"text\":\"and this\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":0,\"length\":8,\"style\":\"color-rgb(0,0,0)\"},{\"offset\":0,\"length\":8,\"style\":\"fontsize-medium\"},{\"offset\":0,\"length\":8,\"style\":\"fontfamily-sans-serif\"}],\"entityRanges\":[],\"data\":{}},{\"key\":\"5irev\",\"text\":\"asdfasdfasdfasdfasdfaand this is not\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":0,\"length\":36,\"style\":\"BOLD\"}],\"entityRanges\":[],\"data\":{\"urgent\":false,\"quick\":false}},{\"key\":\"7ferf\",\"text\":\"pokkklasdf\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":0,\"length\":10,\"style\":\"BOLD\"}],\"entityRanges\":[],\"data\":{}}],\"entityMap\":{}}", "id"=>"1", "todo"=>{"editor_data"=>"{\"blocks\":[{\"key\":\"as6h4\",\"text\":\"fgThis is a strin\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":0,\"length\":17,\"style\":\"UNDERLINE\"},{\"offset\":0,\"length\":17,\"style\":\"STRIKETHROUGH\"}],\"entityRanges\":[],\"data\":{\"urgent\":true,\"quick\":true}},{\"key\":\"cme5g\",\"text\":\"this is still a testasdf \",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":0,\"length\":25,\"style\":\"CODE\"}],\"entityRanges\":[],\"data\":{}},{\"key\":\"dj4sf\",\"text\":\"g of urgency \",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":0,\"length\":8,\"style\":\"UNDERLINE\"},{\"offset\":0,\"length\":13,\"style\":\"STRIKETHROUGH\"}],\"entityRanges\":[],\"data\":{}},{\"key\":\"e4cbd\",\"text\":\"hi younasdfa\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{\"urgent\":true,\"quick\":false}},{\"key\":\"cup06\",\"text\":\"g\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{}},{\"key\":\"6latn\",\"text\":\"and this\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":0,\"length\":8,\"style\":\"color-rgb(0,0,0)\"},{\"offset\":0,\"length\":8,\"style\":\"fontsize-medium\"},{\"offset\":0,\"length\":8,\"style\":\"fontfamily-sans-serif\"}],\"entityRanges\":[],\"data\":{}},{\"key\":\"5irev\",\"text\":\"asdfasdfasdfasdfasdfaand this is not\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":0,\"length\":36,\"style\":\"BOLD\"}],\"entityRanges\":[],\"data\":{\"urgent\":false,\"quick\":false}},{\"key\":\"7ferf\",\"text\":\"pokkklasdf\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":0,\"length\":10,\"style\":\"BOLD\"}],\"entityRanges\":[],\"data\":{}}],\"entityMap\":{}}"}}
+Unpermitted parameter: :todo
+  [1m[36mTodo Load (0.3ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:10
+Unpermitted parameter: :todo
+Unpermitted parameter: :todo
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/todos_controller.rb:13
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:13
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/todos_controller.rb:13
+Completed 204 No Content in 11ms (ActiveRecord: 2.9ms)
+
+
+Started GET "/api/todos/1" for 127.0.0.1 at 2018-05-01 17:18:56 -0400
+Processing by TodosController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mTodo Load (16.0ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:5
+Completed 200 OK in 18ms (Views: 0.2ms | ActiveRecord: 16.0ms)
+
+
+Started GET "/api/todos/1" for 127.0.0.1 at 2018-05-01 17:20:26 -0400
+Processing by TodosController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mTodo Load (0.4ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:5
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/todos/1" for 127.0.0.1 at 2018-05-01 17:20:34 -0400
+Processing by TodosController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mTodo Load (0.3ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:5
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/todos/1" for 127.0.0.1 at 2018-05-01 17:20:45 -0400
+Processing by TodosController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mTodo Load (6.0ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:5
+Completed 200 OK in 8ms (Views: 0.1ms | ActiveRecord: 6.0ms)
+
+
+Started PATCH "/api/todos/1" for 127.0.0.1 at 2018-05-01 17:20:59 -0400
+Processing by TodosController#update as HTML
+  Parameters: {"editor_data"=>"{\"blocks\":[{\"key\":\"as6h4\",\"text\":\"fgThis is a strin\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":0,\"length\":17,\"style\":\"UNDERLINE\"},{\"offset\":0,\"length\":17,\"style\":\"STRIKETHROUGH\"}],\"entityRanges\":[],\"data\":{\"urgent\":true,\"quick\":true}},{\"key\":\"4i27l\",\"text\":\"testing again🤓\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":0,\"length\":14,\"style\":\"UNDERLINE\"},{\"offset\":0,\"length\":14,\"style\":\"STRIKETHROUGH\"}],\"entityRanges\":[],\"data\":{}},{\"key\":\"cme5g\",\"text\":\"this is still a testasdf \",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":0,\"length\":25,\"style\":\"CODE\"}],\"entityRanges\":[],\"data\":{}},{\"key\":\"dj4sf\",\"text\":\"g of urgency \",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":0,\"length\":8,\"style\":\"UNDERLINE\"},{\"offset\":0,\"length\":13,\"style\":\"STRIKETHROUGH\"}],\"entityRanges\":[],\"data\":{}},{\"key\":\"e4cbd\",\"text\":\"asdfhi younasdfa\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{\"urgent\":true,\"quick\":false}},{\"key\":\"cup06\",\"text\":\"g\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{}},{\"key\":\"6latn\",\"text\":\"and this\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":0,\"length\":8,\"style\":\"color-rgb(0,0,0)\"},{\"offset\":0,\"length\":8,\"style\":\"fontsize-medium\"},{\"offset\":0,\"length\":8,\"style\":\"fontfamily-sans-serif\"}],\"entityRanges\":[],\"data\":{}},{\"key\":\"5irev\",\"text\":\"asdfasdfasdfasdfasdfaand this is not\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":0,\"length\":36,\"style\":\"BOLD\"}],\"entityRanges\":[],\"data\":{\"urgent\":false,\"quick\":false}},{\"key\":\"7ferf\",\"text\":\"pokkklasdf\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":0,\"length\":10,\"style\":\"BOLD\"}],\"entityRanges\":[],\"data\":{}}],\"entityMap\":{}}", "id"=>"1", "todo"=>{"editor_data"=>"{\"blocks\":[{\"key\":\"as6h4\",\"text\":\"fgThis is a strin\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":0,\"length\":17,\"style\":\"UNDERLINE\"},{\"offset\":0,\"length\":17,\"style\":\"STRIKETHROUGH\"}],\"entityRanges\":[],\"data\":{\"urgent\":true,\"quick\":true}},{\"key\":\"4i27l\",\"text\":\"testing again🤓\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":0,\"length\":14,\"style\":\"UNDERLINE\"},{\"offset\":0,\"length\":14,\"style\":\"STRIKETHROUGH\"}],\"entityRanges\":[],\"data\":{}},{\"key\":\"cme5g\",\"text\":\"this is still a testasdf \",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":0,\"length\":25,\"style\":\"CODE\"}],\"entityRanges\":[],\"data\":{}},{\"key\":\"dj4sf\",\"text\":\"g of urgency \",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":0,\"length\":8,\"style\":\"UNDERLINE\"},{\"offset\":0,\"length\":13,\"style\":\"STRIKETHROUGH\"}],\"entityRanges\":[],\"data\":{}},{\"key\":\"e4cbd\",\"text\":\"asdfhi younasdfa\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{\"urgent\":true,\"quick\":false}},{\"key\":\"cup06\",\"text\":\"g\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{}},{\"key\":\"6latn\",\"text\":\"and this\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":0,\"length\":8,\"style\":\"color-rgb(0,0,0)\"},{\"offset\":0,\"length\":8,\"style\":\"fontsize-medium\"},{\"offset\":0,\"length\":8,\"style\":\"fontfamily-sans-serif\"}],\"entityRanges\":[],\"data\":{}},{\"key\":\"5irev\",\"text\":\"asdfasdfasdfasdfasdfaand this is not\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":0,\"length\":36,\"style\":\"BOLD\"}],\"entityRanges\":[],\"data\":{\"urgent\":false,\"quick\":false}},{\"key\":\"7ferf\",\"text\":\"pokkklasdf\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":0,\"length\":10,\"style\":\"BOLD\"}],\"entityRanges\":[],\"data\":{}}],\"entityMap\":{}}"}}
+Unpermitted parameter: :todo
+  [1m[36mTodo Load (7.2ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:10
+Unpermitted parameter: :todo
+Unpermitted parameter: :todo
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/todos_controller.rb:13
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:13
+  [1m[36mTodo Update (25.0ms)[0m  [1m[33mUPDATE "todos" SET "editor_data" = $1 WHERE "todos"."id" = $2[0m  [["editor_data", "\"{\\\"blocks\\\":[{\\\"key\\\":\\\"as6h4\\\",\\\"text\\\":\\\"fgThis is a strin\\\",\\\"type\\\":\\\"unstyled\\\",\\\"depth\\\":0,\\\"inlineStyleRanges\\\":[{\\\"offset\\\":0,\\\"length\\\":17,\\\"style\\\":\\\"UNDERLINE\\\"},{\\\"offset\\\":0,\\\"length\\\":17,\\\"style\\\":\\\"STRIKETHROUGH\\\"}],\\\"entityRanges\\\":[],\\\"data\\\":{\\\"urgent\\\":true,\\\"quick\\\":true}},{\\\"key\\\":\\\"4i27l\\\",\\\"text\\\":\\\"testing again🤓\\\",\\\"type\\\":\\\"unstyled\\\",\\\"depth\\\":0,\\\"inlineStyleRanges\\\":[{\\\"offset\\\":0,\\\"length\\\":14,\\\"style\\\":\\\"UNDERLINE\\\"},{\\\"offset\\\":0,\\\"length\\\":14,\\\"style\\\":\\\"STRIKETHROUGH\\\"}],\\\"entityRanges\\\":[],\\\"data\\\":{}},{\\\"key\\\":\\\"cme5g\\\",\\\"text\\\":\\\"this is still a testasdf \\\",\\\"type\\\":\\\"unstyled\\\",\\\"depth\\\":0,\\\"inlineStyleRanges\\\":[{\\\"offset\\\":0,\\\"length\\\":25,\\\"style\\\":\\\"CODE\\\"}],\\\"entityRanges\\\":[],\\\"data\\\":{}},{\\\"key\\\":\\\"dj4sf\\\",\\\"text\\\":\\\"g of urgency \\\",\\\"type\\\":\\\"unstyled\\\",\\\"depth\\\":0,\\\"inlineStyleRanges\\\":[{\\\"offset\\\":0,\\\"length\\\":8,\\\"style\\\":\\\"UNDERLINE\\\"},{\\\"offset\\\":0,\\\"length\\\":13,\\\"style\\\":\\\"STRIKETHROUGH\\\"}],\\\"entityRanges\\\":[],\\\"data\\\":{}},{\\\"key\\\":\\\"e4cbd\\\",\\\"text\\\":\\\"asdfhi younasdfa\\\",\\\"type\\\":\\\"unstyled\\\",\\\"depth\\\":0,\\\"inlineStyleRanges\\\":[],\\\"entityRanges\\\":[],\\\"data\\\":{\\\"urgent\\\":true,\\\"quick\\\":false}},{\\\"key\\\":\\\"cup06\\\",\\\"text\\\":\\\"g\\\",\\\"type\\\":\\\"unstyled\\\",\\\"depth\\\":0,\\\"inlineStyleRanges\\\":[],\\\"entityRanges\\\":[],\\\"data\\\":{}},{\\\"key\\\":\\\"6latn\\\",\\\"text\\\":\\\"and this\\\",\\\"type\\\":\\\"unstyled\\\",\\\"depth\\\":0,\\\"inlineStyleRanges\\\":[{\\\"offset\\\":0,\\\"length\\\":8,\\\"style\\\":\\\"color-rgb(0,0,0)\\\"},{\\\"offset\\\":0,\\\"length\\\":8,\\\"style\\\":\\\"fontsize-medium\\\"},{\\\"offset\\\":0,\\\"length\\\":8,\\\"style\\\":\\\"fontfamily-sans-serif\\\"}],\\\"entityRanges\\\":[],\\\"data\\\":{}},{\\\"key\\\":\\\"5irev\\\",\\\"text\\\":\\\"asdfasdfasdfasdfasdfaand this is not\\\",\\\"type\\\":\\\"unstyled\\\",\\\"depth\\\":0,\\\"inlineStyleRanges\\\":[{\\\"offset\\\":0,\\\"length\\\":36,\\\"style\\\":\\\"BOLD\\\"}],\\\"entityRanges\\\":[],\\\"data\\\":{\\\"urgent\\\":false,\\\"quick\\\":false}},{\\\"key\\\":\\\"7ferf\\\",\\\"text\\\":\\\"pokkklasdf\\\",\\\"type\\\":\\\"unstyled\\\",\\\"depth\\\":0,\\\"inlineStyleRanges\\\":[{\\\"offset\\\":0,\\\"length\\\":10,\\\"style\\\":\\\"BOLD\\\"}],\\\"entityRanges\\\":[],\\\"data\\\":{}}],\\\"entityMap\\\":{}}\""], ["id", 1]]
+  ↳ app/controllers/todos_controller.rb:13
+  [1m[35m (5.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/todos_controller.rb:13
+Completed 204 No Content in 141ms (ActiveRecord: 40.0ms)
+
+
+Started PATCH "/api/todos/1" for 127.0.0.1 at 2018-05-01 17:21:06 -0400
+Processing by TodosController#update as HTML
+  Parameters: {"editor_data"=>"{\"blocks\":[{\"key\":\"as6h4\",\"text\":\"fgThis is a strin\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":0,\"length\":17,\"style\":\"UNDERLINE\"},{\"offset\":0,\"length\":17,\"style\":\"STRIKETHROUGH\"}],\"entityRanges\":[],\"data\":{\"urgent\":true,\"quick\":true}},{\"key\":\"4i27l\",\"text\":\"testing again🤓\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":0,\"length\":14,\"style\":\"UNDERLINE\"},{\"offset\":0,\"length\":14,\"style\":\"STRIKETHROUGH\"}],\"entityRanges\":[],\"data\":{}},{\"key\":\"cme5g\",\"text\":\"this is still a testasdf \",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":0,\"length\":25,\"style\":\"CODE\"}],\"entityRanges\":[],\"data\":{}},{\"key\":\"dj4sf\",\"text\":\"g of urgency \",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":0,\"length\":8,\"style\":\"UNDERLINE\"},{\"offset\":0,\"length\":13,\"style\":\"STRIKETHROUGH\"}],\"entityRanges\":[],\"data\":{}},{\"key\":\"e4cbd\",\"text\":\"asdfhi younasdfa\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{\"urgent\":true,\"quick\":false}},{\"key\":\"cup06\",\"text\":\"g\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{}},{\"key\":\"6latn\",\"text\":\"and this\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":0,\"length\":8,\"style\":\"color-rgb(0,0,0)\"},{\"offset\":0,\"length\":8,\"style\":\"fontsize-medium\"},{\"offset\":0,\"length\":8,\"style\":\"fontfamily-sans-serif\"}],\"entityRanges\":[],\"data\":{}},{\"key\":\"5irev\",\"text\":\"asdfasdfasdfasdfasdfaand this is not\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":0,\"length\":36,\"style\":\"BOLD\"}],\"entityRanges\":[],\"data\":{\"urgent\":false,\"quick\":false}},{\"key\":\"7ferf\",\"text\":\"pokkklasdf\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":0,\"length\":10,\"style\":\"BOLD\"}],\"entityRanges\":[],\"data\":{}}],\"entityMap\":{}}", "id"=>"1", "todo"=>{"editor_data"=>"{\"blocks\":[{\"key\":\"as6h4\",\"text\":\"fgThis is a strin\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":0,\"length\":17,\"style\":\"UNDERLINE\"},{\"offset\":0,\"length\":17,\"style\":\"STRIKETHROUGH\"}],\"entityRanges\":[],\"data\":{\"urgent\":true,\"quick\":true}},{\"key\":\"4i27l\",\"text\":\"testing again🤓\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":0,\"length\":14,\"style\":\"UNDERLINE\"},{\"offset\":0,\"length\":14,\"style\":\"STRIKETHROUGH\"}],\"entityRanges\":[],\"data\":{}},{\"key\":\"cme5g\",\"text\":\"this is still a testasdf \",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":0,\"length\":25,\"style\":\"CODE\"}],\"entityRanges\":[],\"data\":{}},{\"key\":\"dj4sf\",\"text\":\"g of urgency \",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":0,\"length\":8,\"style\":\"UNDERLINE\"},{\"offset\":0,\"length\":13,\"style\":\"STRIKETHROUGH\"}],\"entityRanges\":[],\"data\":{}},{\"key\":\"e4cbd\",\"text\":\"asdfhi younasdfa\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{\"urgent\":true,\"quick\":false}},{\"key\":\"cup06\",\"text\":\"g\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{}},{\"key\":\"6latn\",\"text\":\"and this\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":0,\"length\":8,\"style\":\"color-rgb(0,0,0)\"},{\"offset\":0,\"length\":8,\"style\":\"fontsize-medium\"},{\"offset\":0,\"length\":8,\"style\":\"fontfamily-sans-serif\"}],\"entityRanges\":[],\"data\":{}},{\"key\":\"5irev\",\"text\":\"asdfasdfasdfasdfasdfaand this is not\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":0,\"length\":36,\"style\":\"BOLD\"}],\"entityRanges\":[],\"data\":{\"urgent\":false,\"quick\":false}},{\"key\":\"7ferf\",\"text\":\"pokkklasdf\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":0,\"length\":10,\"style\":\"BOLD\"}],\"entityRanges\":[],\"data\":{}}],\"entityMap\":{}}"}}
+Unpermitted parameter: :todo
+  [1m[36mTodo Load (8.9ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:10
+Unpermitted parameter: :todo
+Unpermitted parameter: :todo
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/todos_controller.rb:13
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:13
+  [1m[35m (26.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/todos_controller.rb:13
+Completed 204 No Content in 46ms (ActiveRecord: 36.5ms)
+
+
+Started GET "/api/todos/1" for 127.0.0.1 at 2018-05-01 17:21:08 -0400
+Processing by TodosController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mTodo Load (12.1ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:5
+Completed 200 OK in 14ms (Views: 0.2ms | ActiveRecord: 12.1ms)
+
+

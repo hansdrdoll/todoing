@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Switch, Route, Link } from 'react-router-dom';
-import DraftEditor from './DraftEditor';
+import { EditorState, convertToRaw, convertFromRaw } from 'draft-js';
+import { Editor } from 'react-draft-wysiwyg';
+import { getTodo, updateTodo } from './api';
+import debounce from 'lodash/debounce';
+import DraftEditor from "./DraftEditor"
 import PriorityMatrix from './PriorityMatrix';
 import './App.css';
 
@@ -8,51 +12,96 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      editorData: {},
+      editorState: EditorState.createEmpty(),
+      dataLoaded: false,
     };
     this.handleRawEditorState = this.handleRawEditorState.bind(this);
+    this.handleEditorStateChange = this.handleEditorStateChange.bind(this);
   }
 
+  componentDidMount() {
+    getTodo(1).then((rawData) => {
+      if (rawData) {
+        this.setState({
+          editorState: EditorState.createWithContent(convertFromRaw(rawData)),
+          dataLoaded: true,
+        });
+        // also place the data in state for the priority matrix
+        // this.props.shareEditor(rawData)
+      } else {
+        console.log('i got nothin');
+        this.setState({
+          editorState: EditorState.createEmpty(),
+          dataLoaded: false,
+        });
+      }
+    });
+  }
+
+  handleEditorStateChange(editorState) {
+    const currentContent = editorState.getCurrentContent();
+    const rawState = convertToRaw(currentContent);
+    this.updateApiEditorData(rawState);
+    this.setState({
+      editorState,
+    });
+  }
+
+  updateApiEditorData = debounce((rawState) => {
+    const userId = 1;
+    updateTodo(userId, rawState)
+    console.table(rawState.blocks)
+  }, 2000)
+
+
+  // maybe unnecessary
   handleRawEditorState(editorData) {
-    // console.log("apo", editorData.blocks[0].text)
     this.setState({
       editorData,
-    })
+    });
   }
 
-
-
   render() {
+    if (this.state.dataLoaded) {
     return (
       <BrowserRouter>
-      <div className="App">
-        <div className="header">
-          <h1>header</h1>
-          <Link to='/'>Editor</Link>
-          {' '}
-          <Link to='priority'>Priority</Link>
-        </div>
-        <div className="editor">
+        <div className="App">
+          <div className="header">
+            <h1>header</h1>
+            <Link to="/">Editor</Link> <Link to="priority">Priority</Link>
+          </div>
+          <div className="editor">
             <Switch>
               <Route
                 exact
                 path="/"
                 render={props => (
-                  <DraftEditor {...props} shareEditor={this.handleRawEditorState} />
+                  <DraftEditor
+                    {...props}
+                    editorState={this.state.editorState}
+                    onChange={this.handleEditorStateChange}
+                    // shareEditor={this.handleRawEditorState}
+                  />
                 )}
               />
-              <Route
+              {/* <Route
                 exact
                 path="/priority"
                 render={props => (
                   <PriorityMatrix {...props} editorData={this.state.editorData} />
                 )}
-              />
+              /> */}
             </Switch>
+          </div>
+          <div className="matrix">
+            {/* <PriorityMatrix editorData={this.state.editorData} /> */}
+          </div>
         </div>
-      </div>
-    </BrowserRouter>
-    );
+      </BrowserRouter>
+    )
+  } else {
+    return <div>Loading</div>
+  }
   }
 }
 
