@@ -20,7 +20,7 @@ class UrgentQuick extends Component {
 
   render() {
     return (
-      <div onClick={this.setUrgentQuick}>_Urgent-Quick_</div>
+      <div onClick={this.setUrgentQuick}>_U-Q_</div>
     );
   }
 }
@@ -43,30 +43,7 @@ class UrgentSlow extends Component {
 
   render() {
     return (
-      <div onClick={this.setUrgentSlow}>|_Urgent-NotQuick_</div>
-    );
-  }
-}
-
-class NotUrgentSlow extends Component {
-  static propTypes = {
-    onChange: PropTypes.func,
-    editorState: PropTypes.object,
-  };
-
-  setNotUrgentSlow: Function = (): void => {
-    const { editorState, onChange } = this.props;
-    let contentState = Modifier.setBlockData(
-      editorState.getCurrentContent(),
-      editorState.getSelection(),
-      { "urgent": false, "quick": false },
-    )
-    onChange(EditorState.push(editorState, contentState, 'set-priority'));
-  };
-
-  render() {
-    return (
-      <div onClick={this.setNotUrgentSlow}>|_NotUrgent-NotQuick_</div>
+      <div onClick={this.setUrgentSlow}>|_U-nQ_</div>
     );
   }
 }
@@ -89,9 +66,32 @@ class NotUrgentQuick extends Component {
 
   render() {
     return (
-      <div onClick={this.setNotUrgentQuick}>|_NotUrgent-Quick_</div>
+      <div onClick={this.setNotUrgentQuick}>|_nU-Q_</div>
     );
   }
 }
 
-export { UrgentSlow, UrgentQuick, NotUrgentSlow, NotUrgentQuick }
+class NotUrgentSlow extends Component {
+  static propTypes = {
+    onChange: PropTypes.func,
+    editorState: PropTypes.object,
+  };
+
+  setNotUrgentSlow: Function = (): void => {
+    const { editorState, onChange } = this.props;
+    let contentState = Modifier.setBlockData(
+      editorState.getCurrentContent(),
+      editorState.getSelection(),
+      { "urgent": false, "quick": false },
+    )
+    onChange(EditorState.push(editorState, contentState, 'set-priority'));
+  };
+
+  render() {
+    return (
+      <div onClick={this.setNotUrgentSlow}>|_nU-nQ_</div>
+    );
+  }
+}
+
+export { UrgentQuick, UrgentSlow, NotUrgentQuick, NotUrgentSlow }

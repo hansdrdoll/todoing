@@ -71,6 +71,7 @@ class App extends Component {
             <h1>header</h1>
             {/* <Link to="/">Editor</Link> <Link to="priority">Priority</Link> */}
           </div>
+          <div className="main">
           <div className="editor">
             <Switch>
               <Route
@@ -96,6 +97,7 @@ class App extends Component {
           <div className="matrix">
             <PriorityMatrix editorData={this.state.rawState} />
           </div>
+        </div>
         </div>
       </BrowserRouter>
     )

@@ -18,8 +18,8 @@ function DraftEditor(props) {
       toolbarCustomButtons={[
         <UrgentQuick />,
         <UrgentSlow />,
-        <NotUrgentSlow />,
         <NotUrgentQuick />,
+        <NotUrgentSlow />,
       ]}
       toolbar={{
         options: ['inline', 'emoji', 'history'],
