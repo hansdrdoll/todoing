@@ -1,20 +1,13 @@
-const Api = {
-
-  getTodo(id) {
-    console.log("i api");
-    return fetch(`/api/todos/${id}`)
-      .then(response => response.json())
-      // .then(data => console.log(data))
-  }
-
-  // updateTodo(newData) {
-  //   return fetch('/api/todos', {
-  //     method: 'POST',
-  //     headers: {
-  //       'content-type': 'application:json'
-  //     }
-  //     body: JSON.stringify(newData)
-  //   })
+export function getTodo(id) {
+  console.log('i api');
+  return fetch(`/api/todos/${id}`)
+    .then(response => response.json());
 }
 
-export default Api;
+export function updateTodo(id, newData) {
+  return fetch(`/api/todos/${id}`, {
+    method: 'PATCH',
+    headers: { 'content-type': 'application:json' },
+    body: { data: JSON.stringify(newData) },
+  });
+}

@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import { EditorState, Modifier, convertToRaw } from 'draft-js';
-import { Editor } from 'react-draft-wysiwyg';
+import { EditorState, Modifier } from 'draft-js';
 import PropTypes from 'prop-types';
 
 class UrgentQuick extends Component {

@@ -1,28 +1,10 @@
 import React, { Component } from 'react';
-import { EditorState, Modifier, convertToRaw, convertFromRaw } from 'draft-js';
+import { EditorState, convertToRaw, convertFromRaw } from 'draft-js';
 import { Editor } from 'react-draft-wysiwyg';
-import PropTypes from 'prop-types';
-import Api from '../api';
+import { getTodo, updateTodo } from '../api';
 import { UrgentSlow, UrgentQuick, NotUrgentSlow, NotUrgentQuick } from './PrioritySetters'
-
-// import { Map } from 'immutable';
 import debounce from 'lodash/debounce';
 import 'react-draft-wysiwyg/dist/react-draft-wysiwyg.css';
-
-const styleMap = {
-  'urgent-slow': {
-    color: 'red',
-  },
-  'urgent-quick': {
-    color: 'blue',
-  },
-  'noturgent-slow': {
-    color: 'orange',
-  },
-  'noturgent-quick': {
-    color: 'green',
-  },
-};
 
 class DraftEditor extends Component {
   constructor(props) {
@@ -34,7 +16,7 @@ class DraftEditor extends Component {
 }
 
   componentDidMount() {
-    Api.getTodo(1)
+    getTodo(1)
     .then(rawData => {
       if (rawData) {
         console.log("i got data", rawData)
@@ -53,14 +35,18 @@ class DraftEditor extends Component {
   };
 
 onEditorStateChange: Function = (editorState) => {
-  this.logStateChange(editorState.getCurrentContent())
+  const currentContent = editorState.getCurrentContent();
+  const rawState = convertToRaw(currentContent);
+  this.props.shareEditor(rawState);
+  this.logStateChange(rawState);
   this.setState({
     editorState,
   });
 };
 
-logStateChange = debounce((editorState) => {
-  const rawState = convertToRaw(editorState)
+logStateChange = debounce((rawState) => {
+  const userId = 1;
+  updateTodo(userId, rawState)
   // console.log(JSON.stringify(rawState))
   console.table(rawState.blocks)
 }, 2000)
@@ -75,7 +61,6 @@ render() {
       editorClassName="demo-editor"
       onEditorStateChange={this.onEditorStateChange}
       toolbarCustomButtons={[<UrgentQuick />, <UrgentSlow />, <NotUrgentSlow />, <NotUrgentQuick />]}
-      customStyleMap={styleMap}
       toolbar={{
   options: ['inline', 'blockType', 'fontSize', 'fontFamily', 'list', 'colorPicker', 'link', 'emoji', 'history'],
   inline: {
