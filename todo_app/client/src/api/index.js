@@ -1,3 +1,5 @@
+import axios from 'axios';
+
 export function getTodo(id) {
   console.log('i api');
   return fetch(`/api/todos/${id}`)
@@ -5,9 +7,9 @@ export function getTodo(id) {
 }
 
 export function updateTodo(id, newData) {
-  return fetch(`/api/todos/${id}`, {
+  return axios({
     method: 'PATCH',
-    headers: { 'content-type': 'application:json' },
-    body: { data: JSON.stringify(newData) },
+    url: `/api/todos/${id}`,
+    data: { editor_data: JSON.stringify(newData) },
   });
 }
