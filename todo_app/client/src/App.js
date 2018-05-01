@@ -29,7 +29,7 @@ class App extends Component {
         <div className="header">
           <h1>header</h1>
           <Link to='/'>Editor</Link>
-          {" "}
+          {' '}
           <Link to='priority'>Priority</Link>
         </div>
         <div className="editor">

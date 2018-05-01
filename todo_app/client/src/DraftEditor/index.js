@@ -19,11 +19,12 @@ class DraftEditor extends Component {
     getTodo(1)
     .then(rawData => {
       if (rawData) {
-        console.log("i got data", rawData)
         this.setState({
           editorState: EditorState.createWithContent(convertFromRaw(rawData)),
           dataLoaded: true
         })
+        // also place the data in state for the priority matrix
+        this.props.shareEditor(rawData)
       } else {
         console.log("i got nothin");
         this.setState({
@@ -62,7 +63,7 @@ render() {
       onEditorStateChange={this.onEditorStateChange}
       toolbarCustomButtons={[<UrgentQuick />, <UrgentSlow />, <NotUrgentSlow />, <NotUrgentQuick />]}
       toolbar={{
-  options: ['inline', 'blockType', 'fontSize', 'fontFamily', 'list', 'colorPicker', 'link', 'emoji', 'history'],
+  options: ['inline', 'emoji', 'history'],
   inline: {
     inDropdown: false,
     className: undefined,
