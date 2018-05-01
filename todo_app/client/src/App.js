@@ -13,6 +13,7 @@ class App extends Component {
     super(props);
     this.state = {
       editorState: EditorState.createEmpty(),
+      rawState: {},
       dataLoaded: false,
     };
     this.handleRawEditorState = this.handleRawEditorState.bind(this);
@@ -20,14 +21,13 @@ class App extends Component {
   }
 
   componentDidMount() {
-    getTodo(1).then((rawData) => {
-      if (rawData) {
+    getTodo(1).then((rawState) => {
+      if (rawState) {
         this.setState({
-          editorState: EditorState.createWithContent(convertFromRaw(rawData)),
+          editorState: EditorState.createWithContent(convertFromRaw(rawState)),
+          rawState,
           dataLoaded: true,
         });
-        // also place the data in state for the priority matrix
-        // this.props.shareEditor(rawData)
       } else {
         console.log('i got nothin');
         this.setState({
@@ -44,6 +44,7 @@ class App extends Component {
     this.updateApiEditorData(rawState);
     this.setState({
       editorState,
+      rawState,
     });
   }
 
@@ -68,7 +69,7 @@ class App extends Component {
         <div className="App">
           <div className="header">
             <h1>header</h1>
-            <Link to="/">Editor</Link> <Link to="priority">Priority</Link>
+            {/* <Link to="/">Editor</Link> <Link to="priority">Priority</Link> */}
           </div>
           <div className="editor">
             <Switch>
@@ -80,7 +81,6 @@ class App extends Component {
                     {...props}
                     editorState={this.state.editorState}
                     onChange={this.handleEditorStateChange}
-                    // shareEditor={this.handleRawEditorState}
                   />
                 )}
               />
@@ -94,7 +94,7 @@ class App extends Component {
             </Switch>
           </div>
           <div className="matrix">
-            {/* <PriorityMatrix editorData={this.state.editorData} /> */}
+            <PriorityMatrix editorData={this.state.rawState} />
           </div>
         </div>
       </BrowserRouter>
