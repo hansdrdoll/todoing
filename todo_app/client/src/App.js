@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Switch, Route, Link } from 'react-router-dom';
 import { EditorState, convertToRaw, convertFromRaw } from 'draft-js';
-import { Editor } from 'react-draft-wysiwyg';
+// import { Editor } from 'react-draft-wysiwyg';
 import { getTodo, updateTodo } from './api';
 import debounce from 'lodash/debounce';
-import DraftEditor from "./DraftEditor"
+import DraftEditor from './DraftEditor';
 import PriorityMatrix from './PriorityMatrix';
 import './App.css';
 
@@ -15,13 +15,13 @@ class App extends Component {
       editorState: EditorState.createEmpty(),
       rawState: {},
       dataLoaded: false,
+      saved: true,
     };
-    this.handleRawEditorState = this.handleRawEditorState.bind(this);
     this.handleEditorStateChange = this.handleEditorStateChange.bind(this);
   }
 
   componentDidMount() {
-    getTodo(1).then((rawState) => {
+    getTodo(1).then(rawState => {
       if (rawState) {
         this.setState({
           editorState: EditorState.createWithContent(convertFromRaw(rawState)),
@@ -48,62 +48,70 @@ class App extends Component {
     });
   }
 
-  updateApiEditorData = debounce((rawState) => {
+// make work
+  // evaluateDiffExcludingSelection(prevState, newData) {
+  //   if (prevState.rawState === newData){
+  //     return true
+  //   } else {
+  //     return false
+  //   }
+  // }
+
+  updateApiEditorData = debounce(rawState => {
     const userId = 1;
-    updateTodo(userId, rawState)
-    console.table(rawState.blocks)
-  }, 2000)
-
-
-  // maybe unnecessary
-  handleRawEditorState(editorData) {
-    this.setState({
-      editorData,
+    updateTodo(userId, rawState).then(_res => {
+      this.setState({
+        saved: true,
+      });
     });
-  }
+    // console.table(rawState.blocks)
+  }, 1500);
 
   render() {
     if (this.state.dataLoaded) {
-    return (
-      <BrowserRouter>
-        <div className="App">
-          <div className="header">
-            <h1>header</h1>
-            {/* <Link to="/">Editor</Link> <Link to="priority">Priority</Link> */}
-          </div>
-          <div className="main">
-          <div className="editor">
-            <Switch>
-              <Route
-                exact
-                path="/"
-                render={props => (
-                  <DraftEditor
-                    {...props}
-                    editorState={this.state.editorState}
-                    onChange={this.handleEditorStateChange}
+      return (
+        <BrowserRouter>
+          <div className="App">
+            <div className="header">
+              <h1>just todo it</h1>
+              <p>
+                {this.state.saved ? <span>saved</span> : <span>editing</span>}
+              </p>
+              {/* <Link to="/">Editor</Link> <Link to="priority">Priority</Link> */}
+            </div>
+            <div className="main">
+              <div className="editor">
+                <Switch>
+                  <Route
+                    exact
+                    path="/"
+                    render={props => (
+                      <DraftEditor
+                        {...props}
+                        editorState={this.state.editorState}
+                        onChange={this.handleEditorStateChange}
+                      />
+                    )}
                   />
-                )}
-              />
-              {/* <Route
+                  {/* <Route
                 exact
                 path="/priority"
                 render={props => (
                   <PriorityMatrix {...props} editorData={this.state.editorData} />
                 )}
               /> */}
-            </Switch>
+                </Switch>
+              </div>
+              <div className="matrix">
+                <PriorityMatrix editorData={this.state.rawState} />
+              </div>
+            </div>
           </div>
-          <div className="matrix">
-            <PriorityMatrix editorData={this.state.rawState} />
-          </div>
-        </div>
-        </div>
-      </BrowserRouter>
-    )
-  } else {
-    return <div>Loading</div>
-  }
+        </BrowserRouter>
+      );
+    } else {
+      return <div>Loading</div>;
+    }
   }
 }
 

@@ -11,6 +11,7 @@ import 'react-draft-wysiwyg/dist/react-draft-wysiwyg.css';
 function DraftEditor(props) {
   return (
     <Editor
+      toolbarOnFocus
       editorState={props.editorState}
       wrapperClassName="demo-wrapper"
       editorClassName="demo-editor"
@@ -22,7 +23,7 @@ function DraftEditor(props) {
         <NotUrgentSlow />,
       ]}
       toolbar={{
-        options: ['inline', 'emoji', 'history'],
+        options: ['inline', 'list', 'emoji', 'history'],
         inline: {
           inDropdown: false,
           className: undefined,
