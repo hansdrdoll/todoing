@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
-import DraggyThing from './DraggyThing';
+import { DragDropContext } from 'react-beautiful-dnd';
 import DroppyArea from './DroppyArea';
 
 const grid = 8;

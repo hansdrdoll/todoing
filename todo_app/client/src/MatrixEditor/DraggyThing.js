@@ -1,8 +1,8 @@
 import React from 'react';
-import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
+import { Draggable } from 'react-beautiful-dnd';
 
 function DraggyThing(props) {
-  const { item, index, grid, getItemStyle } = props;
+  const { item, index, getItemStyle } = props;
   return (
     <Draggable key={item.key} draggableId={item.key} index={index}>
       {(provided, snapshot) => (
