@@ -4,6 +4,7 @@ import { EditorState, convertToRaw, convertFromRaw } from 'draft-js';
 // import { Editor } from 'react-draft-wysiwyg';
 import { getTodo, updateTodo } from './api';
 import debounce from 'lodash/debounce';
+import isEqual from 'lodash/isEqual';
 import DraftEditor from './DraftEditor';
 import MatrixEditor from './MatrixEditor';
 import './App.css';
@@ -38,10 +39,17 @@ class App extends Component {
     });
   }
 
+  componentDidUpdate(_prevProps, prevState, _snapshot) {
+    if (!isEqual(prevState.rawState.blocks, this.state.rawState.blocks)) {
+      this.setState({ saved: false })
+      this.updateApiEditorData(this.state.rawState)
+    }
+  }
+
   handleEditorStateChange(editorState) {
     const currentContent = editorState.getCurrentContent();
     const rawState = convertToRaw(currentContent);
-    this.updateApiEditorData(rawState);
+    // this.updateApiEditorData(rawState);
     this.setState({
       editorState,
       rawState,
@@ -75,7 +83,7 @@ class App extends Component {
             <div className="header">
               <h1>just todo it</h1>
               <p>
-                {this.state.saved ? <span>saved</span> : <span>editing</span>}
+                {this.state.saved ? <span>saved</span> : <span>...</span>}
               </p>
               <Link to="/">Editor</Link> <Link to="priority">Priority</Link>
             </div>
