@@ -5,7 +5,7 @@ import { EditorState, convertToRaw, convertFromRaw } from 'draft-js';
 import { getTodo, updateTodo } from './api';
 import debounce from 'lodash/debounce';
 import DraftEditor from './DraftEditor';
-import PriorityMatrix from './PriorityMatrix';
+import MatrixEditor from './MatrixEditor';
 import './App.css';
 
 class App extends Component {
@@ -77,10 +77,8 @@ class App extends Component {
               <p>
                 {this.state.saved ? <span>saved</span> : <span>editing</span>}
               </p>
-              {/* <Link to="/">Editor</Link> <Link to="priority">Priority</Link> */}
+              <Link to="/">Editor</Link> <Link to="priority">Priority</Link>
             </div>
-            <div className="main">
-              <div className="editor">
                 <Switch>
                   <Route
                     exact
@@ -90,22 +88,18 @@ class App extends Component {
                         {...props}
                         editorState={this.state.editorState}
                         onChange={this.handleEditorStateChange}
+                        rawState={this.state.rawState}
                       />
                     )}
                   />
-                  {/* <Route
+                  <Route
                 exact
                 path="/priority"
                 render={props => (
-                  <PriorityMatrix {...props} editorData={this.state.editorData} />
+                  <MatrixEditor {...props} editorData={this.state.rawState} />
                 )}
-              /> */}
+              />
                 </Switch>
-              </div>
-              <div className="matrix">
-                <PriorityMatrix editorData={this.state.rawState} />
-              </div>
-            </div>
           </div>
         </BrowserRouter>
       );

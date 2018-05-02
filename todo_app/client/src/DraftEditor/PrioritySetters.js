@@ -13,7 +13,7 @@ class UrgentQuick extends Component {
     const contentState = Modifier.setBlockData(
       editorState.getCurrentContent(),
       editorState.getSelection(),
-      { "urgent": true, "quick": true },
+      { "urgent": true, "quick": true, "listName": "urgentQuick", },
     );
     onChange(EditorState.push(editorState, contentState, 'set-priority'));
   };
@@ -36,7 +36,7 @@ class UrgentSlow extends Component {
     let contentState = Modifier.setBlockData(
       editorState.getCurrentContent(),
       editorState.getSelection(),
-      { "urgent": true, "quick": false },
+      { "urgent": true, "quick": false, "listName": "urgentSlow", },
     )
     onChange(EditorState.push(editorState, contentState, 'set-priority'));
   };
@@ -59,7 +59,7 @@ class NotUrgentQuick extends Component {
     let contentState = Modifier.setBlockData(
       editorState.getCurrentContent(),
       editorState.getSelection(),
-      { "urgent": false, "quick": true },
+      { "urgent": false, "quick": true, "listName": "notUrgentQuick", },
     )
     onChange(EditorState.push(editorState, contentState, 'set-priority'));
   };
@@ -82,7 +82,7 @@ class NotUrgentSlow extends Component {
     let contentState = Modifier.setBlockData(
       editorState.getCurrentContent(),
       editorState.getSelection(),
-      { "urgent": false, "quick": false },
+      { "urgent": false, "quick": false, "listName": "notUrgentSlow", },
     )
     onChange(EditorState.push(editorState, contentState, 'set-priority'));
   };

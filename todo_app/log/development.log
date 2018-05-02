@@ -11457,3 +11457,827 @@ Unpermitted parameter: :todo
 Completed 204 No Content in 18ms (ActiveRecord: 9.1ms)
 
 
+Started GET "/api/todos/1" for 127.0.0.1 at 2018-05-02 11:36:24 -0400
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by TodosController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mTodo Load (7.2ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:5
+Completed 200 OK in 198ms (Views: 0.3ms | ActiveRecord: 48.6ms)
+
+
+Started GET "/api/todos/1" for 127.0.0.1 at 2018-05-02 11:36:31 -0400
+Processing by TodosController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mTodo Load (0.5ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:5
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/todos/1" for 127.0.0.1 at 2018-05-02 11:36:41 -0400
+Processing by TodosController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mTodo Load (124.8ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:5
+Completed 200 OK in 128ms (Views: 0.3ms | ActiveRecord: 124.8ms)
+
+
+Started GET "/api/todos/1" for 127.0.0.1 at 2018-05-02 11:36:57 -0400
+Processing by TodosController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mTodo Load (9.5ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:5
+Completed 200 OK in 14ms (Views: 0.1ms | ActiveRecord: 9.5ms)
+
+
+Started GET "/api/todos/1" for 127.0.0.1 at 2018-05-02 11:38:18 -0400
+Processing by TodosController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mTodo Load (20.0ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:5
+Completed 200 OK in 24ms (Views: 0.2ms | ActiveRecord: 20.0ms)
+
+
+Started GET "/api/todos/1" for 127.0.0.1 at 2018-05-02 11:38:23 -0400
+Processing by TodosController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mTodo Load (0.6ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:5
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/todos/1" for 127.0.0.1 at 2018-05-02 11:38:35 -0400
+Processing by TodosController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mTodo Load (0.5ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:5
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/todos/1" for 127.0.0.1 at 2018-05-02 11:41:52 -0400
+Processing by TodosController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mTodo Load (15.1ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:5
+Completed 200 OK in 18ms (Views: 0.2ms | ActiveRecord: 15.1ms)
+
+
+Started GET "/api/todos/1" for 127.0.0.1 at 2018-05-02 11:42:15 -0400
+Processing by TodosController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mTodo Load (207.6ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:5
+Completed 200 OK in 210ms (Views: 0.2ms | ActiveRecord: 207.6ms)
+
+
+Started GET "/api/todos/1" for 127.0.0.1 at 2018-05-02 11:42:24 -0400
+Processing by TodosController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mTodo Load (19.7ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:5
+Completed 200 OK in 22ms (Views: 0.1ms | ActiveRecord: 19.7ms)
+
+
+Started GET "/api/todos/1" for 127.0.0.1 at 2018-05-02 11:42:59 -0400
+Processing by TodosController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mTodo Load (56.7ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:5
+Completed 200 OK in 58ms (Views: 0.1ms | ActiveRecord: 56.7ms)
+
+
+Started PATCH "/api/todos/1" for 127.0.0.1 at 2018-05-02 11:43:06 -0400
+Processing by TodosController#update as HTML
+  Parameters: {"editor_data"=>"{\"blocks\":[{\"key\":\"as6h4\",\"text\":\"write splash screen\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{\"urgent\":false,\"quick\":false}},{\"key\":\"1kggh\",\"text\":\"build out containers\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{\"urgent\":true,\"quick\":true}},{\"key\":\"9m2k2\",\"text\":\"add drag/drop components to priority screen\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{\"urgent\":true,\"quick\":true}},{\"key\":\"t5qa\",\"text\":\"modify style for block components in draft\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{}},{\"key\":\"a5fan\",\"text\":\"make toolbar buttons actual buttons\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{}},{\"key\":\"5hsk0\",\"text\":\"make editing button differenciate between selection change and actual edits\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{\"urgent\":true,\"quick\":false}},{\"key\":\"55o1v\",\"text\":\"add spellcheck\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{}},{\"key\":\"3ouh5\",\"text\":\"choose ui kit\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{\"urgent\":false,\"quick\":true}},{\"key\":\"fqlpk\",\"text\":\"add keybinding to move lines up/down\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{\"urgent\":false,\"quick\":false}},{\"key\":\"ca3gr\",\"text\":\"make loading button\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":0,\"length\":19,\"style\":\"STRIKETHROUGH\"}],\"entityRanges\":[],\"data\":{}},{\"key\":\"e1cpu\",\"text\":\"move editor state up to app level \",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":0,\"length\":24,\"style\":\"STRIKETHROUGH\"},{\"offset\":27,\"length\":7,\"style\":\"STRIKETHROUGH\"}],\"entityRanges\":[],\"data\":{\"urgent\":false,\"quick\":false}}],\"entityMap\":{}}", "id"=>"1", "todo"=>{"editor_data"=>"{\"blocks\":[{\"key\":\"as6h4\",\"text\":\"write splash screen\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{\"urgent\":false,\"quick\":false}},{\"key\":\"1kggh\",\"text\":\"build out containers\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{\"urgent\":true,\"quick\":true}},{\"key\":\"9m2k2\",\"text\":\"add drag/drop components to priority screen\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{\"urgent\":true,\"quick\":true}},{\"key\":\"t5qa\",\"text\":\"modify style for block components in draft\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{}},{\"key\":\"a5fan\",\"text\":\"make toolbar buttons actual buttons\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{}},{\"key\":\"5hsk0\",\"text\":\"make editing button differenciate between selection change and actual edits\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{\"urgent\":true,\"quick\":false}},{\"key\":\"55o1v\",\"text\":\"add spellcheck\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{}},{\"key\":\"3ouh5\",\"text\":\"choose ui kit\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{\"urgent\":false,\"quick\":true}},{\"key\":\"fqlpk\",\"text\":\"add keybinding to move lines up/down\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{\"urgent\":false,\"quick\":false}},{\"key\":\"ca3gr\",\"text\":\"make loading button\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":0,\"length\":19,\"style\":\"STRIKETHROUGH\"}],\"entityRanges\":[],\"data\":{}},{\"key\":\"e1cpu\",\"text\":\"move editor state up to app level \",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":0,\"length\":24,\"style\":\"STRIKETHROUGH\"},{\"offset\":27,\"length\":7,\"style\":\"STRIKETHROUGH\"}],\"entityRanges\":[],\"data\":{\"urgent\":false,\"quick\":false}}],\"entityMap\":{}}"}}
+Unpermitted parameter: :todo
+  [1m[36mTodo Load (0.3ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:10
+Unpermitted parameter: :todo
+Unpermitted parameter: :todo
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/todos_controller.rb:13
+  [1m[36mUser Load (21.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:13
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/todos_controller.rb:13
+Completed 204 No Content in 288ms (ActiveRecord: 92.1ms)
+
+
+Started PATCH "/api/todos/1" for 127.0.0.1 at 2018-05-02 11:45:47 -0400
+Processing by TodosController#update as HTML
+  Parameters: {"editor_data"=>"{\"blocks\":[{\"key\":\"as6h4\",\"text\":\"write splash screen\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{\"urgent\":false,\"quick\":false}},{\"key\":\"1kggh\",\"text\":\"build out containers\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{\"urgent\":true,\"quick\":true}},{\"key\":\"9m2k2\",\"text\":\"add drag/drop components to priority screen\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{\"urgent\":true,\"quick\":true}},{\"key\":\"t5qa\",\"text\":\"modify style for block components in draft\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{}},{\"key\":\"a5fan\",\"text\":\"make toolbar buttons actual buttons\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{}},{\"key\":\"5hsk0\",\"text\":\"make editing button differenciate between selection change and actual edits\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{\"urgent\":true,\"quick\":false}},{\"key\":\"55o1v\",\"text\":\"add spellcheck\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{}},{\"key\":\"3ouh5\",\"text\":\"choose ui kit\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{\"urgent\":false,\"quick\":true}},{\"key\":\"fqlpk\",\"text\":\"add keybinding to move lines up/down\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{\"urgent\":false,\"quick\":false}},{\"key\":\"ca3gr\",\"text\":\"make loading button\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":0,\"length\":19,\"style\":\"STRIKETHROUGH\"}],\"entityRanges\":[],\"data\":{}},{\"key\":\"e1cpu\",\"text\":\"move editor state up to app level \",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":0,\"length\":24,\"style\":\"STRIKETHROUGH\"},{\"offset\":27,\"length\":7,\"style\":\"STRIKETHROUGH\"}],\"entityRanges\":[],\"data\":{\"urgent\":false,\"quick\":false}}],\"entityMap\":{}}", "id"=>"1", "todo"=>{"editor_data"=>"{\"blocks\":[{\"key\":\"as6h4\",\"text\":\"write splash screen\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{\"urgent\":false,\"quick\":false}},{\"key\":\"1kggh\",\"text\":\"build out containers\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{\"urgent\":true,\"quick\":true}},{\"key\":\"9m2k2\",\"text\":\"add drag/drop components to priority screen\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{\"urgent\":true,\"quick\":true}},{\"key\":\"t5qa\",\"text\":\"modify style for block components in draft\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{}},{\"key\":\"a5fan\",\"text\":\"make toolbar buttons actual buttons\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{}},{\"key\":\"5hsk0\",\"text\":\"make editing button differenciate between selection change and actual edits\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{\"urgent\":true,\"quick\":false}},{\"key\":\"55o1v\",\"text\":\"add spellcheck\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{}},{\"key\":\"3ouh5\",\"text\":\"choose ui kit\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{\"urgent\":false,\"quick\":true}},{\"key\":\"fqlpk\",\"text\":\"add keybinding to move lines up/down\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{\"urgent\":false,\"quick\":false}},{\"key\":\"ca3gr\",\"text\":\"make loading button\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":0,\"length\":19,\"style\":\"STRIKETHROUGH\"}],\"entityRanges\":[],\"data\":{}},{\"key\":\"e1cpu\",\"text\":\"move editor state up to app level \",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":0,\"length\":24,\"style\":\"STRIKETHROUGH\"},{\"offset\":27,\"length\":7,\"style\":\"STRIKETHROUGH\"}],\"entityRanges\":[],\"data\":{\"urgent\":false,\"quick\":false}}],\"entityMap\":{}}"}}
+Unpermitted parameter: :todo
+  [1m[36mTodo Load (0.4ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:10
+Unpermitted parameter: :todo
+Unpermitted parameter: :todo
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/todos_controller.rb:13
+  [1m[36mUser Load (4.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:13
+  [1m[35m (7.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/todos_controller.rb:13
+Completed 204 No Content in 25ms (ActiveRecord: 12.2ms)
+
+
+Started PATCH "/api/todos/1" for 127.0.0.1 at 2018-05-02 11:45:54 -0400
+Processing by TodosController#update as HTML
+  Parameters: {"editor_data"=>"{\"blocks\":[{\"key\":\"as6h4\",\"text\":\"write splash screen\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{\"urgent\":false,\"quick\":false}},{\"key\":\"1kggh\",\"text\":\"build out containers\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{\"urgent\":true,\"quick\":true}},{\"key\":\"9m2k2\",\"text\":\"add drag/drop components to priority screen\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{\"urgent\":true,\"quick\":true}},{\"key\":\"t5qa\",\"text\":\"modify style for block components in draft\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{}},{\"key\":\"a5fan\",\"text\":\"make toolbar buttons actual buttons\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{}},{\"key\":\"5hsk0\",\"text\":\"make editing button differenciate between selection change and actual edits\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{\"urgent\":true,\"quick\":false}},{\"key\":\"55o1v\",\"text\":\"add spellcheck\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{}},{\"key\":\"3ouh5\",\"text\":\"choose ui kit\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{\"urgent\":false,\"quick\":true}},{\"key\":\"fqlpk\",\"text\":\"add keybinding to move lines up/downasdf\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{\"urgent\":false,\"quick\":false}},{\"key\":\"ca3gr\",\"text\":\"make loading button\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":0,\"length\":19,\"style\":\"STRIKETHROUGH\"}],\"entityRanges\":[],\"data\":{}},{\"key\":\"e1cpu\",\"text\":\"move editor state up to app level \",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":0,\"length\":24,\"style\":\"STRIKETHROUGH\"},{\"offset\":27,\"length\":7,\"style\":\"STRIKETHROUGH\"}],\"entityRanges\":[],\"data\":{\"urgent\":false,\"quick\":false}}],\"entityMap\":{}}", "id"=>"1", "todo"=>{"editor_data"=>"{\"blocks\":[{\"key\":\"as6h4\",\"text\":\"write splash screen\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{\"urgent\":false,\"quick\":false}},{\"key\":\"1kggh\",\"text\":\"build out containers\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{\"urgent\":true,\"quick\":true}},{\"key\":\"9m2k2\",\"text\":\"add drag/drop components to priority screen\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{\"urgent\":true,\"quick\":true}},{\"key\":\"t5qa\",\"text\":\"modify style for block components in draft\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{}},{\"key\":\"a5fan\",\"text\":\"make toolbar buttons actual buttons\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{}},{\"key\":\"5hsk0\",\"text\":\"make editing button differenciate between selection change and actual edits\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{\"urgent\":true,\"quick\":false}},{\"key\":\"55o1v\",\"text\":\"add spellcheck\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{}},{\"key\":\"3ouh5\",\"text\":\"choose ui kit\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{\"urgent\":false,\"quick\":true}},{\"key\":\"fqlpk\",\"text\":\"add keybinding to move lines up/downasdf\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{\"urgent\":false,\"quick\":false}},{\"key\":\"ca3gr\",\"text\":\"make loading button\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":0,\"length\":19,\"style\":\"STRIKETHROUGH\"}],\"entityRanges\":[],\"data\":{}},{\"key\":\"e1cpu\",\"text\":\"move editor state up to app level \",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":0,\"length\":24,\"style\":\"STRIKETHROUGH\"},{\"offset\":27,\"length\":7,\"style\":\"STRIKETHROUGH\"}],\"entityRanges\":[],\"data\":{\"urgent\":false,\"quick\":false}}],\"entityMap\":{}}"}}
+Unpermitted parameter: :todo
+  [1m[36mTodo Load (0.3ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:10
+Unpermitted parameter: :todo
+Unpermitted parameter: :todo
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/todos_controller.rb:13
+  [1m[36mUser Load (6.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:13
+  [1m[36mTodo Update (63.8ms)[0m  [1m[33mUPDATE "todos" SET "editor_data" = $1 WHERE "todos"."id" = $2[0m  [["editor_data", "\"{\\\"blocks\\\":[{\\\"key\\\":\\\"as6h4\\\",\\\"text\\\":\\\"write splash screen\\\",\\\"type\\\":\\\"unstyled\\\",\\\"depth\\\":0,\\\"inlineStyleRanges\\\":[],\\\"entityRanges\\\":[],\\\"data\\\":{\\\"urgent\\\":false,\\\"quick\\\":false}},{\\\"key\\\":\\\"1kggh\\\",\\\"text\\\":\\\"build out containers\\\",\\\"type\\\":\\\"unstyled\\\",\\\"depth\\\":0,\\\"inlineStyleRanges\\\":[],\\\"entityRanges\\\":[],\\\"data\\\":{\\\"urgent\\\":true,\\\"quick\\\":true}},{\\\"key\\\":\\\"9m2k2\\\",\\\"text\\\":\\\"add drag/drop components to priority screen\\\",\\\"type\\\":\\\"unstyled\\\",\\\"depth\\\":0,\\\"inlineStyleRanges\\\":[],\\\"entityRanges\\\":[],\\\"data\\\":{\\\"urgent\\\":true,\\\"quick\\\":true}},{\\\"key\\\":\\\"t5qa\\\",\\\"text\\\":\\\"modify style for block components in draft\\\",\\\"type\\\":\\\"unstyled\\\",\\\"depth\\\":0,\\\"inlineStyleRanges\\\":[],\\\"entityRanges\\\":[],\\\"data\\\":{}},{\\\"key\\\":\\\"a5fan\\\",\\\"text\\\":\\\"make toolbar buttons actual buttons\\\",\\\"type\\\":\\\"unstyled\\\",\\\"depth\\\":0,\\\"inlineStyleRanges\\\":[],\\\"entityRanges\\\":[],\\\"data\\\":{}},{\\\"key\\\":\\\"5hsk0\\\",\\\"text\\\":\\\"make editing button differenciate between selection change and actual edits\\\",\\\"type\\\":\\\"unstyled\\\",\\\"depth\\\":0,\\\"inlineStyleRanges\\\":[],\\\"entityRanges\\\":[],\\\"data\\\":{\\\"urgent\\\":true,\\\"quick\\\":false}},{\\\"key\\\":\\\"55o1v\\\",\\\"text\\\":\\\"add spellcheck\\\",\\\"type\\\":\\\"unstyled\\\",\\\"depth\\\":0,\\\"inlineStyleRanges\\\":[],\\\"entityRanges\\\":[],\\\"data\\\":{}},{\\\"key\\\":\\\"3ouh5\\\",\\\"text\\\":\\\"choose ui kit\\\",\\\"type\\\":\\\"unstyled\\\",\\\"depth\\\":0,\\\"inlineStyleRanges\\\":[],\\\"entityRanges\\\":[],\\\"data\\\":{\\\"urgent\\\":false,\\\"quick\\\":true}},{\\\"key\\\":\\\"fqlpk\\\",\\\"text\\\":\\\"add keybinding to move lines up/downasdf\\\",\\\"type\\\":\\\"unstyled\\\",\\\"depth\\\":0,\\\"inlineStyleRanges\\\":[],\\\"entityRanges\\\":[],\\\"data\\\":{\\\"urgent\\\":false,\\\"quick\\\":false}},{\\\"key\\\":\\\"ca3gr\\\",\\\"text\\\":\\\"make loading button\\\",\\\"type\\\":\\\"unstyled\\\",\\\"depth\\\":0,\\\"inlineStyleRanges\\\":[{\\\"offset\\\":0,\\\"length\\\":19,\\\"style\\\":\\\"STRIKETHROUGH\\\"}],\\\"entityRanges\\\":[],\\\"data\\\":{}},{\\\"key\\\":\\\"e1cpu\\\",\\\"text\\\":\\\"move editor state up to app level \\\",\\\"type\\\":\\\"unstyled\\\",\\\"depth\\\":0,\\\"inlineStyleRanges\\\":[{\\\"offset\\\":0,\\\"length\\\":24,\\\"style\\\":\\\"STRIKETHROUGH\\\"},{\\\"offset\\\":27,\\\"length\\\":7,\\\"style\\\":\\\"STRIKETHROUGH\\\"}],\\\"entityRanges\\\":[],\\\"data\\\":{\\\"urgent\\\":false,\\\"quick\\\":false}}],\\\"entityMap\\\":{}}\""], ["id", 1]]
+  ↳ app/controllers/todos_controller.rb:13
+  [1m[35m (33.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/todos_controller.rb:13
+Completed 204 No Content in 128ms (ActiveRecord: 104.8ms)
+
+
+Started PATCH "/api/todos/1" for 127.0.0.1 at 2018-05-02 11:45:57 -0400
+Processing by TodosController#update as HTML
+  Parameters: {"editor_data"=>"{\"blocks\":[{\"key\":\"as6h4\",\"text\":\"write splash screen\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{\"urgent\":false,\"quick\":false}},{\"key\":\"1kggh\",\"text\":\"build out containers\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{\"urgent\":true,\"quick\":true}},{\"key\":\"9m2k2\",\"text\":\"add drag/drop components to priority screen\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{\"urgent\":true,\"quick\":true}},{\"key\":\"t5qa\",\"text\":\"modify style for block components in draft\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{}},{\"key\":\"a5fan\",\"text\":\"make toolbar buttons actual buttons\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{}},{\"key\":\"5hsk0\",\"text\":\"make editing button differenciate between selection change and actual edits\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{\"urgent\":true,\"quick\":false}},{\"key\":\"55o1v\",\"text\":\"add spellcheck\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{}},{\"key\":\"3ouh5\",\"text\":\"choose ui kit\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{\"urgent\":false,\"quick\":true}},{\"key\":\"fqlpk\",\"text\":\"add keybinding to move lines up/down\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{\"urgent\":false,\"quick\":false}},{\"key\":\"ca3gr\",\"text\":\"make loading button\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":0,\"length\":19,\"style\":\"STRIKETHROUGH\"}],\"entityRanges\":[],\"data\":{}},{\"key\":\"e1cpu\",\"text\":\"move editor state up to app level \",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":0,\"length\":24,\"style\":\"STRIKETHROUGH\"},{\"offset\":27,\"length\":7,\"style\":\"STRIKETHROUGH\"}],\"entityRanges\":[],\"data\":{\"urgent\":false,\"quick\":false}}],\"entityMap\":{}}", "id"=>"1", "todo"=>{"editor_data"=>"{\"blocks\":[{\"key\":\"as6h4\",\"text\":\"write splash screen\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{\"urgent\":false,\"quick\":false}},{\"key\":\"1kggh\",\"text\":\"build out containers\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{\"urgent\":true,\"quick\":true}},{\"key\":\"9m2k2\",\"text\":\"add drag/drop components to priority screen\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{\"urgent\":true,\"quick\":true}},{\"key\":\"t5qa\",\"text\":\"modify style for block components in draft\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{}},{\"key\":\"a5fan\",\"text\":\"make toolbar buttons actual buttons\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{}},{\"key\":\"5hsk0\",\"text\":\"make editing button differenciate between selection change and actual edits\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{\"urgent\":true,\"quick\":false}},{\"key\":\"55o1v\",\"text\":\"add spellcheck\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{}},{\"key\":\"3ouh5\",\"text\":\"choose ui kit\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{\"urgent\":false,\"quick\":true}},{\"key\":\"fqlpk\",\"text\":\"add keybinding to move lines up/down\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{\"urgent\":false,\"quick\":false}},{\"key\":\"ca3gr\",\"text\":\"make loading button\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":0,\"length\":19,\"style\":\"STRIKETHROUGH\"}],\"entityRanges\":[],\"data\":{}},{\"key\":\"e1cpu\",\"text\":\"move editor state up to app level \",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":0,\"length\":24,\"style\":\"STRIKETHROUGH\"},{\"offset\":27,\"length\":7,\"style\":\"STRIKETHROUGH\"}],\"entityRanges\":[],\"data\":{\"urgent\":false,\"quick\":false}}],\"entityMap\":{}}"}}
+Unpermitted parameter: :todo
+  [1m[36mTodo Load (0.9ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:10
+Unpermitted parameter: :todo
+Unpermitted parameter: :todo
+  [1m[35m (2.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/todos_controller.rb:13
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:13
+  [1m[36mTodo Update (20.2ms)[0m  [1m[33mUPDATE "todos" SET "editor_data" = $1 WHERE "todos"."id" = $2[0m  [["editor_data", "\"{\\\"blocks\\\":[{\\\"key\\\":\\\"as6h4\\\",\\\"text\\\":\\\"write splash screen\\\",\\\"type\\\":\\\"unstyled\\\",\\\"depth\\\":0,\\\"inlineStyleRanges\\\":[],\\\"entityRanges\\\":[],\\\"data\\\":{\\\"urgent\\\":false,\\\"quick\\\":false}},{\\\"key\\\":\\\"1kggh\\\",\\\"text\\\":\\\"build out containers\\\",\\\"type\\\":\\\"unstyled\\\",\\\"depth\\\":0,\\\"inlineStyleRanges\\\":[],\\\"entityRanges\\\":[],\\\"data\\\":{\\\"urgent\\\":true,\\\"quick\\\":true}},{\\\"key\\\":\\\"9m2k2\\\",\\\"text\\\":\\\"add drag/drop components to priority screen\\\",\\\"type\\\":\\\"unstyled\\\",\\\"depth\\\":0,\\\"inlineStyleRanges\\\":[],\\\"entityRanges\\\":[],\\\"data\\\":{\\\"urgent\\\":true,\\\"quick\\\":true}},{\\\"key\\\":\\\"t5qa\\\",\\\"text\\\":\\\"modify style for block components in draft\\\",\\\"type\\\":\\\"unstyled\\\",\\\"depth\\\":0,\\\"inlineStyleRanges\\\":[],\\\"entityRanges\\\":[],\\\"data\\\":{}},{\\\"key\\\":\\\"a5fan\\\",\\\"text\\\":\\\"make toolbar buttons actual buttons\\\",\\\"type\\\":\\\"unstyled\\\",\\\"depth\\\":0,\\\"inlineStyleRanges\\\":[],\\\"entityRanges\\\":[],\\\"data\\\":{}},{\\\"key\\\":\\\"5hsk0\\\",\\\"text\\\":\\\"make editing button differenciate between selection change and actual edits\\\",\\\"type\\\":\\\"unstyled\\\",\\\"depth\\\":0,\\\"inlineStyleRanges\\\":[],\\\"entityRanges\\\":[],\\\"data\\\":{\\\"urgent\\\":true,\\\"quick\\\":false}},{\\\"key\\\":\\\"55o1v\\\",\\\"text\\\":\\\"add spellcheck\\\",\\\"type\\\":\\\"unstyled\\\",\\\"depth\\\":0,\\\"inlineStyleRanges\\\":[],\\\"entityRanges\\\":[],\\\"data\\\":{}},{\\\"key\\\":\\\"3ouh5\\\",\\\"text\\\":\\\"choose ui kit\\\",\\\"type\\\":\\\"unstyled\\\",\\\"depth\\\":0,\\\"inlineStyleRanges\\\":[],\\\"entityRanges\\\":[],\\\"data\\\":{\\\"urgent\\\":false,\\\"quick\\\":true}},{\\\"key\\\":\\\"fqlpk\\\",\\\"text\\\":\\\"add keybinding to move lines up/down\\\",\\\"type\\\":\\\"unstyled\\\",\\\"depth\\\":0,\\\"inlineStyleRanges\\\":[],\\\"entityRanges\\\":[],\\\"data\\\":{\\\"urgent\\\":false,\\\"quick\\\":false}},{\\\"key\\\":\\\"ca3gr\\\",\\\"text\\\":\\\"make loading button\\\",\\\"type\\\":\\\"unstyled\\\",\\\"depth\\\":0,\\\"inlineStyleRanges\\\":[{\\\"offset\\\":0,\\\"length\\\":19,\\\"style\\\":\\\"STRIKETHROUGH\\\"}],\\\"entityRanges\\\":[],\\\"data\\\":{}},{\\\"key\\\":\\\"e1cpu\\\",\\\"text\\\":\\\"move editor state up to app level \\\",\\\"type\\\":\\\"unstyled\\\",\\\"depth\\\":0,\\\"inlineStyleRanges\\\":[{\\\"offset\\\":0,\\\"length\\\":24,\\\"style\\\":\\\"STRIKETHROUGH\\\"},{\\\"offset\\\":27,\\\"length\\\":7,\\\"style\\\":\\\"STRIKETHROUGH\\\"}],\\\"entityRanges\\\":[],\\\"data\\\":{\\\"urgent\\\":false,\\\"quick\\\":false}}],\\\"entityMap\\\":{}}\""], ["id", 1]]
+  ↳ app/controllers/todos_controller.rb:13
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/todos_controller.rb:13
+Completed 204 No Content in 100ms (ActiveRecord: 27.1ms)
+
+
+Started GET "/api/todos/1" for 127.0.0.1 at 2018-05-02 11:58:13 -0400
+Processing by TodosController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mTodo Load (1.9ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:5
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/api/todos/1" for 127.0.0.1 at 2018-05-02 11:58:50 -0400
+Processing by TodosController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mTodo Load (11.1ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:5
+Completed 200 OK in 13ms (Views: 0.1ms | ActiveRecord: 11.1ms)
+
+
+Started GET "/api/todos/1" for 127.0.0.1 at 2018-05-02 11:59:26 -0400
+Processing by TodosController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mTodo Load (12.2ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:5
+Completed 200 OK in 14ms (Views: 0.1ms | ActiveRecord: 12.2ms)
+
+
+Started GET "/api/todos/1" for 127.0.0.1 at 2018-05-02 12:10:11 -0400
+Processing by TodosController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mTodo Load (1.5ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:5
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/api/todos/1" for 127.0.0.1 at 2018-05-02 12:10:45 -0400
+Processing by TodosController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mTodo Load (3.2ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:5
+Completed 200 OK in 6ms (Views: 0.1ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/api/todos/1" for 127.0.0.1 at 2018-05-02 12:10:57 -0400
+Processing by TodosController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mTodo Load (51.8ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:5
+Completed 200 OK in 54ms (Views: 0.1ms | ActiveRecord: 51.8ms)
+
+
+Started GET "/api/todos/1" for 127.0.0.1 at 2018-05-02 12:12:11 -0400
+Processing by TodosController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mTodo Load (24.5ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:5
+Completed 200 OK in 27ms (Views: 0.2ms | ActiveRecord: 24.5ms)
+
+
+Started GET "/api/todos/1" for 127.0.0.1 at 2018-05-02 12:15:28 -0400
+Processing by TodosController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mTodo Load (8.3ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:5
+Completed 200 OK in 11ms (Views: 0.1ms | ActiveRecord: 8.3ms)
+
+
+Started GET "/api/todos/1" for 127.0.0.1 at 2018-05-02 12:15:38 -0400
+Processing by TodosController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mTodo Load (194.3ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:5
+Completed 200 OK in 197ms (Views: 0.2ms | ActiveRecord: 194.3ms)
+
+
+Started GET "/api/todos/1" for 127.0.0.1 at 2018-05-02 12:15:49 -0400
+Processing by TodosController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mTodo Load (229.0ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:5
+Completed 200 OK in 231ms (Views: 0.2ms | ActiveRecord: 229.0ms)
+
+
+Started GET "/api/todos/1" for 127.0.0.1 at 2018-05-02 12:15:59 -0400
+Processing by TodosController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mTodo Load (15.6ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:5
+Completed 200 OK in 18ms (Views: 0.4ms | ActiveRecord: 15.6ms)
+
+
+Started GET "/api/todos/1" for 127.0.0.1 at 2018-05-02 12:16:39 -0400
+Processing by TodosController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mTodo Load (261.3ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:5
+Completed 200 OK in 263ms (Views: 0.2ms | ActiveRecord: 261.3ms)
+
+
+Started GET "/api/todos/1" for 127.0.0.1 at 2018-05-02 12:18:48 -0400
+Processing by TodosController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mTodo Load (228.2ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:5
+Completed 200 OK in 230ms (Views: 0.1ms | ActiveRecord: 228.2ms)
+
+
+Started GET "/api/todos/1" for 127.0.0.1 at 2018-05-02 12:19:09 -0400
+Processing by TodosController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mTodo Load (128.9ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:5
+Completed 200 OK in 131ms (Views: 0.3ms | ActiveRecord: 128.9ms)
+
+
+Started GET "/api/todos/1" for 127.0.0.1 at 2018-05-02 12:19:42 -0400
+Processing by TodosController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mTodo Load (0.6ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:5
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/todos/1" for 127.0.0.1 at 2018-05-02 12:19:56 -0400
+Processing by TodosController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mTodo Load (122.5ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:5
+Completed 200 OK in 125ms (Views: 0.1ms | ActiveRecord: 122.5ms)
+
+
+Started GET "/api/todos/1" for 127.0.0.1 at 2018-05-02 12:20:17 -0400
+Processing by TodosController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mTodo Load (2.4ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:5
+Completed 200 OK in 5ms (Views: 0.1ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/api/todos/1" for 127.0.0.1 at 2018-05-02 12:20:40 -0400
+Processing by TodosController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mTodo Load (31.6ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:5
+Completed 200 OK in 34ms (Views: 0.1ms | ActiveRecord: 31.6ms)
+
+
+Started GET "/api/todos/1" for 127.0.0.1 at 2018-05-02 12:21:09 -0400
+Processing by TodosController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mTodo Load (0.7ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:5
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/todos/1" for 127.0.0.1 at 2018-05-02 12:21:15 -0400
+Processing by TodosController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mTodo Load (117.2ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:5
+Completed 200 OK in 120ms (Views: 0.4ms | ActiveRecord: 117.2ms)
+
+
+Started PATCH "/api/todos/1" for 127.0.0.1 at 2018-05-02 15:11:15 -0400
+Processing by TodosController#update as HTML
+  Parameters: {"editor_data"=>"{\"blocks\":[{\"key\":\"as6h4\",\"text\":\"write splash screen\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{\"urgent\":false,\"quick\":false}},{\"key\":\"1kggh\",\"text\":\"build out containers\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{\"urgent\":true,\"quick\":true}},{\"key\":\"9m2k2\",\"text\":\"add drag/drop components to priority screen\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{\"urgent\":true,\"quick\":true}},{\"key\":\"t5qa\",\"text\":\"modify style for block components in draft\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{}},{\"key\":\"a5fan\",\"text\":\"make toolbar buttons actual buttons\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{}},{\"key\":\"5hsk0\",\"text\":\"make editing button differenciate between selection change and actual edits\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{\"urgent\":true,\"quick\":false}},{\"key\":\"55o1v\",\"text\":\"add spellcheck\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{}},{\"key\":\"3ouh5\",\"text\":\"choose ui kit\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{\"urgent\":false,\"quick\":true}},{\"key\":\"fqlpk\",\"text\":\"add keybinding to move lines up/down\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{\"urgent\":false,\"quick\":false}},{\"key\":\"ca3gr\",\"text\":\"make loading button\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":0,\"length\":19,\"style\":\"STRIKETHROUGH\"}],\"entityRanges\":[],\"data\":{}},{\"key\":\"e1cpu\",\"text\":\"move editor state up to app level \",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":0,\"length\":24,\"style\":\"STRIKETHROUGH\"},{\"offset\":27,\"length\":7,\"style\":\"STRIKETHROUGH\"}],\"entityRanges\":[],\"data\":{\"urgent\":false,\"quick\":false}}],\"entityMap\":{}}", "id"=>"1", "todo"=>{"editor_data"=>"{\"blocks\":[{\"key\":\"as6h4\",\"text\":\"write splash screen\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{\"urgent\":false,\"quick\":false}},{\"key\":\"1kggh\",\"text\":\"build out containers\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{\"urgent\":true,\"quick\":true}},{\"key\":\"9m2k2\",\"text\":\"add drag/drop components to priority screen\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{\"urgent\":true,\"quick\":true}},{\"key\":\"t5qa\",\"text\":\"modify style for block components in draft\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{}},{\"key\":\"a5fan\",\"text\":\"make toolbar buttons actual buttons\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{}},{\"key\":\"5hsk0\",\"text\":\"make editing button differenciate between selection change and actual edits\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{\"urgent\":true,\"quick\":false}},{\"key\":\"55o1v\",\"text\":\"add spellcheck\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{}},{\"key\":\"3ouh5\",\"text\":\"choose ui kit\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{\"urgent\":false,\"quick\":true}},{\"key\":\"fqlpk\",\"text\":\"add keybinding to move lines up/down\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{\"urgent\":false,\"quick\":false}},{\"key\":\"ca3gr\",\"text\":\"make loading button\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":0,\"length\":19,\"style\":\"STRIKETHROUGH\"}],\"entityRanges\":[],\"data\":{}},{\"key\":\"e1cpu\",\"text\":\"move editor state up to app level \",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":0,\"length\":24,\"style\":\"STRIKETHROUGH\"},{\"offset\":27,\"length\":7,\"style\":\"STRIKETHROUGH\"}],\"entityRanges\":[],\"data\":{\"urgent\":false,\"quick\":false}}],\"entityMap\":{}}"}}
+Unpermitted parameter: :todo
+  [1m[36mTodo Load (42.5ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:10
+Unpermitted parameter: :todo
+Unpermitted parameter: :todo
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/todos_controller.rb:13
+  [1m[36mUser Load (3.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:13
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/todos_controller.rb:13
+Completed 204 No Content in 155ms (ActiveRecord: 47.2ms)
+
+
+Started PATCH "/api/todos/1" for 127.0.0.1 at 2018-05-02 15:11:17 -0400
+Processing by TodosController#update as HTML
+  Parameters: {"editor_data"=>"{\"blocks\":[{\"key\":\"as6h4\",\"text\":\"write splash screen\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{\"urgent\":false,\"quick\":false}},{\"key\":\"1kggh\",\"text\":\"build out containers\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{\"urgent\":true,\"quick\":true}},{\"key\":\"9m2k2\",\"text\":\"add drag/drop components to priority screen\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{\"urgent\":true,\"quick\":true}},{\"key\":\"t5qa\",\"text\":\"modify style for block components in draft\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{}},{\"key\":\"a5fan\",\"text\":\"make toolbar buttons actual buttons\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{}},{\"key\":\"5hsk0\",\"text\":\"make editing button differenciate between selection change and actual edits\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{\"urgent\":true,\"quick\":false}},{\"key\":\"55o1v\",\"text\":\"add spellcheck\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{}},{\"key\":\"3ouh5\",\"text\":\"choose ui kit\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{\"urgent\":false,\"quick\":true}},{\"key\":\"fqlpk\",\"text\":\"add keybinding to move lines up/down\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{\"urgent\":false,\"quick\":false}},{\"key\":\"ca3gr\",\"text\":\"make loading button\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":0,\"length\":19,\"style\":\"STRIKETHROUGH\"}],\"entityRanges\":[],\"data\":{}},{\"key\":\"e1cpu\",\"text\":\"move editor state up to app level \",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":0,\"length\":24,\"style\":\"STRIKETHROUGH\"},{\"offset\":27,\"length\":7,\"style\":\"STRIKETHROUGH\"}],\"entityRanges\":[],\"data\":{\"urgent\":false,\"quick\":false}}],\"entityMap\":{}}", "id"=>"1", "todo"=>{"editor_data"=>"{\"blocks\":[{\"key\":\"as6h4\",\"text\":\"write splash screen\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{\"urgent\":false,\"quick\":false}},{\"key\":\"1kggh\",\"text\":\"build out containers\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{\"urgent\":true,\"quick\":true}},{\"key\":\"9m2k2\",\"text\":\"add drag/drop components to priority screen\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{\"urgent\":true,\"quick\":true}},{\"key\":\"t5qa\",\"text\":\"modify style for block components in draft\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{}},{\"key\":\"a5fan\",\"text\":\"make toolbar buttons actual buttons\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{}},{\"key\":\"5hsk0\",\"text\":\"make editing button differenciate between selection change and actual edits\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{\"urgent\":true,\"quick\":false}},{\"key\":\"55o1v\",\"text\":\"add spellcheck\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{}},{\"key\":\"3ouh5\",\"text\":\"choose ui kit\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{\"urgent\":false,\"quick\":true}},{\"key\":\"fqlpk\",\"text\":\"add keybinding to move lines up/down\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{\"urgent\":false,\"quick\":false}},{\"key\":\"ca3gr\",\"text\":\"make loading button\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":0,\"length\":19,\"style\":\"STRIKETHROUGH\"}],\"entityRanges\":[],\"data\":{}},{\"key\":\"e1cpu\",\"text\":\"move editor state up to app level \",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":0,\"length\":24,\"style\":\"STRIKETHROUGH\"},{\"offset\":27,\"length\":7,\"style\":\"STRIKETHROUGH\"}],\"entityRanges\":[],\"data\":{\"urgent\":false,\"quick\":false}}],\"entityMap\":{}}"}}
+Unpermitted parameter: :todo
+  [1m[36mTodo Load (0.8ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:10
+Unpermitted parameter: :todo
+Unpermitted parameter: :todo
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/todos_controller.rb:13
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:13
+  [1m[35m (4.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/todos_controller.rb:13
+Completed 204 No Content in 16ms (ActiveRecord: 6.6ms)
+
+
+Started GET "/api/todos/1" for 127.0.0.1 at 2018-05-02 15:22:47 -0400
+Processing by TodosController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mTodo Load (1.8ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:5
+Completed 200 OK in 13ms (Views: 1.2ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/api/todos/1" for 127.0.0.1 at 2018-05-02 15:22:58 -0400
+Processing by TodosController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mTodo Load (0.8ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:5
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.8ms)
+
+
+Started PATCH "/api/todos/1" for 127.0.0.1 at 2018-05-02 15:23:06 -0400
+Processing by TodosController#update as HTML
+  Parameters: {"editor_data"=>"{\"blocks\":[{\"key\":\"as6h4\",\"text\":\"write splash screen\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{\"urgent\":false,\"quick\":false}},{\"key\":\"1kggh\",\"text\":\"build out containers\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{\"urgent\":true,\"quick\":true}},{\"key\":\"9m2k2\",\"text\":\"add drag/drop components to priority screen\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{\"urgent\":true,\"quick\":true}},{\"key\":\"t5qa\",\"text\":\"modify style for block components in draft\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{}},{\"key\":\"a5fan\",\"text\":\"make toolbar buttons actual buttons\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{}},{\"key\":\"5hsk0\",\"text\":\"make editing button differenciate between selection change and actual edits\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{\"urgent\":true,\"quick\":false}},{\"key\":\"55o1v\",\"text\":\"add spellcheck\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{}},{\"key\":\"3ouh5\",\"text\":\"choose ui kit\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{\"urgent\":false,\"quick\":true}},{\"key\":\"fqlpk\",\"text\":\"add keybinding to move lines up/down\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{\"urgent\":false,\"quick\":false}},{\"key\":\"ca3gr\",\"text\":\"make loading button\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":0,\"length\":19,\"style\":\"STRIKETHROUGH\"}],\"entityRanges\":[],\"data\":{}},{\"key\":\"e1cpu\",\"text\":\"move editor state up to app level \",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":0,\"length\":24,\"style\":\"STRIKETHROUGH\"},{\"offset\":27,\"length\":7,\"style\":\"STRIKETHROUGH\"}],\"entityRanges\":[],\"data\":{\"urgent\":false,\"quick\":false}}],\"entityMap\":{}}", "id"=>"1", "todo"=>{"editor_data"=>"{\"blocks\":[{\"key\":\"as6h4\",\"text\":\"write splash screen\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{\"urgent\":false,\"quick\":false}},{\"key\":\"1kggh\",\"text\":\"build out containers\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{\"urgent\":true,\"quick\":true}},{\"key\":\"9m2k2\",\"text\":\"add drag/drop components to priority screen\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{\"urgent\":true,\"quick\":true}},{\"key\":\"t5qa\",\"text\":\"modify style for block components in draft\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{}},{\"key\":\"a5fan\",\"text\":\"make toolbar buttons actual buttons\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{}},{\"key\":\"5hsk0\",\"text\":\"make editing button differenciate between selection change and actual edits\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{\"urgent\":true,\"quick\":false}},{\"key\":\"55o1v\",\"text\":\"add spellcheck\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{}},{\"key\":\"3ouh5\",\"text\":\"choose ui kit\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{\"urgent\":false,\"quick\":true}},{\"key\":\"fqlpk\",\"text\":\"add keybinding to move lines up/down\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{\"urgent\":false,\"quick\":false}},{\"key\":\"ca3gr\",\"text\":\"make loading button\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":0,\"length\":19,\"style\":\"STRIKETHROUGH\"}],\"entityRanges\":[],\"data\":{}},{\"key\":\"e1cpu\",\"text\":\"move editor state up to app level \",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":0,\"length\":24,\"style\":\"STRIKETHROUGH\"},{\"offset\":27,\"length\":7,\"style\":\"STRIKETHROUGH\"}],\"entityRanges\":[],\"data\":{\"urgent\":false,\"quick\":false}}],\"entityMap\":{}}"}}
+Unpermitted parameter: :todo
+  [1m[36mTodo Load (0.7ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:10
+Unpermitted parameter: :todo
+Unpermitted parameter: :todo
+  [1m[35m (3.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/todos_controller.rb:13
+  [1m[36mUser Load (8.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:13
+  [1m[35m (82.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/todos_controller.rb:13
+Completed 204 No Content in 117ms (ActiveRecord: 95.0ms)
+
+
+Started PATCH "/api/todos/1" for 127.0.0.1 at 2018-05-02 15:23:09 -0400
+Processing by TodosController#update as HTML
+  Parameters: {"editor_data"=>"{\"blocks\":[{\"key\":\"as6h4\",\"text\":\"write splash screen\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{\"urgent\":false,\"quick\":false}},{\"key\":\"1kggh\",\"text\":\"build out containers\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{\"urgent\":true,\"quick\":true}},{\"key\":\"9m2k2\",\"text\":\"add drag/drop components to priority screen\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{\"urgent\":true,\"quick\":true}},{\"key\":\"t5qa\",\"text\":\"modify style for block components in draft\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{}},{\"key\":\"a5fan\",\"text\":\"make toolbar buttons actual buttons\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{}},{\"key\":\"5hsk0\",\"text\":\"make editing button differenciate between selection change and actual edits\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{\"urgent\":true,\"quick\":false}},{\"key\":\"55o1v\",\"text\":\"add spellcheck!!!!\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{}},{\"key\":\"3ouh5\",\"text\":\"choose ui kit\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{\"urgent\":false,\"quick\":true}},{\"key\":\"fqlpk\",\"text\":\"add keybinding to move lines up/down\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{\"urgent\":false,\"quick\":false}},{\"key\":\"ca3gr\",\"text\":\"make loading button\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":0,\"length\":19,\"style\":\"STRIKETHROUGH\"}],\"entityRanges\":[],\"data\":{}},{\"key\":\"e1cpu\",\"text\":\"move editor state up to app level \",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":0,\"length\":24,\"style\":\"STRIKETHROUGH\"},{\"offset\":27,\"length\":7,\"style\":\"STRIKETHROUGH\"}],\"entityRanges\":[],\"data\":{\"urgent\":false,\"quick\":false}}],\"entityMap\":{}}", "id"=>"1", "todo"=>{"editor_data"=>"{\"blocks\":[{\"key\":\"as6h4\",\"text\":\"write splash screen\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{\"urgent\":false,\"quick\":false}},{\"key\":\"1kggh\",\"text\":\"build out containers\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{\"urgent\":true,\"quick\":true}},{\"key\":\"9m2k2\",\"text\":\"add drag/drop components to priority screen\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{\"urgent\":true,\"quick\":true}},{\"key\":\"t5qa\",\"text\":\"modify style for block components in draft\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{}},{\"key\":\"a5fan\",\"text\":\"make toolbar buttons actual buttons\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{}},{\"key\":\"5hsk0\",\"text\":\"make editing button differenciate between selection change and actual edits\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{\"urgent\":true,\"quick\":false}},{\"key\":\"55o1v\",\"text\":\"add spellcheck!!!!\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{}},{\"key\":\"3ouh5\",\"text\":\"choose ui kit\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{\"urgent\":false,\"quick\":true}},{\"key\":\"fqlpk\",\"text\":\"add keybinding to move lines up/down\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{\"urgent\":false,\"quick\":false}},{\"key\":\"ca3gr\",\"text\":\"make loading button\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":0,\"length\":19,\"style\":\"STRIKETHROUGH\"}],\"entityRanges\":[],\"data\":{}},{\"key\":\"e1cpu\",\"text\":\"move editor state up to app level \",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":0,\"length\":24,\"style\":\"STRIKETHROUGH\"},{\"offset\":27,\"length\":7,\"style\":\"STRIKETHROUGH\"}],\"entityRanges\":[],\"data\":{\"urgent\":false,\"quick\":false}}],\"entityMap\":{}}"}}
+Unpermitted parameter: :todo
+  [1m[36mTodo Load (0.6ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:10
+Unpermitted parameter: :todo
+Unpermitted parameter: :todo
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/todos_controller.rb:13
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:13
+  [1m[36mTodo Update (112.5ms)[0m  [1m[33mUPDATE "todos" SET "editor_data" = $1 WHERE "todos"."id" = $2[0m  [["editor_data", "\"{\\\"blocks\\\":[{\\\"key\\\":\\\"as6h4\\\",\\\"text\\\":\\\"write splash screen\\\",\\\"type\\\":\\\"unstyled\\\",\\\"depth\\\":0,\\\"inlineStyleRanges\\\":[],\\\"entityRanges\\\":[],\\\"data\\\":{\\\"urgent\\\":false,\\\"quick\\\":false}},{\\\"key\\\":\\\"1kggh\\\",\\\"text\\\":\\\"build out containers\\\",\\\"type\\\":\\\"unstyled\\\",\\\"depth\\\":0,\\\"inlineStyleRanges\\\":[],\\\"entityRanges\\\":[],\\\"data\\\":{\\\"urgent\\\":true,\\\"quick\\\":true}},{\\\"key\\\":\\\"9m2k2\\\",\\\"text\\\":\\\"add drag/drop components to priority screen\\\",\\\"type\\\":\\\"unstyled\\\",\\\"depth\\\":0,\\\"inlineStyleRanges\\\":[],\\\"entityRanges\\\":[],\\\"data\\\":{\\\"urgent\\\":true,\\\"quick\\\":true}},{\\\"key\\\":\\\"t5qa\\\",\\\"text\\\":\\\"modify style for block components in draft\\\",\\\"type\\\":\\\"unstyled\\\",\\\"depth\\\":0,\\\"inlineStyleRanges\\\":[],\\\"entityRanges\\\":[],\\\"data\\\":{}},{\\\"key\\\":\\\"a5fan\\\",\\\"text\\\":\\\"make toolbar buttons actual buttons\\\",\\\"type\\\":\\\"unstyled\\\",\\\"depth\\\":0,\\\"inlineStyleRanges\\\":[],\\\"entityRanges\\\":[],\\\"data\\\":{}},{\\\"key\\\":\\\"5hsk0\\\",\\\"text\\\":\\\"make editing button differenciate between selection change and actual edits\\\",\\\"type\\\":\\\"unstyled\\\",\\\"depth\\\":0,\\\"inlineStyleRanges\\\":[],\\\"entityRanges\\\":[],\\\"data\\\":{\\\"urgent\\\":true,\\\"quick\\\":false}},{\\\"key\\\":\\\"55o1v\\\",\\\"text\\\":\\\"add spellcheck!!!!\\\",\\\"type\\\":\\\"unstyled\\\",\\\"depth\\\":0,\\\"inlineStyleRanges\\\":[],\\\"entityRanges\\\":[],\\\"data\\\":{}},{\\\"key\\\":\\\"3ouh5\\\",\\\"text\\\":\\\"choose ui kit\\\",\\\"type\\\":\\\"unstyled\\\",\\\"depth\\\":0,\\\"inlineStyleRanges\\\":[],\\\"entityRanges\\\":[],\\\"data\\\":{\\\"urgent\\\":false,\\\"quick\\\":true}},{\\\"key\\\":\\\"fqlpk\\\",\\\"text\\\":\\\"add keybinding to move lines up/down\\\",\\\"type\\\":\\\"unstyled\\\",\\\"depth\\\":0,\\\"inlineStyleRanges\\\":[],\\\"entityRanges\\\":[],\\\"data\\\":{\\\"urgent\\\":false,\\\"quick\\\":false}},{\\\"key\\\":\\\"ca3gr\\\",\\\"text\\\":\\\"make loading button\\\",\\\"type\\\":\\\"unstyled\\\",\\\"depth\\\":0,\\\"inlineStyleRanges\\\":[{\\\"offset\\\":0,\\\"length\\\":19,\\\"style\\\":\\\"STRIKETHROUGH\\\"}],\\\"entityRanges\\\":[],\\\"data\\\":{}},{\\\"key\\\":\\\"e1cpu\\\",\\\"text\\\":\\\"move editor state up to app level \\\",\\\"type\\\":\\\"unstyled\\\",\\\"depth\\\":0,\\\"inlineStyleRanges\\\":[{\\\"offset\\\":0,\\\"length\\\":24,\\\"style\\\":\\\"STRIKETHROUGH\\\"},{\\\"offset\\\":27,\\\"length\\\":7,\\\"style\\\":\\\"STRIKETHROUGH\\\"}],\\\"entityRanges\\\":[],\\\"data\\\":{\\\"urgent\\\":false,\\\"quick\\\":false}}],\\\"entityMap\\\":{}}\""], ["id", 1]]
+  ↳ app/controllers/todos_controller.rb:13
+  [1m[35m (22.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/todos_controller.rb:13
+Completed 204 No Content in 193ms (ActiveRecord: 136.2ms)
+
+
+Started PATCH "/api/todos/1" for 127.0.0.1 at 2018-05-02 15:23:12 -0400
+Processing by TodosController#update as HTML
+  Parameters: {"editor_data"=>"{\"blocks\":[{\"key\":\"as6h4\",\"text\":\"write splash screen\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{\"urgent\":false,\"quick\":false}},{\"key\":\"1kggh\",\"text\":\"build out containers\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{\"urgent\":true,\"quick\":true}},{\"key\":\"9m2k2\",\"text\":\"add drag/drop components to priority screen\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{\"urgent\":true,\"quick\":true}},{\"key\":\"t5qa\",\"text\":\"modify style for block components in draft\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{}},{\"key\":\"a5fan\",\"text\":\"make toolbar buttons actual buttons\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{}},{\"key\":\"5hsk0\",\"text\":\"make editing button differenciate between selection change and actual edits\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{\"urgent\":true,\"quick\":false}},{\"key\":\"55o1v\",\"text\":\"add spellcheck!!!!\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{\"urgent\":true,\"quick\":true,\"listName\":\"urgentQuick\"}},{\"key\":\"3ouh5\",\"text\":\"choose ui kit\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{\"urgent\":false,\"quick\":true}},{\"key\":\"fqlpk\",\"text\":\"add keybinding to move lines up/down\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{\"urgent\":false,\"quick\":false}},{\"key\":\"ca3gr\",\"text\":\"make loading button\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":0,\"length\":19,\"style\":\"STRIKETHROUGH\"}],\"entityRanges\":[],\"data\":{}},{\"key\":\"e1cpu\",\"text\":\"move editor state up to app level \",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":0,\"length\":24,\"style\":\"STRIKETHROUGH\"},{\"offset\":27,\"length\":7,\"style\":\"STRIKETHROUGH\"}],\"entityRanges\":[],\"data\":{\"urgent\":false,\"quick\":false}}],\"entityMap\":{}}", "id"=>"1", "todo"=>{"editor_data"=>"{\"blocks\":[{\"key\":\"as6h4\",\"text\":\"write splash screen\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{\"urgent\":false,\"quick\":false}},{\"key\":\"1kggh\",\"text\":\"build out containers\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{\"urgent\":true,\"quick\":true}},{\"key\":\"9m2k2\",\"text\":\"add drag/drop components to priority screen\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{\"urgent\":true,\"quick\":true}},{\"key\":\"t5qa\",\"text\":\"modify style for block components in draft\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{}},{\"key\":\"a5fan\",\"text\":\"make toolbar buttons actual buttons\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{}},{\"key\":\"5hsk0\",\"text\":\"make editing button differenciate between selection change and actual edits\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{\"urgent\":true,\"quick\":false}},{\"key\":\"55o1v\",\"text\":\"add spellcheck!!!!\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{\"urgent\":true,\"quick\":true,\"listName\":\"urgentQuick\"}},{\"key\":\"3ouh5\",\"text\":\"choose ui kit\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{\"urgent\":false,\"quick\":true}},{\"key\":\"fqlpk\",\"text\":\"add keybinding to move lines up/down\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{\"urgent\":false,\"quick\":false}},{\"key\":\"ca3gr\",\"text\":\"make loading button\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":0,\"length\":19,\"style\":\"STRIKETHROUGH\"}],\"entityRanges\":[],\"data\":{}},{\"key\":\"e1cpu\",\"text\":\"move editor state up to app level \",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":0,\"length\":24,\"style\":\"STRIKETHROUGH\"},{\"offset\":27,\"length\":7,\"style\":\"STRIKETHROUGH\"}],\"entityRanges\":[],\"data\":{\"urgent\":false,\"quick\":false}}],\"entityMap\":{}}"}}
+Unpermitted parameter: :todo
+  [1m[36mTodo Load (0.5ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:10
+Unpermitted parameter: :todo
+Unpermitted parameter: :todo
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/todos_controller.rb:13
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:13
+  [1m[36mTodo Update (4.7ms)[0m  [1m[33mUPDATE "todos" SET "editor_data" = $1 WHERE "todos"."id" = $2[0m  [["editor_data", "\"{\\\"blocks\\\":[{\\\"key\\\":\\\"as6h4\\\",\\\"text\\\":\\\"write splash screen\\\",\\\"type\\\":\\\"unstyled\\\",\\\"depth\\\":0,\\\"inlineStyleRanges\\\":[],\\\"entityRanges\\\":[],\\\"data\\\":{\\\"urgent\\\":false,\\\"quick\\\":false}},{\\\"key\\\":\\\"1kggh\\\",\\\"text\\\":\\\"build out containers\\\",\\\"type\\\":\\\"unstyled\\\",\\\"depth\\\":0,\\\"inlineStyleRanges\\\":[],\\\"entityRanges\\\":[],\\\"data\\\":{\\\"urgent\\\":true,\\\"quick\\\":true}},{\\\"key\\\":\\\"9m2k2\\\",\\\"text\\\":\\\"add drag/drop components to priority screen\\\",\\\"type\\\":\\\"unstyled\\\",\\\"depth\\\":0,\\\"inlineStyleRanges\\\":[],\\\"entityRanges\\\":[],\\\"data\\\":{\\\"urgent\\\":true,\\\"quick\\\":true}},{\\\"key\\\":\\\"t5qa\\\",\\\"text\\\":\\\"modify style for block components in draft\\\",\\\"type\\\":\\\"unstyled\\\",\\\"depth\\\":0,\\\"inlineStyleRanges\\\":[],\\\"entityRanges\\\":[],\\\"data\\\":{}},{\\\"key\\\":\\\"a5fan\\\",\\\"text\\\":\\\"make toolbar buttons actual buttons\\\",\\\"type\\\":\\\"unstyled\\\",\\\"depth\\\":0,\\\"inlineStyleRanges\\\":[],\\\"entityRanges\\\":[],\\\"data\\\":{}},{\\\"key\\\":\\\"5hsk0\\\",\\\"text\\\":\\\"make editing button differenciate between selection change and actual edits\\\",\\\"type\\\":\\\"unstyled\\\",\\\"depth\\\":0,\\\"inlineStyleRanges\\\":[],\\\"entityRanges\\\":[],\\\"data\\\":{\\\"urgent\\\":true,\\\"quick\\\":false}},{\\\"key\\\":\\\"55o1v\\\",\\\"text\\\":\\\"add spellcheck!!!!\\\",\\\"type\\\":\\\"unstyled\\\",\\\"depth\\\":0,\\\"inlineStyleRanges\\\":[],\\\"entityRanges\\\":[],\\\"data\\\":{\\\"urgent\\\":true,\\\"quick\\\":true,\\\"listName\\\":\\\"urgentQuick\\\"}},{\\\"key\\\":\\\"3ouh5\\\",\\\"text\\\":\\\"choose ui kit\\\",\\\"type\\\":\\\"unstyled\\\",\\\"depth\\\":0,\\\"inlineStyleRanges\\\":[],\\\"entityRanges\\\":[],\\\"data\\\":{\\\"urgent\\\":false,\\\"quick\\\":true}},{\\\"key\\\":\\\"fqlpk\\\",\\\"text\\\":\\\"add keybinding to move lines up/down\\\",\\\"type\\\":\\\"unstyled\\\",\\\"depth\\\":0,\\\"inlineStyleRanges\\\":[],\\\"entityRanges\\\":[],\\\"data\\\":{\\\"urgent\\\":false,\\\"quick\\\":false}},{\\\"key\\\":\\\"ca3gr\\\",\\\"text\\\":\\\"make loading button\\\",\\\"type\\\":\\\"unstyled\\\",\\\"depth\\\":0,\\\"inlineStyleRanges\\\":[{\\\"offset\\\":0,\\\"length\\\":19,\\\"style\\\":\\\"STRIKETHROUGH\\\"}],\\\"entityRanges\\\":[],\\\"data\\\":{}},{\\\"key\\\":\\\"e1cpu\\\",\\\"text\\\":\\\"move editor state up to app level \\\",\\\"type\\\":\\\"unstyled\\\",\\\"depth\\\":0,\\\"inlineStyleRanges\\\":[{\\\"offset\\\":0,\\\"length\\\":24,\\\"style\\\":\\\"STRIKETHROUGH\\\"},{\\\"offset\\\":27,\\\"length\\\":7,\\\"style\\\":\\\"STRIKETHROUGH\\\"}],\\\"entityRanges\\\":[],\\\"data\\\":{\\\"urgent\\\":false,\\\"quick\\\":false}}],\\\"entityMap\\\":{}}\""], ["id", 1]]
+  ↳ app/controllers/todos_controller.rb:13
+  [1m[35m (2.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/todos_controller.rb:13
+Completed 204 No Content in 166ms (ActiveRecord: 9.3ms)
+
+
+Started PATCH "/api/todos/1" for 127.0.0.1 at 2018-05-02 15:23:25 -0400
+Processing by TodosController#update as HTML
+  Parameters: {"editor_data"=>"{\"blocks\":[{\"key\":\"as6h4\",\"text\":\"write splash screen\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{\"urgent\":false,\"quick\":false}},{\"key\":\"1kggh\",\"text\":\"build out containers\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{\"urgent\":true,\"quick\":true}},{\"key\":\"9m2k2\",\"text\":\"add drag/drop components to priority screen\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{\"urgent\":true,\"quick\":true}},{\"key\":\"t5qa\",\"text\":\"modify style for block components in draft\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{}},{\"key\":\"a5fan\",\"text\":\"make toolbar buttons actual buttons\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{}},{\"key\":\"5hsk0\",\"text\":\"make editing button differenciate between selection change and actual edits\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{\"urgent\":true,\"quick\":false}},{\"key\":\"55o1v\",\"text\":\"add spellcheck\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{\"urgent\":true,\"quick\":true,\"listName\":\"urgentQuick\"}},{\"key\":\"3ouh5\",\"text\":\"choose ui kit\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{\"urgent\":false,\"quick\":true}},{\"key\":\"fqlpk\",\"text\":\"add keybinding to move lines up/down\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{\"urgent\":false,\"quick\":false}},{\"key\":\"ca3gr\",\"text\":\"make loading button\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":0,\"length\":19,\"style\":\"STRIKETHROUGH\"}],\"entityRanges\":[],\"data\":{}},{\"key\":\"e1cpu\",\"text\":\"move editor state up to app level \",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":0,\"length\":24,\"style\":\"STRIKETHROUGH\"},{\"offset\":27,\"length\":7,\"style\":\"STRIKETHROUGH\"}],\"entityRanges\":[],\"data\":{\"urgent\":false,\"quick\":false}}],\"entityMap\":{}}", "id"=>"1", "todo"=>{"editor_data"=>"{\"blocks\":[{\"key\":\"as6h4\",\"text\":\"write splash screen\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{\"urgent\":false,\"quick\":false}},{\"key\":\"1kggh\",\"text\":\"build out containers\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{\"urgent\":true,\"quick\":true}},{\"key\":\"9m2k2\",\"text\":\"add drag/drop components to priority screen\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{\"urgent\":true,\"quick\":true}},{\"key\":\"t5qa\",\"text\":\"modify style for block components in draft\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{}},{\"key\":\"a5fan\",\"text\":\"make toolbar buttons actual buttons\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{}},{\"key\":\"5hsk0\",\"text\":\"make editing button differenciate between selection change and actual edits\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{\"urgent\":true,\"quick\":false}},{\"key\":\"55o1v\",\"text\":\"add spellcheck\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{\"urgent\":true,\"quick\":true,\"listName\":\"urgentQuick\"}},{\"key\":\"3ouh5\",\"text\":\"choose ui kit\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{\"urgent\":false,\"quick\":true}},{\"key\":\"fqlpk\",\"text\":\"add keybinding to move lines up/down\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{\"urgent\":false,\"quick\":false}},{\"key\":\"ca3gr\",\"text\":\"make loading button\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":0,\"length\":19,\"style\":\"STRIKETHROUGH\"}],\"entityRanges\":[],\"data\":{}},{\"key\":\"e1cpu\",\"text\":\"move editor state up to app level \",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":0,\"length\":24,\"style\":\"STRIKETHROUGH\"},{\"offset\":27,\"length\":7,\"style\":\"STRIKETHROUGH\"}],\"entityRanges\":[],\"data\":{\"urgent\":false,\"quick\":false}}],\"entityMap\":{}}"}}
+Unpermitted parameter: :todo
+  [1m[36mTodo Load (0.6ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:10
+Unpermitted parameter: :todo
+Unpermitted parameter: :todo
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/todos_controller.rb:13
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:13
+  [1m[36mTodo Update (117.8ms)[0m  [1m[33mUPDATE "todos" SET "editor_data" = $1 WHERE "todos"."id" = $2[0m  [["editor_data", "\"{\\\"blocks\\\":[{\\\"key\\\":\\\"as6h4\\\",\\\"text\\\":\\\"write splash screen\\\",\\\"type\\\":\\\"unstyled\\\",\\\"depth\\\":0,\\\"inlineStyleRanges\\\":[],\\\"entityRanges\\\":[],\\\"data\\\":{\\\"urgent\\\":false,\\\"quick\\\":false}},{\\\"key\\\":\\\"1kggh\\\",\\\"text\\\":\\\"build out containers\\\",\\\"type\\\":\\\"unstyled\\\",\\\"depth\\\":0,\\\"inlineStyleRanges\\\":[],\\\"entityRanges\\\":[],\\\"data\\\":{\\\"urgent\\\":true,\\\"quick\\\":true}},{\\\"key\\\":\\\"9m2k2\\\",\\\"text\\\":\\\"add drag/drop components to priority screen\\\",\\\"type\\\":\\\"unstyled\\\",\\\"depth\\\":0,\\\"inlineStyleRanges\\\":[],\\\"entityRanges\\\":[],\\\"data\\\":{\\\"urgent\\\":true,\\\"quick\\\":true}},{\\\"key\\\":\\\"t5qa\\\",\\\"text\\\":\\\"modify style for block components in draft\\\",\\\"type\\\":\\\"unstyled\\\",\\\"depth\\\":0,\\\"inlineStyleRanges\\\":[],\\\"entityRanges\\\":[],\\\"data\\\":{}},{\\\"key\\\":\\\"a5fan\\\",\\\"text\\\":\\\"make toolbar buttons actual buttons\\\",\\\"type\\\":\\\"unstyled\\\",\\\"depth\\\":0,\\\"inlineStyleRanges\\\":[],\\\"entityRanges\\\":[],\\\"data\\\":{}},{\\\"key\\\":\\\"5hsk0\\\",\\\"text\\\":\\\"make editing button differenciate between selection change and actual edits\\\",\\\"type\\\":\\\"unstyled\\\",\\\"depth\\\":0,\\\"inlineStyleRanges\\\":[],\\\"entityRanges\\\":[],\\\"data\\\":{\\\"urgent\\\":true,\\\"quick\\\":false}},{\\\"key\\\":\\\"55o1v\\\",\\\"text\\\":\\\"add spellcheck\\\",\\\"type\\\":\\\"unstyled\\\",\\\"depth\\\":0,\\\"inlineStyleRanges\\\":[],\\\"entityRanges\\\":[],\\\"data\\\":{\\\"urgent\\\":true,\\\"quick\\\":true,\\\"listName\\\":\\\"urgentQuick\\\"}},{\\\"key\\\":\\\"3ouh5\\\",\\\"text\\\":\\\"choose ui kit\\\",\\\"type\\\":\\\"unstyled\\\",\\\"depth\\\":0,\\\"inlineStyleRanges\\\":[],\\\"entityRanges\\\":[],\\\"data\\\":{\\\"urgent\\\":false,\\\"quick\\\":true}},{\\\"key\\\":\\\"fqlpk\\\",\\\"text\\\":\\\"add keybinding to move lines up/down\\\",\\\"type\\\":\\\"unstyled\\\",\\\"depth\\\":0,\\\"inlineStyleRanges\\\":[],\\\"entityRanges\\\":[],\\\"data\\\":{\\\"urgent\\\":false,\\\"quick\\\":false}},{\\\"key\\\":\\\"ca3gr\\\",\\\"text\\\":\\\"make loading button\\\",\\\"type\\\":\\\"unstyled\\\",\\\"depth\\\":0,\\\"inlineStyleRanges\\\":[{\\\"offset\\\":0,\\\"length\\\":19,\\\"style\\\":\\\"STRIKETHROUGH\\\"}],\\\"entityRanges\\\":[],\\\"data\\\":{}},{\\\"key\\\":\\\"e1cpu\\\",\\\"text\\\":\\\"move editor state up to app level \\\",\\\"type\\\":\\\"unstyled\\\",\\\"depth\\\":0,\\\"inlineStyleRanges\\\":[{\\\"offset\\\":0,\\\"length\\\":24,\\\"style\\\":\\\"STRIKETHROUGH\\\"},{\\\"offset\\\":27,\\\"length\\\":7,\\\"style\\\":\\\"STRIKETHROUGH\\\"}],\\\"entityRanges\\\":[],\\\"data\\\":{\\\"urgent\\\":false,\\\"quick\\\":false}}],\\\"entityMap\\\":{}}\""], ["id", 1]]
+  ↳ app/controllers/todos_controller.rb:13
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/todos_controller.rb:13
+Completed 204 No Content in 146ms (ActiveRecord: 121.2ms)
+
+
+Started GET "/api/todos/1" for 127.0.0.1 at 2018-05-02 15:28:09 -0400
+Processing by TodosController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mTodo Load (1.9ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:5
+Completed 200 OK in 15ms (Views: 0.2ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/api/todos/1" for 127.0.0.1 at 2018-05-02 15:30:30 -0400
+Processing by TodosController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mTodo Load (13.3ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:5
+Completed 200 OK in 15ms (Views: 0.1ms | ActiveRecord: 13.3ms)
+
+
+Started GET "/api/todos/1" for 127.0.0.1 at 2018-05-02 15:31:57 -0400
+Processing by TodosController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mTodo Load (0.5ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:5
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/todos/1" for 127.0.0.1 at 2018-05-02 15:40:28 -0400
+Processing by TodosController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mTodo Load (48.8ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:5
+Completed 200 OK in 66ms (Views: 2.9ms | ActiveRecord: 48.8ms)
+
+
+Started GET "/api/todos/1" for 127.0.0.1 at 2018-05-02 15:40:34 -0400
+Processing by TodosController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mTodo Load (1.5ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:5
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/api/todos/1" for 127.0.0.1 at 2018-05-02 15:40:43 -0400
+Processing by TodosController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mTodo Load (2.7ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:5
+Completed 200 OK in 5ms (Views: 0.1ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/api/todos/1" for 127.0.0.1 at 2018-05-02 15:41:05 -0400
+Processing by TodosController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mTodo Load (4.7ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:5
+Completed 200 OK in 7ms (Views: 0.1ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/api/todos/1" for 127.0.0.1 at 2018-05-02 15:41:14 -0400
+Processing by TodosController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mTodo Load (219.4ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:5
+Completed 200 OK in 222ms (Views: 0.2ms | ActiveRecord: 219.4ms)
+
+
+Started GET "/api/todos/1" for 127.0.0.1 at 2018-05-02 15:41:41 -0400
+Processing by TodosController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mTodo Load (340.6ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:5
+Completed 200 OK in 342ms (Views: 0.1ms | ActiveRecord: 340.6ms)
+
+
+Started GET "/api/todos/1" for 127.0.0.1 at 2018-05-02 15:42:15 -0400
+Processing by TodosController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mTodo Load (45.4ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:5
+Completed 200 OK in 48ms (Views: 0.1ms | ActiveRecord: 45.4ms)
+
+
+Started GET "/api/todos/1" for 127.0.0.1 at 2018-05-02 15:43:20 -0400
+Processing by TodosController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mTodo Load (45.8ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:5
+Completed 200 OK in 48ms (Views: 0.3ms | ActiveRecord: 45.8ms)
+
+
+Started PATCH "/api/todos/1" for 127.0.0.1 at 2018-05-02 15:43:30 -0400
+Processing by TodosController#update as HTML
+  Parameters: {"editor_data"=>"{\"blocks\":[{\"key\":\"as6h4\",\"text\":\"write splash screen\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{\"urgent\":false,\"quick\":false}},{\"key\":\"1kggh\",\"text\":\"build out containers\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{\"urgent\":true,\"quick\":true}},{\"key\":\"9m2k2\",\"text\":\"add drag/drop components to priority screen\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{\"urgent\":true,\"quick\":true}},{\"key\":\"t5qa\",\"text\":\"modify style for block components in draft\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{}},{\"key\":\"a5fan\",\"text\":\"make toolbar buttons actual buttons\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{}},{\"key\":\"5hsk0\",\"text\":\"make editing button differenciate between selection change and actual edits\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{\"urgent\":true,\"quick\":false}},{\"key\":\"55o1v\",\"text\":\"add spellcheck\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{\"urgent\":true,\"quick\":true,\"listName\":\"urgentQuick\"}},{\"key\":\"3ouh5\",\"text\":\"choose ui kit\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{\"urgent\":false,\"quick\":true}},{\"key\":\"fqlpk\",\"text\":\"add keybinding to move lines up/down\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{\"urgent\":false,\"quick\":false}},{\"key\":\"ca3gr\",\"text\":\"make loading button\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":0,\"length\":19,\"style\":\"STRIKETHROUGH\"}],\"entityRanges\":[],\"data\":{}},{\"key\":\"e1cpu\",\"text\":\"move editor state up to app level \",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":0,\"length\":24,\"style\":\"STRIKETHROUGH\"},{\"offset\":27,\"length\":7,\"style\":\"STRIKETHROUGH\"}],\"entityRanges\":[],\"data\":{\"urgent\":false,\"quick\":false}}],\"entityMap\":{}}", "id"=>"1", "todo"=>{"editor_data"=>"{\"blocks\":[{\"key\":\"as6h4\",\"text\":\"write splash screen\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{\"urgent\":false,\"quick\":false}},{\"key\":\"1kggh\",\"text\":\"build out containers\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{\"urgent\":true,\"quick\":true}},{\"key\":\"9m2k2\",\"text\":\"add drag/drop components to priority screen\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{\"urgent\":true,\"quick\":true}},{\"key\":\"t5qa\",\"text\":\"modify style for block components in draft\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{}},{\"key\":\"a5fan\",\"text\":\"make toolbar buttons actual buttons\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{}},{\"key\":\"5hsk0\",\"text\":\"make editing button differenciate between selection change and actual edits\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{\"urgent\":true,\"quick\":false}},{\"key\":\"55o1v\",\"text\":\"add spellcheck\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{\"urgent\":true,\"quick\":true,\"listName\":\"urgentQuick\"}},{\"key\":\"3ouh5\",\"text\":\"choose ui kit\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{\"urgent\":false,\"quick\":true}},{\"key\":\"fqlpk\",\"text\":\"add keybinding to move lines up/down\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{\"urgent\":false,\"quick\":false}},{\"key\":\"ca3gr\",\"text\":\"make loading button\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":0,\"length\":19,\"style\":\"STRIKETHROUGH\"}],\"entityRanges\":[],\"data\":{}},{\"key\":\"e1cpu\",\"text\":\"move editor state up to app level \",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":0,\"length\":24,\"style\":\"STRIKETHROUGH\"},{\"offset\":27,\"length\":7,\"style\":\"STRIKETHROUGH\"}],\"entityRanges\":[],\"data\":{\"urgent\":false,\"quick\":false}}],\"entityMap\":{}}"}}
+Unpermitted parameter: :todo
+  [1m[36mTodo Load (0.6ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:10
+Unpermitted parameter: :todo
+Unpermitted parameter: :todo
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/todos_controller.rb:13
+  [1m[36mUser Load (194.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:13
+  [1m[35m (6.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/todos_controller.rb:13
+Completed 204 No Content in 231ms (ActiveRecord: 202.1ms)
+
+
+Started GET "/api/todos/1" for 127.0.0.1 at 2018-05-02 15:44:22 -0400
+Processing by TodosController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mTodo Load (23.4ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:5
+Completed 200 OK in 25ms (Views: 0.2ms | ActiveRecord: 23.4ms)
+
+
+Started GET "/api/todos/1" for 127.0.0.1 at 2018-05-02 15:45:25 -0400
+Processing by TodosController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mTodo Load (177.7ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:5
+Completed 200 OK in 179ms (Views: 0.1ms | ActiveRecord: 177.7ms)
+
+
+Started GET "/api/todos/1" for 127.0.0.1 at 2018-05-02 15:46:28 -0400
+Processing by TodosController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mTodo Load (0.6ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:5
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/todos/1" for 127.0.0.1 at 2018-05-02 15:47:21 -0400
+Processing by TodosController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mTodo Load (41.3ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:5
+Completed 200 OK in 43ms (Views: 0.1ms | ActiveRecord: 41.3ms)
+
+
+Started GET "/api/todos/1" for 127.0.0.1 at 2018-05-02 15:48:35 -0400
+Processing by TodosController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mTodo Load (50.3ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:5
+Completed 200 OK in 52ms (Views: 0.1ms | ActiveRecord: 50.3ms)
+
+
+Started GET "/api/todos/1" for 127.0.0.1 at 2018-05-02 16:18:35 -0400
+Processing by TodosController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mTodo Load (3.2ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:5
+Completed 200 OK in 20ms (Views: 1.7ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/api/todos/1" for 127.0.0.1 at 2018-05-02 16:21:59 -0400
+Processing by TodosController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mTodo Load (0.8ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:5
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/todos/1" for 127.0.0.1 at 2018-05-02 16:23:13 -0400
+Processing by TodosController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mTodo Load (32.0ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:5
+Completed 200 OK in 35ms (Views: 0.1ms | ActiveRecord: 32.0ms)
+
+
+Started GET "/api/todos/1" for 127.0.0.1 at 2018-05-02 16:23:54 -0400
+Processing by TodosController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mTodo Load (0.9ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:5
+Completed 200 OK in 4ms (Views: 0.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/todos/1" for 127.0.0.1 at 2018-05-02 16:28:09 -0400
+Processing by TodosController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mTodo Load (140.6ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:5
+Completed 200 OK in 142ms (Views: 0.1ms | ActiveRecord: 140.6ms)
+
+
+Started GET "/api/todos/1" for 127.0.0.1 at 2018-05-02 16:36:07 -0400
+Processing by TodosController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mTodo Load (1.6ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:5
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/api/todos/1" for 127.0.0.1 at 2018-05-02 16:41:24 -0400
+Processing by TodosController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mTodo Load (31.9ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:5
+Completed 200 OK in 71ms (Views: 8.4ms | ActiveRecord: 31.9ms)
+
+
+Started GET "/api/todos/1" for 127.0.0.1 at 2018-05-02 16:41:34 -0400
+Processing by TodosController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mTodo Load (0.6ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:5
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/todos/1" for 127.0.0.1 at 2018-05-02 16:41:45 -0400
+Processing by TodosController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mTodo Load (5.1ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:5
+Completed 200 OK in 8ms (Views: 0.1ms | ActiveRecord: 5.1ms)
+
+
+Started GET "/api/todos/1" for 127.0.0.1 at 2018-05-02 16:43:12 -0400
+Processing by TodosController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mTodo Load (120.8ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:5
+Completed 200 OK in 125ms (Views: 0.2ms | ActiveRecord: 120.8ms)
+
+
+Started GET "/api/todos/1" for 127.0.0.1 at 2018-05-02 16:43:46 -0400
+Processing by TodosController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mTodo Load (3.9ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:5
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/api/todos/1" for 127.0.0.1 at 2018-05-02 16:45:13 -0400
+Processing by TodosController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mTodo Load (0.7ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:5
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/todos/1" for 127.0.0.1 at 2018-05-02 16:45:16 -0400
+Processing by TodosController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mTodo Load (0.6ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:5
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/todos/1" for 127.0.0.1 at 2018-05-02 16:46:45 -0400
+Processing by TodosController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mTodo Load (39.7ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:5
+Completed 200 OK in 43ms (Views: 0.2ms | ActiveRecord: 39.7ms)
+
+
+Started GET "/api/todos/1" for 127.0.0.1 at 2018-05-02 16:47:12 -0400
+Processing by TodosController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mTodo Load (1.7ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:5
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/api/todos/1" for 127.0.0.1 at 2018-05-02 16:47:23 -0400
+Processing by TodosController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mTodo Load (19.6ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:5
+Completed 200 OK in 23ms (Views: 0.3ms | ActiveRecord: 19.6ms)
+
+
+Started GET "/api/todos/1" for 127.0.0.1 at 2018-05-02 16:47:42 -0400
+Processing by TodosController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mTodo Load (120.3ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:5
+Completed 200 OK in 123ms (Views: 0.3ms | ActiveRecord: 120.3ms)
+
+
+Started GET "/api/todos/1" for 127.0.0.1 at 2018-05-02 16:48:28 -0400
+Processing by TodosController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mTodo Load (188.4ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:5
+Completed 200 OK in 192ms (Views: 0.2ms | ActiveRecord: 188.4ms)
+
+
+Started GET "/api/todos/1" for 127.0.0.1 at 2018-05-02 16:48:42 -0400
+Processing by TodosController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mTodo Load (0.6ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:5
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/todos/1" for 127.0.0.1 at 2018-05-02 16:52:14 -0400
+Processing by TodosController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mTodo Load (7.8ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:5
+Completed 200 OK in 10ms (Views: 0.1ms | ActiveRecord: 7.8ms)
+
+
+Started GET "/api/todos/1" for 127.0.0.1 at 2018-05-02 16:52:33 -0400
+Processing by TodosController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mTodo Load (42.7ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:5
+Completed 200 OK in 45ms (Views: 0.7ms | ActiveRecord: 42.7ms)
+
+
+Started GET "/api/todos/1" for 127.0.0.1 at 2018-05-02 16:55:33 -0400
+Processing by TodosController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mTodo Load (1.8ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:5
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/api/todos/1" for 127.0.0.1 at 2018-05-02 16:55:47 -0400
+Processing by TodosController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mTodo Load (232.1ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:5
+Completed 200 OK in 234ms (Views: 0.1ms | ActiveRecord: 232.1ms)
+
+
+Started GET "/api/todos/1" for 127.0.0.1 at 2018-05-02 16:57:03 -0400
+Processing by TodosController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mTodo Load (8.7ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:5
+Completed 200 OK in 10ms (Views: 0.1ms | ActiveRecord: 8.7ms)
+
+
+Started GET "/api/todos/1" for 127.0.0.1 at 2018-05-02 16:57:33 -0400
+Processing by TodosController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mTodo Load (4.9ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:5
+Completed 200 OK in 7ms (Views: 0.1ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/api/todos/1" for 127.0.0.1 at 2018-05-02 16:59:58 -0400
+Processing by TodosController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mTodo Load (5.4ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:5
+Completed 200 OK in 7ms (Views: 0.1ms | ActiveRecord: 5.4ms)
+
+
+Started GET "/api/todos/1" for 127.0.0.1 at 2018-05-02 17:00:14 -0400
+Processing by TodosController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mTodo Load (6.5ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:5
+Completed 200 OK in 9ms (Views: 0.2ms | ActiveRecord: 6.5ms)
+
+
+Started PATCH "/api/todos/1" for 127.0.0.1 at 2018-05-02 17:19:13 -0400
+Processing by TodosController#update as HTML
+  Parameters: {"editor_data"=>"{\"blocks\":[{\"key\":\"as6h4\",\"text\":\"write splash screen\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{\"urgent\":false,\"quick\":false}},{\"key\":\"1kggh\",\"text\":\"build out containers\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{\"urgent\":true,\"quick\":true}},{\"key\":\"9m2k2\",\"text\":\"add drag/drop components to priority screen\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{\"urgent\":true,\"quick\":true}},{\"key\":\"t5qa\",\"text\":\"modify style for block components in draft\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{}},{\"key\":\"a5fan\",\"text\":\"make toolbar buttons actual buttons\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{}},{\"key\":\"5hsk0\",\"text\":\"make editing button differenciate between selection change and actual edits\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{\"urgent\":true,\"quick\":false}},{\"key\":\"55o1v\",\"text\":\"add spellcheck\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{\"urgent\":true,\"quick\":true,\"listName\":\"urgentQuick\"}},{\"key\":\"3ouh5\",\"text\":\"choose ui kit\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{\"urgent\":false,\"quick\":true}},{\"key\":\"fqlpk\",\"text\":\"add keybinding to move lines up/down\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{\"urgent\":false,\"quick\":false}},{\"key\":\"ca3gr\",\"text\":\"make loading button\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":0,\"length\":19,\"style\":\"STRIKETHROUGH\"}],\"entityRanges\":[],\"data\":{}},{\"key\":\"e1cpu\",\"text\":\"move editor state up to app level \",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":0,\"length\":24,\"style\":\"STRIKETHROUGH\"},{\"offset\":27,\"length\":7,\"style\":\"STRIKETHROUGH\"}],\"entityRanges\":[],\"data\":{\"urgent\":false,\"quick\":false}}],\"entityMap\":{}}", "id"=>"1", "todo"=>{"editor_data"=>"{\"blocks\":[{\"key\":\"as6h4\",\"text\":\"write splash screen\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{\"urgent\":false,\"quick\":false}},{\"key\":\"1kggh\",\"text\":\"build out containers\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{\"urgent\":true,\"quick\":true}},{\"key\":\"9m2k2\",\"text\":\"add drag/drop components to priority screen\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{\"urgent\":true,\"quick\":true}},{\"key\":\"t5qa\",\"text\":\"modify style for block components in draft\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{}},{\"key\":\"a5fan\",\"text\":\"make toolbar buttons actual buttons\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{}},{\"key\":\"5hsk0\",\"text\":\"make editing button differenciate between selection change and actual edits\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{\"urgent\":true,\"quick\":false}},{\"key\":\"55o1v\",\"text\":\"add spellcheck\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{\"urgent\":true,\"quick\":true,\"listName\":\"urgentQuick\"}},{\"key\":\"3ouh5\",\"text\":\"choose ui kit\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{\"urgent\":false,\"quick\":true}},{\"key\":\"fqlpk\",\"text\":\"add keybinding to move lines up/down\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{\"urgent\":false,\"quick\":false}},{\"key\":\"ca3gr\",\"text\":\"make loading button\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":0,\"length\":19,\"style\":\"STRIKETHROUGH\"}],\"entityRanges\":[],\"data\":{}},{\"key\":\"e1cpu\",\"text\":\"move editor state up to app level \",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":0,\"length\":24,\"style\":\"STRIKETHROUGH\"},{\"offset\":27,\"length\":7,\"style\":\"STRIKETHROUGH\"}],\"entityRanges\":[],\"data\":{\"urgent\":false,\"quick\":false}}],\"entityMap\":{}}"}}
+Unpermitted parameter: :todo
+  [1m[36mTodo Load (1.6ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:10
+Unpermitted parameter: :todo
+Unpermitted parameter: :todo
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/todos_controller.rb:13
+  [1m[36mUser Load (84.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:13
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/todos_controller.rb:13
+Completed 204 No Content in 118ms (ActiveRecord: 87.2ms)
+
+
