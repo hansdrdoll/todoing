@@ -12281,3 +12281,227 @@ Unpermitted parameter: :todo
 Completed 204 No Content in 118ms (ActiveRecord: 87.2ms)
 
 
+Started GET "/api/todos/1" for 127.0.0.1 at 2018-05-02 17:40:07 -0400
+Processing by TodosController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mTodo Load (50.6ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:5
+Completed 200 OK in 84ms (Views: 5.6ms | ActiveRecord: 50.6ms)
+
+
+Started GET "/api/todos/1" for 127.0.0.1 at 2018-05-02 17:40:21 -0400
+Processing by TodosController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mTodo Load (10.8ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:5
+Completed 200 OK in 13ms (Views: 0.1ms | ActiveRecord: 10.8ms)
+
+
+Started GET "/api/todos/1" for 127.0.0.1 at 2018-05-02 17:43:02 -0400
+Processing by TodosController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mTodo Load (5.1ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:5
+Completed 200 OK in 7ms (Views: 0.1ms | ActiveRecord: 5.1ms)
+
+
+Started GET "/api/todos/1" for 127.0.0.1 at 2018-05-02 17:43:37 -0400
+Processing by TodosController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mTodo Load (42.9ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:5
+Completed 200 OK in 45ms (Views: 0.2ms | ActiveRecord: 42.9ms)
+
+
+Started GET "/api/todos/1" for 127.0.0.1 at 2018-05-02 17:44:06 -0400
+Processing by TodosController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mTodo Load (154.5ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:5
+Completed 200 OK in 157ms (Views: 0.1ms | ActiveRecord: 154.5ms)
+
+
+Started GET "/api/todos/1" for 127.0.0.1 at 2018-05-02 17:49:35 -0400
+Processing by TodosController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mTodo Load (21.1ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:5
+Completed 200 OK in 34ms (Views: 1.1ms | ActiveRecord: 21.1ms)
+
+
+Started GET "/api/todos/1" for 127.0.0.1 at 2018-05-02 17:50:49 -0400
+Processing by TodosController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mTodo Load (1.1ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:5
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/api/todos/1" for 127.0.0.1 at 2018-05-02 17:54:03 -0400
+Processing by TodosController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mTodo Load (2.0ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:5
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/api/todos/1" for 127.0.0.1 at 2018-05-02 17:55:19 -0400
+Processing by TodosController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mTodo Load (4.4ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:5
+Completed 200 OK in 7ms (Views: 0.9ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/api/todos/1" for 127.0.0.1 at 2018-05-02 17:57:20 -0400
+Processing by TodosController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mTodo Load (14.3ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:5
+Completed 200 OK in 17ms (Views: 0.2ms | ActiveRecord: 14.3ms)
+
+
+Started GET "/api/todos/1" for 127.0.0.1 at 2018-05-02 18:01:20 -0400
+Processing by TodosController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mTodo Load (14.7ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:5
+Completed 200 OK in 17ms (Views: 0.2ms | ActiveRecord: 14.7ms)
+
+
+Started GET "/api/todos/1" for 127.0.0.1 at 2018-05-02 18:05:40 -0400
+Processing by TodosController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mTodo Load (12.1ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:5
+Completed 200 OK in 16ms (Views: 1.1ms | ActiveRecord: 12.1ms)
+
+
+Started GET "/api/todos/1" for 127.0.0.1 at 2018-05-02 18:13:40 -0400
+Processing by TodosController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mTodo Load (5.8ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:5
+Completed 200 OK in 8ms (Views: 0.1ms | ActiveRecord: 5.8ms)
+
+
+Started GET "/api/todos/1" for 127.0.0.1 at 2018-05-02 18:14:18 -0400
+Processing by TodosController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mTodo Load (251.4ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:5
+Completed 200 OK in 258ms (Views: 0.2ms | ActiveRecord: 251.4ms)
+
+
+Started GET "/api/todos/1" for 127.0.0.1 at 2018-05-02 18:15:13 -0400
+Processing by TodosController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mTodo Load (150.4ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:5
+Completed 200 OK in 153ms (Views: 0.2ms | ActiveRecord: 150.4ms)
+
+
+Started GET "/api/todos/1" for 127.0.0.1 at 2018-05-02 18:16:20 -0400
+Processing by TodosController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mTodo Load (151.2ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:5
+Completed 200 OK in 154ms (Views: 0.2ms | ActiveRecord: 151.2ms)
+
+
+Started GET "/api/todos/1" for 127.0.0.1 at 2018-05-02 18:16:37 -0400
+Processing by TodosController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mTodo Load (285.6ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:5
+Completed 200 OK in 288ms (Views: 0.2ms | ActiveRecord: 285.6ms)
+
+
+Started GET "/api/todos/1" for 127.0.0.1 at 2018-05-02 18:17:31 -0400
+Processing by TodosController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mTodo Load (205.9ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:5
+Completed 200 OK in 209ms (Views: 0.1ms | ActiveRecord: 205.9ms)
+
+
+Started GET "/api/todos/1" for 127.0.0.1 at 2018-05-02 18:17:49 -0400
+Processing by TodosController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mTodo Load (0.5ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:5
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/todos/1" for 127.0.0.1 at 2018-05-02 18:18:37 -0400
+Processing by TodosController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mTodo Load (92.0ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:5
+Completed 200 OK in 94ms (Views: 0.2ms | ActiveRecord: 92.0ms)
+
+
+Started GET "/api/todos/1" for 127.0.0.1 at 2018-05-02 18:19:19 -0400
+Processing by TodosController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mTodo Load (2.8ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:5
+Completed 200 OK in 5ms (Views: 0.1ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/api/todos/1" for 127.0.0.1 at 2018-05-02 18:19:39 -0400
+Processing by TodosController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mTodo Load (4.7ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:5
+Completed 200 OK in 7ms (Views: 0.1ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/api/todos/1" for 127.0.0.1 at 2018-05-02 18:20:37 -0400
+Processing by TodosController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mTodo Load (0.6ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:5
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/todos/1" for 127.0.0.1 at 2018-05-02 18:21:21 -0400
+Processing by TodosController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mTodo Load (0.6ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:5
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/todos/1" for 127.0.0.1 at 2018-05-02 18:21:44 -0400
+Processing by TodosController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mTodo Load (3.7ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:5
+Completed 200 OK in 6ms (Views: 0.1ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/api/todos/1" for 127.0.0.1 at 2018-05-02 18:21:56 -0400
+Processing by TodosController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mTodo Load (96.5ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:5
+Completed 200 OK in 99ms (Views: 0.1ms | ActiveRecord: 96.5ms)
+
+
+Started GET "/api/todos/1" for 127.0.0.1 at 2018-05-02 18:22:04 -0400
+Processing by TodosController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mTodo Load (96.8ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:5
+Completed 200 OK in 99ms (Views: 0.7ms | ActiveRecord: 96.8ms)
+
+
+Started GET "/api/todos/1" for 127.0.0.1 at 2018-05-02 18:22:34 -0400
+Processing by TodosController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mTodo Load (10.4ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:5
+Completed 200 OK in 12ms (Views: 0.1ms | ActiveRecord: 10.4ms)
+
+
