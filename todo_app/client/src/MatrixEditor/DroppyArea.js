@@ -8,6 +8,7 @@ function DroppyArea(props) {
       {(provided, snapshot) => (
         <div
           ref={provided.innerRef}
+          className="droppy-area"
           style={props.getListStyle(snapshot.isDraggingOver)}>
           {props.items.map((item, index) => (
             <DraggyThing

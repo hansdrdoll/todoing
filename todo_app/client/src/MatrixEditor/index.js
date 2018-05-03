@@ -130,6 +130,9 @@ class MatrixEditor extends Component {
   render() {
     return (
       <DragDropContext onDragEnd={this.onDragEnd}>
+        <div className="priority-grid">
+          <div className="droppy-area-container urgent-quick">
+            <h4>Urgent, Quick</h4>
         <DroppyArea
           areaId={"urgentQuickItems"}
           grid={grid}
@@ -137,7 +140,9 @@ class MatrixEditor extends Component {
           getItemStyle={getItemStyle}
           items={this.state.urgentQuickItems}
         />
-        <br />
+      </div>
+        <div className="droppy-area-container urgent-not-quick">
+          <h4>Urgent, Not Quick</h4>
         <DroppyArea
           areaId={"urgentNotQuickItems"}
           grid={grid}
@@ -145,7 +150,9 @@ class MatrixEditor extends Component {
           getItemStyle={getItemStyle}
           items={this.state.urgentNotQuickItems}
         />
-        <br />
+      </div>
+        <div className="droppy-area-container not-urgent-quick">
+          <h4>Not Urgent, Quick</h4>
         <DroppyArea
           areaId={"notUrgentQuickItems"}
           grid={grid}
@@ -153,7 +160,9 @@ class MatrixEditor extends Component {
           getItemStyle={getItemStyle}
           items={this.state.notUrgentQuickItems}
         />
-        <br />
+      </div>
+        <div className="droppy-area-container not-urgent-not-quick">
+          <h4>Not Urgent, Not Quick</h4>
         <DroppyArea
           areaId={"notUrgentNotQuickItems"}
           grid={grid}
@@ -161,7 +170,9 @@ class MatrixEditor extends Component {
           getItemStyle={getItemStyle}
           items={this.state.notUrgentNotQuickItems}
         />
-        <br />
+      </div>
+        <div className="droppy-area-container unclassified">
+          <h4>Unclassified</h4>
         <DroppyArea
           areaId={"unclassifiedItems"}
           grid={grid}
@@ -169,6 +180,8 @@ class MatrixEditor extends Component {
           getItemStyle={getItemStyle}
           items={this.state.unclassifiedItems}
         />
+      </div>
+      </div>
       </DragDropContext>
     );
   }
