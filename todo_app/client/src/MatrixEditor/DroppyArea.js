@@ -16,7 +16,7 @@ function DroppyArea(props) {
               getItemStyle={props.getItemStyle}
               index={index}
               item={item}
-              key={('d', item.key)}
+              key={('_', item.key)}
             />
           ))}
           {provided.placeholder}

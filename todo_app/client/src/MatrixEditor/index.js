@@ -11,7 +11,7 @@ const getItemStyle = (isDragging, draggableStyle) => ({
   margin: `0 0 ${grid}px 0`,
 
   // change background colour if dragging
-  background: isDragging ? 'lightgreen' : 'grey',
+  background: isDragging ? 'lightgrey' : 'grey',
 
   // styles we need to apply on draggables
   ...draggableStyle,
@@ -20,57 +20,102 @@ const getItemStyle = (isDragging, draggableStyle) => ({
 const getListStyle = isDraggingOver => ({
   background: isDraggingOver ? 'lightblue' : 'lightgrey',
   padding: grid,
-  width: 250,
+  // TODO: make this responsive
+  width: 400,
 });
 
 class MatrixEditor extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      urgentQuickItems: [],
-      urgentNotQuickItems: [],
-      notUrgentQuickItems: [],
-      notUrgentNotQuickItems: [],
-      unclassifiedItems: [],
+      urgentQuick: [],
+      urgentNotQuick: [],
+      notUrgentQuick: [],
+      notUrgentNotQuick: [],
+      unclassified: [],
     };
   }
 
   componentDidMount() {
-    const urgentQuickItems = this.props.editorData.blocks.filter(
+    const urgentQuick = this.props.editorData.blocks.filter(
       item => item.data.urgent && item.data.quick
     );
 
-    const urgentNotQuickItems = this.props.editorData.blocks.filter(
+    const urgentNotQuick = this.props.editorData.blocks.filter(
       item => item.data.urgent && !item.data.quick
     );
 
-    const notUrgentQuickItems = this.props.editorData.blocks.filter(
+    const notUrgentQuick = this.props.editorData.blocks.filter(
       item => !item.data.urgent && item.data.quick
     );
 
-    const notUrgentNotQuickItems = this.props.editorData.blocks.filter(
+    const notUrgentNotQuick = this.props.editorData.blocks.filter(
       item =>
         !item.data.urgent && !item.data.quick && item.data.urgent === false
     );
 
-    const unclassifiedItems = this.props.editorData.blocks.filter(
+    const unclassified = this.props.editorData.blocks.filter(
       item => item.data.urgent === undefined
     );
 
     this.setState({
-      urgentQuickItems,
-      urgentNotQuickItems,
-      notUrgentQuickItems,
-      notUrgentNotQuickItems,
-      unclassifiedItems,
+      urgentQuick,
+      urgentNotQuick,
+      notUrgentQuick,
+      notUrgentNotQuick,
+      unclassified,
     });
+  }
+
+  setDataBooleans(item, listName) {
+    switch (listName) {
+      case 'urgentQuick':
+        item.data = {
+          listName,
+          urgent: true,
+          quick: true,
+        }
+        break;
+      case 'urgentNotQuick':
+      item.data = {
+        listName,
+        urgent: true,
+        quick: false,
+      }
+        break;
+      case 'notUrgentQuick':
+      item.data = {
+        listName,
+        urgent: false,
+        quick: true,
+      }
+        break;
+      case 'notUrgentNotQuick':
+      item.data = {
+        listName,
+        urgent: false,
+        quick: false,
+      }
+        break;
+      default:
+        item.data = {
+          unclassified: true,
+        }
+    }
+    return item;
   }
 
   reorder(list, startIndex, endIndex) {
     const result = this.state[list];
     const [removed] = result.splice(startIndex, 1);
+    // put it back in the right place
     result.splice(endIndex, 0, removed);
-
+    // TODO: find a better way assign order values, maybe with floats
+    result.forEach((item, index) => {
+      item.data.order = index;
+    });
+    this.props.updateEditorData(this.props.editorData);
+    // return new array
     return result;
   }
 
@@ -78,19 +123,22 @@ class MatrixEditor extends Component {
     const sourceClone = this.state[source];
     const destClone = this.state[destination];
     const [removed] = sourceClone.splice(droppableSource.index, 1);
-
-    destClone.splice(droppableDestination.index, 0, removed);
+    const renamed = this.setDataBooleans(removed, droppableDestination.droppableId);
+    destClone.splice(droppableDestination.index, 0, renamed);
+    destClone.forEach((item, index) => {
+      item.data.order = index;
+    });
 
     const result = {};
     result[droppableSource.droppableId] = sourceClone;
     result[droppableDestination.droppableId] = destClone;
 
+    this.props.updateEditorData(this.props.editorData);
     return result;
   }
 
   onDragEnd = result => {
     const { source, destination } = result;
-    console.log(result);
     // dropped outside the list
     if (!destination) {
       return;
@@ -104,11 +152,6 @@ class MatrixEditor extends Component {
         destination.index
       );
 
-      // maybe not necessary?
-      // if (source.droppableId === 'droppable2') {
-      //     state = { selected: items };
-      // }
-
       this.setState({ [droppableId]: items });
     } else {
       const result = this.move(
@@ -120,7 +163,7 @@ class MatrixEditor extends Component {
 
       this.setState({
         items: result.droppable,
-        selected: result.droppable2,
+        // selected: result.droppable2,
       });
     }
   };
@@ -133,55 +176,57 @@ class MatrixEditor extends Component {
         <div className="priority-grid">
           <div className="droppy-area-container urgent-quick">
             <h4>Urgent, Quick</h4>
-        <DroppyArea
-          areaId={"urgentQuickItems"}
-          grid={grid}
-          getListStyle={getListStyle}
-          getItemStyle={getItemStyle}
-          items={this.state.urgentQuickItems}
-        />
-      </div>
-        <div className="droppy-area-container urgent-not-quick">
-          <h4>Urgent, Not Quick</h4>
-        <DroppyArea
-          areaId={"urgentNotQuickItems"}
-          grid={grid}
-          getListStyle={getListStyle}
-          getItemStyle={getItemStyle}
-          items={this.state.urgentNotQuickItems}
-        />
-      </div>
-        <div className="droppy-area-container not-urgent-quick">
-          <h4>Not Urgent, Quick</h4>
-        <DroppyArea
-          areaId={"notUrgentQuickItems"}
-          grid={grid}
-          getListStyle={getListStyle}
-          getItemStyle={getItemStyle}
-          items={this.state.notUrgentQuickItems}
-        />
-      </div>
-        <div className="droppy-area-container not-urgent-not-quick">
-          <h4>Not Urgent, Not Quick</h4>
-        <DroppyArea
-          areaId={"notUrgentNotQuickItems"}
-          grid={grid}
-          getListStyle={getListStyle}
-          getItemStyle={getItemStyle}
-          items={this.state.notUrgentNotQuickItems}
-        />
-      </div>
-        <div className="droppy-area-container unclassified">
-          <h4>Unclassified</h4>
-        <DroppyArea
-          areaId={"unclassifiedItems"}
-          grid={grid}
-          getListStyle={getListStyle}
-          getItemStyle={getItemStyle}
-          items={this.state.unclassifiedItems}
-        />
-      </div>
-      </div>
+            <DroppyArea
+              areaId={'urgentQuick'}
+              grid={grid}
+              getListStyle={getListStyle}
+              getItemStyle={getItemStyle}
+              items={this.state.urgentQuick}
+            />
+          </div>
+          <div className="droppy-area-container urgent-not-quick">
+            <h4>Urgent, Not Quick</h4>
+            <DroppyArea
+              areaId={'urgentNotQuick'}
+              grid={grid}
+              getListStyle={getListStyle}
+              getItemStyle={getItemStyle}
+              items={this.state.urgentNotQuick}
+            />
+          </div>
+          <div className="droppy-area-container not-urgent-quick">
+            <h4>Not Urgent, Quick</h4>
+            <DroppyArea
+              areaId={'notUrgentQuick'}
+              grid={grid}
+              getListStyle={getListStyle}
+              getItemStyle={getItemStyle}
+              items={this.state.notUrgentQuick}
+            />
+          </div>
+          <div className="droppy-area-container not-urgent-not-quick">
+            <h4>Not Urgent, Not Quick</h4>
+            <DroppyArea
+              areaId={'notUrgentNotQuick'}
+              grid={grid}
+              getListStyle={getListStyle}
+              getItemStyle={getItemStyle}
+              items={this.state.notUrgentNotQuick}
+            />
+          </div>
+          <div className="droppy-area-container unclassified">
+            <h4>Unclassified</h4>
+            <DroppyArea
+              areaId={'unclassified'}
+              grid={grid}
+              getListStyle={getListStyle}
+              getItemStyle={getItemStyle}
+              items={this.state.unclassified}
+            />
+          </div>
+          <b className="empty-row" />
+          <b className="empty-column" />
+        </div>
       </DragDropContext>
     );
   }

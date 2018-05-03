@@ -30,7 +30,7 @@
 .priority-grid {
   display: grid;
   grid-template-columns: repeat(8 1fr);
-  grid-template-rows: repeat(4 1fr);
+  grid-template-rows: repeat(5 1fr);
   height: 100%;
   box-sizing: border-box;
 }
@@ -79,4 +79,11 @@
 .droppy-area{
   width: 90%;
   height: 90%;
+}
+
+.empty-row {
+  grid-area: 5 / 1 / 6 / 9;
+}
+.empty-column {
+  grid-area: 1 / 8 / 5 / 9;
 }

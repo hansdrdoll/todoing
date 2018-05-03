@@ -19,6 +19,7 @@ class App extends Component {
       saved: true,
     };
     this.handleEditorStateChange = this.handleEditorStateChange.bind(this);
+    this.handleMatrixEditorChange = this.handleMatrixEditorChange.bind(this);
   }
 
   componentDidMount() {
@@ -40,9 +41,10 @@ class App extends Component {
   }
 
   componentDidUpdate(_prevProps, prevState, _snapshot) {
+    // TODO: debounce this
     if (!isEqual(prevState.rawState.blocks, this.state.rawState.blocks)) {
-      this.setState({ saved: false })
-      this.updateApiEditorData(this.state.rawState)
+      this.setState({ saved: false });
+      this.updateApiEditorData(this.state.rawState);
     }
   }
 
@@ -56,15 +58,6 @@ class App extends Component {
     });
   }
 
-// make work
-  // evaluateDiffExcludingSelection(prevState, newData) {
-  //   if (prevState.rawState === newData){
-  //     return true
-  //   } else {
-  //     return false
-  //   }
-  // }
-
   updateApiEditorData = debounce(rawState => {
     const userId = 1;
     updateTodo(userId, rawState).then(_res => {
@@ -72,8 +65,16 @@ class App extends Component {
         saved: true,
       });
     });
-    // console.table(rawState.blocks)
   }, 1500);
+
+  handleMatrixEditorChange(modifiedData) {
+    this.setState({
+      editorState: EditorState.createWithContent(convertFromRaw(modifiedData)),
+      saved: false,
+      // rawState: modifiedData,
+    });
+    this.updateApiEditorData(modifiedData);
+  }
 
   render() {
     if (this.state.dataLoaded) {
@@ -82,32 +83,34 @@ class App extends Component {
           <div className="App">
             <div className="header">
               <h1>just todo it</h1>
-              <p>
-                {this.state.saved ? <span>saved</span> : <span>...</span>}
-              </p>
+              <p>{this.state.saved ? <span>saved</span> : <span>...</span>}</p>
               <Link to="/">Editor</Link> <Link to="priority">Priority</Link>
             </div>
-                <Switch>
-                  <Route
-                    exact
-                    path="/"
-                    render={props => (
-                      <DraftEditor
-                        {...props}
-                        editorState={this.state.editorState}
-                        onChange={this.handleEditorStateChange}
-                        rawState={this.state.rawState}
-                      />
-                    )}
+            <Switch>
+              <Route
+                exact
+                path="/"
+                render={props => (
+                  <DraftEditor
+                    {...props}
+                    editorState={this.state.editorState}
+                    onChange={this.handleEditorStateChange}
+                    rawState={this.state.rawState}
                   />
-                  <Route
+                )}
+              />
+              <Route
                 exact
                 path="/priority"
                 render={props => (
-                  <MatrixEditor {...props} editorData={this.state.rawState} />
+                  <MatrixEditor
+                    {...props}
+                    editorData={this.state.rawState}
+                    updateEditorData={this.handleMatrixEditorChange}
+                  />
                 )}
               />
-                </Switch>
+            </Switch>
           </div>
         </BrowserRouter>
       );

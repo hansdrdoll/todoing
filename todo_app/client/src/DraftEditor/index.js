@@ -1,10 +1,10 @@
 import React from 'react';
 import { Editor } from 'react-draft-wysiwyg';
 import {
-  UrgentSlow,
   UrgentQuick,
-  NotUrgentSlow,
+  UrgentNotQuick,
   NotUrgentQuick,
+  NotUrgentNotQuick,
 } from './PrioritySetters';
 import PriorityMatrix from '../PriorityMatrix';
 import 'react-draft-wysiwyg/dist/react-draft-wysiwyg.css';
@@ -21,9 +21,9 @@ function DraftEditor(props) {
           onEditorStateChange={props.onChange}
           toolbarCustomButtons={[
             <UrgentQuick />,
-            <UrgentSlow />,
+            <UrgentNotQuick />,
             <NotUrgentQuick />,
-            <NotUrgentSlow />,
+            <NotUrgentNotQuick />,
           ]}
           toolbar={{
             options: ['inline', 'list', 'emoji', 'history'],
