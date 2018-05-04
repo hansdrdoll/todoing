@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { DragDropContext } from 'react-beautiful-dnd';
 import DroppyArea from './DroppyArea';
+import _ from 'lodash';
+import orderBy from 'lodash/orderBy';
 
 const grid = 8;
 
@@ -37,26 +39,31 @@ class MatrixEditor extends Component {
   }
 
   componentDidMount() {
-    const urgentQuick = this.props.editorData.blocks.filter(
+    const urgentQuickData = this.props.editorData.blocks.filter(
       item => item.data.urgent && item.data.quick
-    );
+    )
+    const urgentQuick = _.orderBy(urgentQuickData, ["data.order"])
 
-    const urgentNotQuick = this.props.editorData.blocks.filter(
+    const urgentNotQuickData = this.props.editorData.blocks.filter(
       item => item.data.urgent && !item.data.quick
     );
+    const urgentNotQuick = _.orderBy(urgentNotQuickData, ["data.order"])
 
-    const notUrgentQuick = this.props.editorData.blocks.filter(
+    const notUrgentQuickData = this.props.editorData.blocks.filter(
       item => !item.data.urgent && item.data.quick
     );
+    const notUrgentQuick = _.orderBy(notUrgentQuickData, ["data.order"])
 
-    const notUrgentNotQuick = this.props.editorData.blocks.filter(
+    const notUrgentNotQuickData = this.props.editorData.blocks.filter(
       item =>
         !item.data.urgent && !item.data.quick && item.data.urgent === false
     );
+    const notUrgentNotQuick = _.orderBy(notUrgentNotQuickData, ["data.order"])
 
-    const unclassified = this.props.editorData.blocks.filter(
+    const unclassifiedData = this.props.editorData.blocks.filter(
       item => item.data.urgent === undefined
     );
+    const unclassified = _.orderBy(unclassifiedData, ["data.order"])
 
     this.setState({
       urgentQuick,
