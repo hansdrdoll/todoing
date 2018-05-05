@@ -87,3 +87,17 @@
 .empty-column {
   grid-area: 1 / 8 / 5 / 9;
 }
+
+.ugly-line-numbers {
+  margin: 0;
+  line-height: 20px;
+  padding: 0;
+  display: flex;
+}
+
+.ugly-ordered-list {
+  margin: 0;
+  padding: 59px 0 0 0;
+  /* border: 1px solid blue; */
+  line-height: 36px;
+}
