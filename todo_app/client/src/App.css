@@ -19,6 +19,7 @@
 .editor {
   order: 1;
   flex-grow: 1;
+  counter-reset: spans;
 }
 
 .matrix {
@@ -95,9 +96,25 @@
   display: flex;
 }
 
-.ugly-ordered-list {
-  margin: 0;
-  padding: 59px 0 0 0;
+.public-DraftStyleDefault-block::before {
+  font-family: monospace;
+  counter-increment: spans;
+  content: counter(spans);
+  vertical-align: text-bottom;
   /* border: 1px solid blue; */
-  line-height: 36px;
+  position: absolute;
+  left: -25px;
+  top: 1px;
+  opacity: 0.3;
+}
+
+.ugly-list {
+  /* border: 1px solid red; */
+  padding-left: 30px;
+}
+
+.rdw-hashtag-link {
+  background-color: #fff !important;
+  color: #aaa !important;
+  font-family: monospace;
 }
