@@ -26,6 +26,7 @@ function DraftEditor(props) {
           editorClassName="demo-editor"
           onEditorStateChange={props.onChange}
           blockStyleFn={myBlockStyleFn}
+          onTab={props.onTab}
           toolbarCustomButtons={[
             <UrgentQuick />,
             <UrgentNotQuick />,

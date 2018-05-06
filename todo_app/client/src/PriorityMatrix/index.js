@@ -17,7 +17,6 @@ function PriorityMatrix(props) {
     block.data.lineNumber = index + 1;
   });
 
-  console.log(blocks);
   // TODO: maybe theres's a cleaner way to do this...
 
   const urgentQuickItemsData = blocks

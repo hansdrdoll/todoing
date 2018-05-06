@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Switch, Route, Link } from 'react-router-dom';
-import { EditorState, convertToRaw, convertFromRaw } from 'draft-js';
+import { EditorState, convertToRaw, convertFromRaw, Modifier } from 'draft-js';
 // import { Editor } from 'react-draft-wysiwyg';
 import { getTodo, updateTodo } from './api';
 import { Button, Spinner } from '@blueprintjs/core';
@@ -13,6 +13,8 @@ import '@blueprintjs/core/lib/css/blueprint.css';
 import { IconNames } from '@blueprintjs/icons';
 import './App.css';
 
+const tabCharacter = "    ";
+
 class App extends Component {
   constructor(props) {
     super(props);
@@ -24,6 +26,8 @@ class App extends Component {
     };
     this.handleEditorStateChange = this.handleEditorStateChange.bind(this);
     this.handleMatrixEditorChange = this.handleMatrixEditorChange.bind(this);
+    this.handleTab = this.handleTab.bind(this);
+    this.mapHashtags = this.mapHashtags.bind(this);
   }
 
   componentDidMount() {
@@ -47,6 +51,7 @@ class App extends Component {
   componentDidUpdate(_prevProps, prevState, _snapshot) {
     // TODO: debounce this
     if (!isEqual(prevState.rawState.blocks, this.state.rawState.blocks)) {
+      this.mapHashtags(this.state.rawState.blocks);
       this.setState({ saved: false });
       this.updateApiEditorData(this.state.rawState);
     }
@@ -55,7 +60,6 @@ class App extends Component {
   handleEditorStateChange(editorState) {
     const currentContent = editorState.getCurrentContent();
     const rawState = convertToRaw(currentContent);
-    // this.updateApiEditorData(rawState);
     this.setState({
       editorState,
       rawState,
@@ -80,20 +84,54 @@ class App extends Component {
     this.updateApiEditorData(modifiedData);
   }
 
+  handleTab(e) {
+    e.preventDefault();
+
+    let currentState = this.state.editorState;
+    let newContentState = Modifier.replaceText(
+      currentState.getCurrentContent(),
+      currentState.getSelection(),
+      tabCharacter
+    );
+
+    this.setState({
+      editorState: EditorState.push(currentState, newContentState, 'insert-characters')
+    });
+  }
+
+  matchBlocksToHashtags(hashtag, blocks) {
+    return blocks.filter(block => block.text.includes(hashtag))
+  }
+  // thanks http://geekcoder.org/js-extract-hashtags-from-text/
+  mapHashtags(rawState) {
+    const hashtag = /(?:^|\s)(?:#)([a-zA-Z\d]+)/g;
+    const hashtag2 = /(?:^|\s)(?:#)([a-zA-Z\d]+)/;
+    // const containsHashtag = rawState.filter(item => regex.test(item.text));
+    const containsHashtag = rawState.filter(item => hashtag.test(item.text))
+    const allHashtags = new Set(containsHashtag.map(item => {
+      return hashtag2.exec(item.text)[0]
+    }));
+    const blocksByHashtag = [];
+    allHashtags.forEach(h => {
+      blocksByHashtag.push({[h.trim().substring(1)]: this.matchBlocksToHashtags(h, containsHashtag) })
+    });
+    console.log(blocksByHashtag);
+  }
+
   render() {
     if (this.state.dataLoaded) {
       return (
         <BrowserRouter>
           <div className="App">
-            <nav class="pt-navbar">
-              <div class="pt-navbar-group pt-align-left">
-                <div class="pt-navbar-heading">Just ToDo It</div>
-                <span class="pt-navbar-divider" />
-                <div class="pt-tag pt-minimal">
+            <nav className="pt-navbar">
+              <div className="pt-navbar-group pt-align-left">
+                <div className="pt-navbar-heading">Just ToDo It</div>
+                <span className="pt-navbar-divider" />
+                <div className="pt-tag pt-minimal">
                   {this.state.saved ? <span>saved</span> : <span>...</span>}
                 </div>
               </div>
-              <div class="pt-navbar-group pt-align-right">
+              <div className="pt-navbar-group pt-align-right">
                 <Link to="/">
                   <Button minimal icon="manually-entered-data">
                     Editor
@@ -116,6 +154,7 @@ class App extends Component {
                     editorState={this.state.editorState}
                     onChange={this.handleEditorStateChange}
                     rawState={this.state.rawState}
+                    onTab={this.handleTab}
                   />
                 )}
               />
