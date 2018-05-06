@@ -1,5 +1,5 @@
 import React from 'react';
-import { Editor } from 'react-draft-wysiwyg';
+import { Editor, EditorBlock, EditorState } from 'react-draft-wysiwyg';
 import {
   UrgentQuick,
   UrgentNotQuick,
@@ -8,6 +8,10 @@ import {
 } from './PrioritySetters';
 import PriorityMatrix from '../PriorityMatrix';
 import 'react-draft-wysiwyg/dist/react-draft-wysiwyg.css';
+
+function myBlockStyleFn(contentBlock) {
+  return 'ugly-list';
+}
 
 function DraftEditor(props) {
   return (
@@ -19,6 +23,7 @@ function DraftEditor(props) {
           wrapperClassName="demo-wrapper"
           editorClassName="demo-editor"
           onEditorStateChange={props.onChange}
+          blockStyleFn={myBlockStyleFn}
           toolbarCustomButtons={[
             <UrgentQuick />,
             <UrgentNotQuick />,
@@ -26,7 +31,7 @@ function DraftEditor(props) {
             <NotUrgentNotQuick />,
           ]}
           toolbar={{
-            options: ['inline', 'list', 'emoji', 'history'],
+            options: ['inline', 'emoji', 'history'],
             inline: {
               inDropdown: false,
               className: undefined,
@@ -40,11 +45,8 @@ function DraftEditor(props) {
                 'monospace',
               ],
             },
-            list: { inDropdown: true },
-            textAlign: { inDropdown: true },
-            link: { inDropdown: true },
-            // history: { inDropdown: true },
           }}
+          hashtag={{}}
         />
       </div>
       <div className="matrix">
