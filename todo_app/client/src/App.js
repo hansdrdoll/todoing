@@ -3,10 +3,14 @@ import { BrowserRouter, Switch, Route, Link } from 'react-router-dom';
 import { EditorState, convertToRaw, convertFromRaw } from 'draft-js';
 // import { Editor } from 'react-draft-wysiwyg';
 import { getTodo, updateTodo } from './api';
+import { Button, Spinner } from '@blueprintjs/core';
 import debounce from 'lodash/debounce';
 import isEqual from 'lodash/isEqual';
 import DraftEditor from './DraftEditor';
 import MatrixEditor from './MatrixEditor';
+import 'normalize.css/normalize.css';
+import '@blueprintjs/core/lib/css/blueprint.css';
+import { IconNames } from '@blueprintjs/icons';
 import './App.css';
 
 class App extends Component {
@@ -81,11 +85,27 @@ class App extends Component {
       return (
         <BrowserRouter>
           <div className="App">
-            <div className="header">
-              <h1>just todo it</h1>
-              <p>{this.state.saved ? <span>saved</span> : <span>...</span>}</p>
-              <Link to="/">Editor</Link> <Link to="priority">Priority</Link>
-            </div>
+            <nav class="pt-navbar">
+              <div class="pt-navbar-group pt-align-left">
+                <div class="pt-navbar-heading">Just ToDo It</div>
+                <span class="pt-navbar-divider" />
+                <div class="pt-tag pt-minimal">
+                  {this.state.saved ? <span>saved</span> : <span>...</span>}
+                </div>
+              </div>
+              <div class="pt-navbar-group pt-align-right">
+                <Link to="/">
+                  <Button minimal icon="manually-entered-data">
+                    Editor
+                  </Button>
+                </Link>
+                <Link to="priority">
+                  <Button minimal icon="sort">
+                    Priority
+                  </Button>
+                </Link>
+              </div>
+            </nav>
             <Switch>
               <Route
                 exact
@@ -115,7 +135,12 @@ class App extends Component {
         </BrowserRouter>
       );
     } else {
-      return <div>Loading</div>;
+      return (
+        <div className="spinner">
+          <Spinner />
+          <p>Loading</p>
+        </div>
+      );
     }
   }
 }

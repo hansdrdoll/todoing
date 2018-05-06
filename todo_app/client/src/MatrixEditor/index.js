@@ -13,14 +13,14 @@ const getItemStyle = (isDragging, draggableStyle) => ({
   margin: `0 0 ${grid}px 0`,
 
   // change background colour if dragging
-  background: isDragging ? 'lightgrey' : 'grey',
+  background: isDragging ? '#EBF1F5' : '#F5F8FA',
 
   // styles we need to apply on draggables
   ...draggableStyle,
 });
 
 const getListStyle = isDraggingOver => ({
-  background: isDraggingOver ? 'lightblue' : 'lightgrey',
+  background: isDraggingOver ? '#D8E1E8' : '#E1E8ED',
   padding: grid,
   // TODO: make this responsive
   width: 400,

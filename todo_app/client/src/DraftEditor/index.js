@@ -1,5 +1,7 @@
+import 'react-draft-wysiwyg/dist/react-draft-wysiwyg.css';
 import React from 'react';
-import { Editor, EditorBlock, EditorState } from 'react-draft-wysiwyg';
+import { Button, Card, Elevation } from "@blueprintjs/core";
+import { Editor } from 'react-draft-wysiwyg';
 import {
   UrgentQuick,
   UrgentNotQuick,
@@ -7,7 +9,6 @@ import {
   NotUrgentNotQuick,
 } from './PrioritySetters';
 import PriorityMatrix from '../PriorityMatrix';
-import 'react-draft-wysiwyg/dist/react-draft-wysiwyg.css';
 
 function myBlockStyleFn(contentBlock) {
   return 'ugly-list';
@@ -16,9 +17,10 @@ function myBlockStyleFn(contentBlock) {
 function DraftEditor(props) {
   return (
     <div className="main">
-      <div className="editor">
+      <Card className="editor" elevation={Elevation.ONE}>
         <Editor
-          toolbarOnFocus
+          toolbarHidden
+          toolbarClassName="editor-toolbar"
           editorState={props.editorState}
           wrapperClassName="demo-wrapper"
           editorClassName="demo-editor"
@@ -48,10 +50,10 @@ function DraftEditor(props) {
           }}
           hashtag={{}}
         />
-      </div>
-      <div className="matrix">
+      </Card>
+      <Card className="matrix" elevation={Elevation.ONE}>
         <PriorityMatrix editorData={props.rawState} />
-      </div>
+      </Card>
     </div>
   );
 }

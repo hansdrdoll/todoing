@@ -1,3 +1,7 @@
+body {
+  background-color: #F5F8FA;
+}
+
 .App {
   text-align: center;
   display: flex;
@@ -5,8 +9,11 @@
   height: 100vh;
 }
 
-.header {
-
+.spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
 .main {
@@ -14,18 +21,31 @@
   flex-grow: 1;
   display:flex;
   flex-direction: row;
+  justify-content: space-around;
 }
 
 .editor {
   order: 1;
   flex-grow: 1;
   counter-reset: spans;
+  height: 90vh;
+  width: 50vw;
+  overflow-y: auto;
+  overflow-x: hidden;
+  /* background-color: #F5F8FA; */
+}
+
+.editor-toolbar {
+  background-color: #F5F8FA;
 }
 
 .matrix {
   text-align: left;
-  padding-top: 46px;
+  width: 30vw;
+  height: 90vh;
+  /* padding-top: 46px; */
   order: 2;
+  background-color: #F5F8FA;
 }
 
 .priority-grid {
@@ -82,6 +102,12 @@
   height: 90%;
 }
 
+.draggy-thing {
+  /* border: 1px solid gray; */
+  border-radius: 3px;
+  box-shadow: 0 0 0 1px rgba(16, 22, 26, 0.15), 0 0 0 rgba(16, 22, 26, 0), 0 0 0 rgba(16, 22, 26, 0);
+}
+
 .empty-row {
   grid-area: 5 / 1 / 6 / 9;
 }
@@ -116,5 +142,27 @@
 .rdw-hashtag-link {
   background-color: #fff !important;
   color: #aaa !important;
+  font-family: monospace;
+}
+
+.priority-list {
+  list-style: none;
+  padding: 0;
+  list-style-position: inside;
+text-indent: -2em;
+padding: .4em 0 0 2em;
+}
+
+.lineNum {
+  display: block;
+  width: 2em;
+  padding-right: 4px;
+  color: #aaa;
+  float:left;
+  font-family: monospace;
+}
+
+.lineNumTag {
+  float: left;
   font-family: monospace;
 }

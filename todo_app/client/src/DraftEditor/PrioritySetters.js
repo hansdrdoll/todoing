@@ -10,7 +10,7 @@ class UrgentQuick extends Component {
 
   setUrgentQuick: Function = (): void => {
     const { editorState, onChange } = this.props;
-    const contentState = Modifier.setBlockData(
+    const contentState = Modifier.mergeBlockData(
       editorState.getCurrentContent(),
       editorState.getSelection(),
       { "urgent": true, "quick": true, "listName": "urgentQuick", },
@@ -33,7 +33,7 @@ class UrgentNotQuick extends Component {
 
   setUrgentNotQuick: Function = (): void => {
     const { editorState, onChange } = this.props;
-    let contentState = Modifier.setBlockData(
+    let contentState = Modifier.mergeBlockData(
       editorState.getCurrentContent(),
       editorState.getSelection(),
       { "urgent": true, "quick": false, "listName": "urgentNotQuick", },
@@ -56,7 +56,7 @@ class NotUrgentQuick extends Component {
 
   setNotUrgentQuick: Function = (): void => {
     const { editorState, onChange } = this.props;
-    let contentState = Modifier.setBlockData(
+    let contentState = Modifier.mergeBlockData(
       editorState.getCurrentContent(),
       editorState.getSelection(),
       { "urgent": false, "quick": true, "listName": "notUrgentQuick", },
@@ -79,7 +79,7 @@ class NotUrgentNotQuick extends Component {
 
   setNotUrgentNotQuick: Function = (): void => {
     const { editorState, onChange } = this.props;
-    let contentState = Modifier.setBlockData(
+    let contentState = Modifier.mergeBlockData(
       editorState.getCurrentContent(),
       editorState.getSelection(),
       { "urgent": false, "quick": false, "listName": "notUrgentNotQuick", },

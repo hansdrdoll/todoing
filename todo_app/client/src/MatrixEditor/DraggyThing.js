@@ -7,6 +7,8 @@ function DraggyThing(props) {
     <Draggable key={item.key} draggableId={item.key} index={index}>
       {(provided, snapshot) => (
         <div
+          // className="pt-card pt-elevation-0"
+          className="draggy-thing"
           ref={provided.innerRef}
           {...provided.draggableProps}
           {...provided.dragHandleProps}
@@ -15,7 +17,7 @@ function DraggyThing(props) {
             provided.draggableProps.style
           )}
         >
-          {item.text}
+          <span className="lineNumTag pt-tag pt-minimal">{item.data.lineNumber}</span>{item.text}
         </div>
       )}
     </Draggable>
