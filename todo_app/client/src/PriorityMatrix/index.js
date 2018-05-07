@@ -143,14 +143,15 @@ class PriorityMatrix extends React.Component {
               <span className="tagNum">{notUrgentNotQuickItems.length}</span>{' '}
               Not Urgent, Not Quick
             </Tag>
-            <Tag
+            {/* <Tag
               interactive
               minimal
               // className="hashtag-button"
               className={this.state.selectedTag === 'unclassified' ? 'hashtag-button pt-intent-primary' : 'hashtag-button'}
               onClick={e => this.handleTagChange(e, 'unclassified')}>
               <span className="tagNum">{unclassified.length}</span> Unclassified
-            </Tag>
+            </Tag> */}
+            <div>
             {this.props.hashtags &&
               this.props.hashtags.map((h, i) => {
                 return (
@@ -166,17 +167,20 @@ class PriorityMatrix extends React.Component {
                   </Tag>
                 );
               })}
+            </div>
             <div className="tag-results">
               {this.state.hashtag && (
                 <div>
+                <ul className="priority-list">
                   {this.state.hashData.map((b) => {
-                    return (<Card elevation={Elevation.ONE} key={b.key} className="hash-card">
+                    return (<div>
                       <span className="lineNum">{b.data.lineNumber}</span>
-                      {b.text}
-                    </Card>
+                      <li>{b.text}</li>
+                    </div>
                   )
                   })}
-                </div>
+                </ul>
+              </div>
               )}
               {this.state.selectedTag === 'urgentQuick' && (
                 <div>

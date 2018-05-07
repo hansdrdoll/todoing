@@ -23,7 +23,7 @@ const getListStyle = isDraggingOver => ({
   background: isDraggingOver ? '#D8E1E8' : '#E1E8ED',
   padding: grid,
   // TODO: make this responsive
-  width: 400,
+  // width: 400,
 });
 
 class MatrixEditor extends Component {
@@ -189,6 +189,7 @@ class MatrixEditor extends Component {
               getListStyle={getListStyle}
               getItemStyle={getItemStyle}
               items={this.state.urgentQuick}
+              specialClass="droppy-area pt-card"
             />
           </div>
           <div className="droppy-area-container urgent-not-quick">
@@ -199,6 +200,7 @@ class MatrixEditor extends Component {
               getListStyle={getListStyle}
               getItemStyle={getItemStyle}
               items={this.state.urgentNotQuick}
+              specialClass="droppy-area pt-card"
             />
           </div>
           <div className="droppy-area-container not-urgent-quick">
@@ -209,6 +211,7 @@ class MatrixEditor extends Component {
               getListStyle={getListStyle}
               getItemStyle={getItemStyle}
               items={this.state.notUrgentQuick}
+              specialClass="droppy-area pt-card"
             />
           </div>
           <div className="droppy-area-container not-urgent-not-quick">
@@ -219,6 +222,7 @@ class MatrixEditor extends Component {
               getListStyle={getListStyle}
               getItemStyle={getItemStyle}
               items={this.state.notUrgentNotQuick}
+              specialClass="droppy-area pt-card"
             />
           </div>
           <div className="droppy-area-container unclassified">
@@ -229,10 +233,11 @@ class MatrixEditor extends Component {
               getListStyle={getListStyle}
               getItemStyle={getItemStyle}
               items={this.state.unclassified}
+              specialClass="middle-droppy-area droppy-area pt-card"
             />
           </div>
-          <b className="empty-row" />
-          <b className="empty-column" />
+          {/* <b className="empty-row" /> */}
+          {/* <b className="empty-column" /> */}
         </div>
       </DragDropContext>
     );
