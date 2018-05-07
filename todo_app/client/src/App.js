@@ -10,7 +10,7 @@ import DraftEditor from './DraftEditor';
 import MatrixEditor from './MatrixEditor';
 import 'normalize.css/normalize.css';
 import '@blueprintjs/core/lib/css/blueprint.css';
-import { IconNames } from '@blueprintjs/icons';
+// import { IconNames } from '@blueprintjs/icons';
 import './App.css';
 
 const tabCharacter = "    ";
@@ -107,7 +107,7 @@ class App extends Component {
   }
   // thanks http://geekcoder.org/js-extract-hashtags-from-text/
   mapHashtags(rawState) {
-    const hashtag = /(?:^|)(?:#)([a-zA-Z\d]+)/g;
+    const hashtag = /(?:^|)(?:#)([a-zA-Z\d]+)/;
     const hashtag2 = /(?:^|)(?:#)([a-zA-Z\d]+)/;
     // const containsHashtag = rawState.filter(item => regex.test(item.text));
     const containsHashtag = rawState.filter(item => hashtag.test(item.text))
@@ -133,7 +133,7 @@ class App extends Component {
           <div className="App">
             <nav className="pt-navbar">
               <div className="pt-navbar-group pt-align-left">
-                <div className="pt-navbar-heading">Just ToDo It</div>
+                <div className="pt-navbar-heading">Todoing</div>
                 <span className="pt-navbar-divider" />
                 <div className="pt-tag pt-minimal">
                   {this.state.saved ? <span>saved</span> : <span>...</span>}

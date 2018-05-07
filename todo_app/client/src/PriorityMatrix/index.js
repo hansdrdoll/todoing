@@ -1,6 +1,6 @@
 import React from 'react';
 import _ from 'lodash';
-import { Tag, Card, Elevation } from '@blueprintjs/core';
+import { Tag } from '@blueprintjs/core';
 
 class PriorityMatrix extends React.Component {
   constructor(props) {
@@ -18,8 +18,12 @@ class PriorityMatrix extends React.Component {
   }
   handleHashtag(e, selectedTag) {
     // console.log(selectedTag);
-    const hashtagArr = this.props.hashtags.filter(h => h.name === selectedTag)
-    this.setState({ selectedTag: selectedTag[0], hashtag: true, hashData: hashtagArr[0].blocks });
+    const hashtagArr = this.props.hashtags.filter(h => h.name === selectedTag);
+    this.setState({
+      selectedTag: selectedTag,
+      hashtag: true,
+      hashData: hashtagArr[0].blocks,
+    });
   }
 
   render() {
@@ -31,9 +35,10 @@ class PriorityMatrix extends React.Component {
       return false;
     };
 
-    // const blocksWithIndex = blocks.map((block, index) => {
-    //   block.data.lineNumber = index + 1;
-    // });
+    // eslint-disable-next-line
+    const blocksWithIndex = blocks.map((block, index) => {
+      block.data.lineNumber = index + 1;
+    });
 
     // TODO: maybe theres's a cleaner way to do this...
 
@@ -115,14 +120,23 @@ class PriorityMatrix extends React.Component {
             <Tag
               interactive
               minimal
-              className={this.state.selectedTag === 'urgentQuick' ? 'hashtag-button pt-intent-primary' : 'hashtag-button'}
+              className={
+                this.state.selectedTag === 'urgentQuick'
+                  ? 'hashtag-button pt-intent-primary'
+                  : 'hashtag-button'
+              }
               onClick={e => this.handleTagChange(e, 'urgentQuick')}>
-              <span className="tagNum">{urgentQuickItems.length}</span> Urgent, Quick
+              <span className="tagNum">{urgentQuickItems.length}</span> Urgent,
+              Quick
             </Tag>
             <Tag
               interactive
               minimal
-              className={this.state.selectedTag === 'urgentNotQuick' ? 'hashtag-button pt-intent-primary' : 'hashtag-button'}
+              className={
+                this.state.selectedTag === 'urgentNotQuick'
+                  ? 'hashtag-button pt-intent-primary'
+                  : 'hashtag-button'
+              }
               onClick={e => this.handleTagChange(e, 'urgentNotQuick')}>
               <span className="tagNum">{urgentNotQuickItems.length}</span>{' '}
               Urgent, Not Quick
@@ -130,7 +144,11 @@ class PriorityMatrix extends React.Component {
             <Tag
               interactive
               minimal
-              className={this.state.selectedTag === 'notUrgentQuick' ? 'hashtag-button pt-intent-primary' : 'hashtag-button'}
+              className={
+                this.state.selectedTag === 'notUrgentQuick'
+                  ? 'hashtag-button pt-intent-primary'
+                  : 'hashtag-button'
+              }
               onClick={e => this.handleTagChange(e, 'notUrgentQuick')}>
               <span className="tagNum">{notUrgentQuickItems.length}</span> Not
               Urgent, Quick
@@ -138,7 +156,11 @@ class PriorityMatrix extends React.Component {
             <Tag
               interactive
               minimal
-              className={this.state.selectedTag === 'notUrgentNotQuick' ? 'hashtag-button pt-intent-primary' : 'hashtag-button'}
+              className={
+                this.state.selectedTag === 'notUrgentNotQuick'
+                  ? 'hashtag-button pt-intent-primary'
+                  : 'hashtag-button'
+              }
               onClick={e => this.handleTagChange(e, 'notUrgentNotQuick')}>
               <span className="tagNum">{notUrgentNotQuickItems.length}</span>{' '}
               Not Urgent, Not Quick
@@ -152,35 +174,38 @@ class PriorityMatrix extends React.Component {
               <span className="tagNum">{unclassified.length}</span> Unclassified
             </Tag> */}
             <div>
-            {this.props.hashtags &&
-              this.props.hashtags.map((h, i) => {
-                return (
-                  <Tag
-                    key={i}
-                    interactive
-                    minimal
-                    onClick={e => this.handleHashtag(e, h.name)}
-                    className={this.state.selectedTag === h.name[0] ? 'hashtag-button pt-intent-primary' : 'hashtag-button'}
-                  >
-                    <span className="tagNum">{h.blocks.length}</span>
-                    {" "}{h.name}
-                  </Tag>
-                );
-              })}
+              {this.props.hashtags &&
+                this.props.hashtags.map((h, i) => {
+                  return (
+                    <Tag
+                      key={i}
+                      interactive
+                      minimal
+                      onClick={e => this.handleHashtag(e, h.name)}
+                      className={
+                        this.state.selectedTag === h.name
+                          ? 'hashtag-button pt-intent-primary'
+                          : 'hashtag-button'
+                      }>
+                      <span className="tagNum">{h.blocks.length}</span> {h.name}
+                    </Tag>
+                  );
+                })}
             </div>
             <div className="tag-results">
               {this.state.hashtag && (
                 <div>
-                <ul className="priority-list">
-                  {this.state.hashData.map((b) => {
-                    return (<div>
-                      <span className="lineNum">{b.data.lineNumber}</span>
-                      <li>{b.text}</li>
-                    </div>
-                  )
-                  })}
-                </ul>
-              </div>
+                  <ul className="priority-list">
+                    {this.state.hashData.map(b => {
+                      return (
+                        <div key={b.key}>
+                          <span className="lineNum">{b.data.lineNumber}</span>
+                          <li>{b.text}</li>
+                        </div>
+                      );
+                    })}
+                  </ul>
+                </div>
               )}
               {this.state.selectedTag === 'urgentQuick' && (
                 <div>

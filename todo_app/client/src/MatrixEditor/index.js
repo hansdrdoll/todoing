@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { DragDropContext } from 'react-beautiful-dnd';
 import DroppyArea from './DroppyArea';
 import _ from 'lodash';
-import orderBy from 'lodash/orderBy';
 
 const grid = 8;
 
@@ -38,6 +37,13 @@ class MatrixEditor extends Component {
     };
   }
 
+   isBlank (obj){
+    if (obj.text === '' || obj.text === ' ') {
+      return true;
+    }
+    return false;
+  };
+
   componentDidMount() {
     const urgentQuickData = this.props.editorData.blocks.filter(
       item => item.data.urgent && item.data.quick
@@ -61,7 +67,7 @@ class MatrixEditor extends Component {
     const notUrgentNotQuick = _.orderBy(notUrgentNotQuickData, ["data.order"])
 
     const unclassifiedData = this.props.editorData.blocks.filter(
-      item => item.data.urgent === undefined
+      item => item.data.urgent === undefined && !this.isBlank(item)
     );
     const unclassified = _.orderBy(unclassifiedData, ["data.order"])
 
@@ -175,8 +181,6 @@ class MatrixEditor extends Component {
     }
   };
 
-  // Normally you would want to split things out into separate components.
-  // But in this example everything is just done in one place for simplicity
   render() {
     return (
       <DragDropContext onDragEnd={this.onDragEnd}>

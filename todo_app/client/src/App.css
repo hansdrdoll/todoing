@@ -33,6 +33,7 @@ body {
   overflow-y: auto;
   overflow-x: hidden;
   margin-right: 10px;
+  padding-top: 12px;
   /* background-color: #F5F8FA; */
 }
 
@@ -102,7 +103,8 @@ body {
 .droppy-area{
   width: 32vw;
   height: 40vh;
-  overflow-x: scroll;
+  overflow-x: hidden;
+  overflow-y: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -138,10 +140,9 @@ body {
   font-family: monospace;
   counter-increment: spans;
   content: counter(spans);
-  vertical-align: text-bottom;
   /* border: 1px solid blue; */
   position: absolute;
-  left: -25px;
+  left: -30px;
   top: 1px;
   opacity: 0.3;
 }
@@ -155,6 +156,11 @@ body {
   background-color: #fff !important;
   color: #aaa !important;
   font-family: monospace;
+}
+
+.rdw-hashtag-link:hover {
+  text-decoration: none;
+  cursor: text;
 }
 
 .priority-list {

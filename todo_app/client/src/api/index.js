@@ -1,7 +1,6 @@
 import axios from 'axios';
 
 export function getTodo(id) {
-  console.log('i api');
   return fetch(`/api/todos/${id}`)
     .then(response => response.json());
 }

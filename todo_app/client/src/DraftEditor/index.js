@@ -1,6 +1,6 @@
 import 'react-draft-wysiwyg/dist/react-draft-wysiwyg.css';
 import React from 'react';
-import { Button, Card, Elevation } from "@blueprintjs/core";
+import { Card, Elevation } from '@blueprintjs/core';
 import { Editor } from 'react-draft-wysiwyg';
 import {
   UrgentQuick,
