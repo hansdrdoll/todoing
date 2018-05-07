@@ -46,6 +46,7 @@ body {
   /* padding-top: 46px; */
   order: 2;
   background-color: #F5F8FA;
+  overflow: auto;
 }
 
 .priority-grid {
@@ -149,8 +150,8 @@ body {
   list-style: none;
   padding: 0;
   list-style-position: inside;
-text-indent: -2em;
-padding: .4em 0 0 2em;
+  text-indent: -2em;
+  padding: .4em 0 0 2em;
 }
 
 .lineNum {
@@ -165,4 +166,28 @@ padding: .4em 0 0 2em;
 .lineNumTag {
   float: left;
   font-family: monospace;
+}
+
+.hashtag-button {
+  margin: 2px 5px;
+}
+
+.tagNum {
+  /* font-family: monospace; */
+  display: inline-block;
+  text-align: center;
+  background-color: #EBF1F5;
+  border-radius: 2px;
+  width: 1.2em;
+  color: #5C7080;
+}
+
+.tag-results {
+  padding: 10px;
+}
+
+.hash-card {
+  width: 95%;
+  padding: 15px;
+  margin: 6px 0;
 }

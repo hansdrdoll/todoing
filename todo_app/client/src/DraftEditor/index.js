@@ -53,7 +53,7 @@ function DraftEditor(props) {
         />
       </Card>
       <Card className="matrix" elevation={Elevation.ONE}>
-        <PriorityMatrix editorData={props.rawState} />
+        <PriorityMatrix editorData={props.rawState} hashtags={props.hashtags} />
       </Card>
     </div>
   );

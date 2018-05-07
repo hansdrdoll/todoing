@@ -38,6 +38,7 @@ class App extends Component {
           rawState,
           dataLoaded: true,
         });
+        this.mapHashtags(this.state.rawState.blocks);
       } else {
         console.log('i got nothin');
         this.setState({
@@ -51,7 +52,6 @@ class App extends Component {
   componentDidUpdate(_prevProps, prevState, _snapshot) {
     // TODO: debounce this
     if (!isEqual(prevState.rawState.blocks, this.state.rawState.blocks)) {
-      this.mapHashtags(this.state.rawState.blocks);
       this.setState({ saved: false });
       this.updateApiEditorData(this.state.rawState);
     }
@@ -67,6 +67,9 @@ class App extends Component {
   }
 
   updateApiEditorData = debounce(rawState => {
+    // just throwing this in here to benefit from the debouncing
+    this.mapHashtags(this.state.rawState.blocks);
+
     const userId = 1;
     updateTodo(userId, rawState).then(_res => {
       this.setState({
@@ -104,8 +107,8 @@ class App extends Component {
   }
   // thanks http://geekcoder.org/js-extract-hashtags-from-text/
   mapHashtags(rawState) {
-    const hashtag = /(?:^|\s)(?:#)([a-zA-Z\d]+)/g;
-    const hashtag2 = /(?:^|\s)(?:#)([a-zA-Z\d]+)/;
+    const hashtag = /(?:^|)(?:#)([a-zA-Z\d]+)/g;
+    const hashtag2 = /(?:^|)(?:#)([a-zA-Z\d]+)/;
     // const containsHashtag = rawState.filter(item => regex.test(item.text));
     const containsHashtag = rawState.filter(item => hashtag.test(item.text))
     const allHashtags = new Set(containsHashtag.map(item => {
@@ -113,9 +116,14 @@ class App extends Component {
     }));
     const blocksByHashtag = [];
     allHashtags.forEach(h => {
-      blocksByHashtag.push({[h.trim().substring(1)]: this.matchBlocksToHashtags(h, containsHashtag) })
+      blocksByHashtag.push({
+        name: h.trim().substring(1),
+        blocks: this.matchBlocksToHashtags(h, containsHashtag)
+      })
     });
-    console.log(blocksByHashtag);
+    this.setState({
+      blocksByHashtag,
+    });
   }
 
   render() {
@@ -155,6 +163,7 @@ class App extends Component {
                     onChange={this.handleEditorStateChange}
                     rawState={this.state.rawState}
                     onTab={this.handleTab}
+                    hashtags={this.state.blocksByHashtag}
                   />
                 )}
               />
