@@ -8,6 +8,9 @@ body {
   flex-direction: column;
   height: 100vh;
 }
+.header-button {
+  margin: 0 5px;
+}
 
 .spinner {
   display: flex;
@@ -196,6 +199,7 @@ body {
 
 .tagNum {
   /* font-family: monospace; */
+  margin-left: 4px;
   display: inline-block;
   text-align: center;
   background-color: #EBF1F5;
@@ -212,4 +216,9 @@ body {
   width: 95%;
   padding: 15px;
   margin: 6px 0;
+}
+
+.hashy {
+  color: #8A9BA8;
+  margin-right: 2px;
 }

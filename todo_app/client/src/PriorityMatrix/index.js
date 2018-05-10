@@ -126,8 +126,8 @@ class PriorityMatrix extends React.Component {
                   : 'hashtag-button'
               }
               onClick={e => this.handleTagChange(e, 'urgentQuick')}>
-              <span className="tagNum">{urgentQuickItems.length}</span> Urgent,
-              Quick
+              Urgent, Quick
+              <span className="tagNum">{urgentQuickItems.length}</span>
             </Tag>
             <Tag
               interactive
@@ -138,8 +138,8 @@ class PriorityMatrix extends React.Component {
                   : 'hashtag-button'
               }
               onClick={e => this.handleTagChange(e, 'urgentNotQuick')}>
-              <span className="tagNum">{urgentNotQuickItems.length}</span>{' '}
               Urgent, Not Quick
+              <span className="tagNum">{urgentNotQuickItems.length}</span>{' '}
             </Tag>
             <Tag
               interactive
@@ -150,8 +150,8 @@ class PriorityMatrix extends React.Component {
                   : 'hashtag-button'
               }
               onClick={e => this.handleTagChange(e, 'notUrgentQuick')}>
-              <span className="tagNum">{notUrgentQuickItems.length}</span> Not
-              Urgent, Quick
+               Not Urgent, Quick
+              <span className="tagNum">{notUrgentQuickItems.length}</span>
             </Tag>
             <Tag
               interactive
@@ -162,8 +162,8 @@ class PriorityMatrix extends React.Component {
                   : 'hashtag-button'
               }
               onClick={e => this.handleTagChange(e, 'notUrgentNotQuick')}>
-              <span className="tagNum">{notUrgentNotQuickItems.length}</span>{' '}
               Not Urgent, Not Quick
+              <span className="tagNum">{notUrgentNotQuickItems.length}</span>{' '}
             </Tag>
             {/* <Tag
               interactive
@@ -187,7 +187,7 @@ class PriorityMatrix extends React.Component {
                           ? 'hashtag-button pt-intent-primary'
                           : 'hashtag-button'
                       }>
-                      <span className="tagNum">{h.blocks.length}</span> {h.name}
+                      <span className="hashy">#</span>{h.name}<span className="tagNum">{h.blocks.length}</span>
                     </Tag>
                   );
                 })}

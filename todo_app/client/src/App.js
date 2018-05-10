@@ -141,12 +141,12 @@ class App extends Component {
               </div>
               <div className="pt-navbar-group pt-align-right">
                 <Link to="/">
-                  <Button minimal icon="manually-entered-data">
+                  <Button className="header-button" icon="manually-entered-data">
                     Editor
                   </Button>
                 </Link>
                 <Link to="priority">
-                  <Button minimal icon="sort">
+                  <Button className="header-button" icon="sort">
                     Priority
                   </Button>
                 </Link>
