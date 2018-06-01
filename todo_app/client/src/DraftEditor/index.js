@@ -27,6 +27,7 @@ function DraftEditor(props) {
           onEditorStateChange={props.onChange}
           blockStyleFn={myBlockStyleFn}
           onTab={props.onTab}
+          
           toolbarCustomButtons={[
             <UrgentQuick />,
             <UrgentNotQuick />,
@@ -48,8 +49,14 @@ function DraftEditor(props) {
                 'monospace',
               ],
             },
+            link: {
+              showOpenOptionOnHover: false,
+            },
           }}
-          hashtag={{}}
+          hashtag={{
+            separator: ' ',
+            trigger: '#',
+          }}
         />
       </Card>
       <Card className="matrix" elevation={Elevation.ONE}>
